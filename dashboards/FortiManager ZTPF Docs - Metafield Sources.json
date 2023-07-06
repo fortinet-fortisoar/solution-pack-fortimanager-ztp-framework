@@ -1,0 +1,79 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "9545ae4e-0552-43e4-a399-1082dabe8a98",
+    "displayName": "FortiManager ZTPF Docs - Metafield Sources",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "5baf4f1c-56f9-41d6-815c-e5e77b7f2d47",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p>Quick Links<\/p>\n<p><span title=\"Announcements ID 1 - Description\" class=\"cs-richtext-field\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "70864727-aefd-4fc2-8a68-4cf17cd51c07",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "0ed2efd1-09de-4c77-82d5-3c9ccb5dd929",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "markdown",
+                                    "sectionText": "# FortiManager ZTPF Docs - Metafield Sources\n## Schemas and Examples\n\n### FortiManager API \n```\n[\n  {\n    \"source_type\": \"fmg\",\n    \"source\": \"<fmg connector config_name>\",\n    \"keyname\": \"<attribute name for data>\",\n    \"location\": \"<api url>\"\n  }\n]\n```\n\n#### FMG API Examples\n```\n[\n  {\n    \"source_type\": \"fmg\",\n    \"source\": \"{{record.connector_config}}\",\n    \"keyname\": \"interfaces\",\n    \"location\": \"\/pm\/config\/device\/{{record.devname}}\/global\/system\/interface\"\n  }\n]\n```\n\n### FortiSOAR Playbook\n```\n[\n  {\n    \"source_type\": \"playbook\",\n    \"keyname\": \"<attribute name for data>\",\n    \"playbook_id\": \"<custom playbook id found in url of playbook>\",\n    \"payload\": \"<input data for playbook>\"\n  }\n]\n```\n\n#### Playbook Examples\n```\n[\n  {\n    \"source_type\": \"playbook\",\n    \"keyname\": \"ip_table\",\n    \"playbook_id\": \"9e6cff1f-0fe3-4c85-bf25-5cb409cea778\",\n    \"argument\": \"\"\n  },\n  {\n    \"source_type\": \"playbook\",\n    \"keyname\": \"ip_table_lookup\",\n    \"playbook_id\": \"1c6e570a-605e-46ac-9125-32f2af1877e7\",\n    \"argument\": \"{{record.devname}}\"\n  }\n]\n```"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "4acb31f5-95e5-4716-8962-6fc62606eb68",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            }
+        ],
+        "wid": "7acf6c4a-0731-41cc-a4aa-133f105c7dee",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        }
+    },
+    "filterArray": [],
+    "updateDate": null
+}

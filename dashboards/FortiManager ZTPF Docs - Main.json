@@ -1,0 +1,81 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "ad1019a3-30d8-413c-9c5e-b0b2d7d9a560",
+    "displayName": "FortiManager ZTPF Docs - Main",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [
+        "\/api\/3\/roles\/c57340f1-c387-474b-9c24-effc9e3c41aa"
+    ],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "5baf4f1c-56f9-41d6-815c-e5e77b7f2d47",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p>Quick Links<\/p>\n<p><span title=\"Announcements ID 1 - Description\" class=\"cs-richtext-field\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "70864727-aefd-4fc2-8a68-4cf17cd51c07",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "0ed2efd1-09de-4c77-82d5-3c9ccb5dd929",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<h3>FortiSOAR\/FortiManager Integration<\/h3>\n<ul>\n<li><strong>Synchronize FMG DeviceDB<\/strong> will synchronize your FortiManager(s) and FortiSOAR Records. Playbooks can be executed on Device Records to interact with FortiManager via the API.&nbsp;<\/li>\n<li>FortiManager owns the configuration and Management of devices and FortiSOAR can own the orchestration of actions as well as reporting across multiple FortiManagers<\/li>\n<\/ul>\n<h3>Modules<\/h3>\n<table style=\"border-collapse: collapse; width: 97.9319%;\" border=\"1\">\n<tbody>\n<tr>\n<td style=\"width: 20%; text-align: center; background-color: #236fa1;\">Module<\/td>\n<td style=\"width: 80%; text-align: center; background-color: #236fa1;\">Description<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 20%; text-align: center;\"><a href=\"\/modules\/managers\">Managers<\/a><\/td>\n<td style=\"width: 49.9379%;\">\n<p>FortiManager and FortiAnalyzers are stored in the Managers module. Actions on these records are related to handling the system as a whole.<\/p>\n<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 20%; text-align: center;\"><a href=\"\/modules\/devices\">Devices<\/a><\/td>\n<td style=\"width: 49.9379%;\">Devices synchronized, or have been synchronized, with the FortiManager Device DB. Actions on these devices will depend on the status of the device in relationship to FortiManager.<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 20%; text-align: center;\"><a href=\"\/modules\/scripts\">Scripts<\/a><\/td>\n<td style=\"width: 49.9379%;\">Scripts hosted by FortiSOAR that can be run on FortiManager as DeviceDB, REmote CLI, Remote TCL, or PolicyDB scripts. Each script will be created on FortiManager for the device we are running on and then deleted once complete.<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<h3>Devices Field Descriptions<\/h3>\n<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\">\n<tbody>\n<tr>\n<td style=\"width: 25%; background-color: #236fa1; text-align: center; vertical-align: middle;\">Field<\/td>\n<td style=\"width: 49.9392%; background-color: #236fa1; text-align: center; vertical-align: middle;\">Description<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">Management Mode<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">\n<p>The ( mgmt_mode ) field from FMG. This is the management mode of the device found in FMG.<\/p>\n<span style=\"border: 2px solid GREY; color: grey; border-radius: 5px; background-color: black; font-family: verdana; font-weight: bold; font-size: 10px; padding: 2px;\">Unknown<\/span> <span style=\"border: 2px solid ORANGE; color: orange; border-radius: 5px; background-color: black; font-family: verdana; font-weight: bold; font-size: 10px; padding: 2px;\">Unauthorized<\/span> <span style=\"border: 2px solid GREEN; color: green; border-radius: 5px; background-color: black; font-family: verdana; font-weight: bold; font-size: 10px; padding: 2px;\">Managed<\/span> <span style=\"border: 2px solid GREEN; color: green; border-radius: 5px; background-color: black; font-family: verdana; font-weight: bold; font-size: 10px; padding: 2px;\">Logging<\/span>\n<p>&nbsp;<\/p>\n<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">Connection Status<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">The ( conn_status ) field is the latest status of the management tunnel between the FG and FMG.<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">Config Status<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">The ( conf_status ) field is the current FG Configuration status related to the FMG Configuration DB.<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">Config DB Status<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">The ( db_status ) is the FMG Configuration DB status.<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">&nbsp;<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">&nbsp;<\/td>\n<\/tr>\n<tr>\n<td style=\"width: 25%; text-align: center;\">&nbsp;<\/td>\n<td style=\"width: 49.9392%; vertical-align: middle;\">&nbsp;<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<h3>Topics<\/h3>\n<p>&nbsp;- <a href=\"?qid=9545ae4e-0552-43e4-a399-1082dabe8a98\">Metafield Data Source Schema and Examples<\/a><\/p>\n<p>&nbsp;- <a href=\"?qid=d61bc75d-ad4b-494f-93ab-62ddc78ed466\">ZTP Profiles<\/a><\/p>"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "4acb31f5-95e5-4716-8962-6fc62606eb68",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            }
+        ],
+        "wid": "7acf6c4a-0731-41cc-a4aa-133f105c7dee",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        }
+    },
+    "filterArray": [],
+    "updateDate": null
+}

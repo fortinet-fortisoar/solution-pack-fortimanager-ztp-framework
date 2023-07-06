@@ -1,0 +1,207 @@
+{
+    "name": "fortiManagerZTPFlowDev",
+    "version": "1.0.1",
+    "fsrMinCompatibility": "7.4.0",
+    "type": "solutionpack",
+    "local": true,
+    "label": "FortiManager ZTP Flow Dev",
+    "dependencies": [],
+    "prerequisite": null,
+    "publisher": "Community",
+    "description": "A solution framework to manage one or more FortiManagers and attached Fortinet Devices. Build a ZTP Flow that will perform onboarding, lifecycle, and/or offboarding objectives for devices. Create a single pane of glass dashboard for multiple FortiManagers and attached devices. Create reports for devices using jinja to simplify data collection. Interact with external users and/or systems to collect device metadata required for various tasks.",
+    "help": null,
+    "category": [],
+    "supportInfo": null,
+    "iconLarge": null,
+    "postInstallConfig": null,
+    "date": "2023-06-30T20:42:28+00:00",
+    "contents": {
+        "picklistNames": [
+            {
+                "name": "EnableDisable"
+            },
+            {
+                "name": "Script Type"
+            },
+            {
+                "name": "ZTP Assignment Mode"
+            },
+            {
+                "name": "ZTP Assignment Search Field"
+            },
+            {
+                "name": "ZTP Assignment Search Type"
+            },
+            {
+                "name": "ZTP Phase"
+            },
+            {
+                "name": "ZTP Profile Mode"
+            }
+        ],
+        "modules": {
+            "announcements": {
+                "name": "Announcements",
+                "apiName": "announcements"
+            },
+            "devices": {
+                "name": "Devices",
+                "apiName": "devices"
+            },
+            "managers": {
+                "name": "Managers",
+                "apiName": "managers"
+            },
+            "metafield_templates": {
+                "name": "Metafield Templates",
+                "apiName": "metafield_templates"
+            },
+            "scripts": {
+                "name": "Scripts",
+                "apiName": "scripts"
+            },
+            "z_t_p_profiles": {
+                "name": "ZTP Profiles",
+                "apiName": "z_t_p_profiles"
+            }
+        },
+        "viewTemplates": {
+            "managers": {
+                "name": "Managers",
+                "apiName": "managers",
+                "views": [
+                    "list",
+                    "detail",
+                    "form"
+                ]
+            },
+            "metafield_templates": {
+                "name": "Metafield Templates",
+                "apiName": "metafield_templates",
+                "views": [
+                    "list",
+                    "detail",
+                    "form"
+                ]
+            },
+            "scripts": {
+                "name": "Scripts",
+                "apiName": "scripts",
+                "views": [
+                    "list",
+                    "detail",
+                    "form"
+                ]
+            },
+            "z_t_p_profiles": {
+                "name": "ZTP Profiles",
+                "apiName": "z_t_p_profiles",
+                "views": [
+                    "list",
+                    "detail",
+                    "form"
+                ]
+            }
+        },
+        "roles": [
+            {
+                "name": "FortiManager-Playbook"
+            },
+            {
+                "name": "FortiManager-Admin"
+            }
+        ],
+        "playbooks": [
+            {
+                "name": "FortiManager(FMG)-Buttons"
+            },
+            {
+                "name": "FortiManager(FMG)-CustomPlaybooks"
+            },
+            {
+                "name": "FortiManager(FMG)-Microservices"
+            },
+            {
+                "name": "FortiManager(FMG)-PlayGround"
+            },
+            {
+                "name": "FortiManager(FMG)-RecordHandlers"
+            },
+            {
+                "name": "FortiManager(FMG)-Synchronizing"
+            },
+            {
+                "name": "FortiManager(FMG)-Triggers"
+            }
+        ],
+        "globalVariables": [
+            {
+                "id": 7,
+                "name": "Server_fqhn",
+                "value": "10.99.230.22",
+                "default_value": "master.fortisoar.in"
+            }
+        ],
+        "playbookBlocks": [
+            {
+                "name": "Dynamic Manager and Device List"
+            }
+        ],
+        "dashboards": [
+            {
+                "name": "FortiManager Device Assignments - By ZTP Profile"
+            },
+            {
+                "name": "FortiManager Device Config and Policy Manager"
+            },
+            {
+                "name": "FortiManager Device Metadata Assignments and Data"
+            },
+            {
+                "name": "FortiManager Device Metadata Manager"
+            },
+            {
+                "name": "FortiManager Device Metafield Templates"
+            },
+            {
+                "name": "FortiManager Metadata Assignments"
+            },
+            {
+                "name": "FortiManager Product Details"
+            },
+            {
+                "name": "FortiManager ZTPF Docs - Main"
+            },
+            {
+                "name": "FortiManager ZTPF Docs - Metafield Sources"
+            },
+            {
+                "name": "FortiManager ZTPF Docs - ZTP Profiles"
+            },
+            {
+                "name": "FortiManager ZTP Profile and Phase for Devices"
+            },
+            {
+                "name": "FortiManager ZTP Profile and Phase Summary"
+            }
+        ],
+        "connectors": [
+            {
+                "name": "Code Snippet",
+                "apiName": "code-snippet"
+            },
+            {
+                "name": "Fortinet FortiManager Custom",
+                "apiName": "fortinet-fortimanager_dev",
+                "version": "3.0.0"
+            }
+        ],
+        "recordSets": [
+            {
+                "name": "Announcements",
+                "apiName": "announcements",
+                "count": 1
+            }
+        ]
+    }
+}

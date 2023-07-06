@@ -1,0 +1,318 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "primaryDetail",
+                                "config": {
+                                    "wid": "b64f334a-2ff3-4adc-b539-8a4c1653a21b",
+                                    "idField": "managerName",
+                                    "picklistFieldReadOnly": false,
+                                    "titleFieldReadOnly": true,
+                                    "featuredRelationship": {
+                                        "field": null,
+                                        "preText": "Under Investigation In",
+                                        "query": null,
+                                        "statusField": null,
+                                        "sort": []
+                                    }
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "d63153ad-7f64-436e-b768-649ffef92d0e",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "d524020b-12f7-42ca-bfd5-c733fe524cb6",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "adminStatus",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "managerName",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "managerIP",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "platform",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "sN",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "recordTags",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "firmware",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "aDOMMode",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "timeZone",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "licenseStatus",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "maxADOMS",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "maxDevices",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "createUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "createDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "adminRpcUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "adminRpcPassword",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "12611583-f2e8-45ec-8123-86ffad2c6899",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "tabs",
+                                "config": {
+                                    "tabs": [
+                                        {
+                                            "title": "Description",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "6b9ca5d1-10da-4fd1-918e-7847c28399eb",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "description",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-12"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "fa fa-file-text-o",
+                                            "show": false,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Manager Metadata",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "e9fdcb86-636c-41b4-9ea1-dd3305c413b4",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "managerMetadata",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false,
+                                                                            "renderWidget": "json",
+                                                                            "renderWidgetHeight": 500
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "icon icon-json",
+                                            "show": true,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Source Data",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "80ceb3e7-59af-44b8-9924-98160ee8120c",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "sourceData",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": true,
+                                                                            "renderWidgetHeight": 600,
+                                                                            "renderWidget": "json"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "icon icon-source-code",
+                                            "show": false,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Related Records",
+                                            "widget": {
+                                                "type": "relationship.subtab",
+                                                "config": {
+                                                    "excludes": [
+                                                        "notes",
+                                                        "comments",
+                                                        "userOwners",
+                                                        "attachments"
+                                                    ],
+                                                    "wid": "c19e6cc9-7848-4328-916a-50bd23d138dc"
+                                                }
+                                            },
+                                            "show": false,
+                                            "visible": true,
+                                            "icon": "icon icon-relationships"
+                                        },
+                                        {
+                                            "title": "All Fields",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableForm",
+                                                "config": {
+                                                    "wid": "2403f180-1124-4d1e-8cb0-b149fdc50703"
+                                                }
+                                            },
+                                            "icon": "icon icon-expand",
+                                            "show": true,
+                                            "visible": true
+                                        }
+                                    ],
+                                    "wid": "5a3c43af-07dd-4c52-a7de-22ce383932f9"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "6f7892b9-d13d-46b8-a839-55350a32e925",
+                "_collapsed": false
+            }
+        ],
+        "actionButtons": [
+            {
+                "id": "\/api\/3\/workflows\/0317a44c-f854-4c2a-909c-755fcfdc5fb6",
+                "name": "Synch FMG Managers Button - by record",
+                "icon": "fa fa-refresh"
+            },
+            {
+                "id": "\/api\/3\/workflows\/ec0399b0-75bc-436a-bd88-f4b612bd3995",
+                "name": "Synch FMG Manager DeviceDB Button - by record",
+                "icon": "icon icon-refresh"
+            }
+        ],
+        "wid": "d1753c94-c628-4e6d-97e5-2dc705c982fc",
+        "metadata": []
+    },
+    "uuid": "modules-managers-detail"
+}

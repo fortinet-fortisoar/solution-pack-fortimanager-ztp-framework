@@ -1,0 +1,8 @@
+[
+    {
+        "id": 7,
+        "name": "Server_fqhn",
+        "value": "10.99.230.22",
+        "default_value": "master.fortisoar.in"
+    }
+]

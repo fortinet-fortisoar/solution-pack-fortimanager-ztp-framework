@@ -1,0 +1,79 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "d61bc75d-ad4b-494f-93ab-62ddc78ed466",
+    "displayName": "FortiManager ZTPF Docs - ZTP Profiles",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "5baf4f1c-56f9-41d6-815c-e5e77b7f2d47",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p>Quick Links<\/p>\n<p><span title=\"Announcements ID 1 - Description\" class=\"cs-richtext-field\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "70864727-aefd-4fc2-8a68-4cf17cd51c07",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "0ed2efd1-09de-4c77-82d5-3c9ccb5dd929",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "markdown",
+                                    "sectionText": "**Phases**\n| Authorize -> | Device Metadata -> | Device Groups -> | Run Linked Scripts -> | Install Device Config -> | Install Policy Package -> | Complete |\n| --- | --- | --- | --- | --- | --- | --- |\n| Authorize Device if needed. If the device is modeled we skip to the next step. If the ADOM is not set we assume `root`. | Handle Device Metadata which includes notifying users that required info is missing. | Add Device to Device Groups defined in the ZTP Profile and\/or the Device Metadata. | Run all scripts linked to the device record. Scripts are not unlinked but ZTP Profiles can clear linked scripts to prevent running scripts multiple times that should only be run once. | Install the Device Config from the FMG API. | Install the Policy Package from the FMg API. The Policy Package name can be set from the Device Metadata, the ZTP Profile, or will default to the Device Name from the Device Record. |  Process Complete.  | \n\n-----------\n\n**ZTP Profile Modes**\n| Mode  | Description  |\n| --- | --- |\n| Disable |  Not in use. |\n| Manual | Designed to run one phase on entry or manually run any phase on demand from the profile itself. |\n| Onboard | When assigned runs all the phases from inside the step map. |\n| LifeCycle | Runs on change of device states when assigned to a device. |\n| Decommision | At assignment runs all phases from the step map and finishes by deleting the device from FMG by default. |\n\n-----------\n\n**Device Metafield Overrides**\n| Field  | Order | Description | \n| --- | --- | --- |\n| device_groups | ZTP Profile -> Device Metadata | Append device groups to list without duplicating. |\n| policy_package | Device Metadata -> ZTP Profile -> Device Record -> Device Name | Chooses the name of the policy package to use in the ZTP Phases based on this order of being said.  |"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "4acb31f5-95e5-4716-8962-6fc62606eb68",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            }
+        ],
+        "wid": "7acf6c4a-0731-41cc-a4aa-133f105c7dee",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        }
+    },
+    "filterArray": [],
+    "updateDate": null
+}

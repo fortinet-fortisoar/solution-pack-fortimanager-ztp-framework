@@ -1,0 +1,173 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "663dc13b-9a25-4cc9-af85-ed46609e0d4f",
+    "displayName": "FortiManager ZTP Profile and Phase for Devices",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [
+        "\/api\/3\/roles\/c57340f1-c387-474b-9c24-effc9e3c41aa"
+    ],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "f8ba8937-b395-434a-a731-19968c68b895",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p><span class=\"cs-richtext-field\" title=\"Announcements ID 1 - Description\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "17e1798b-283c-4b9c-a11d-679e1c3bc918",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "markdown",
+                                    "sectionText": "# ZTP Profile and Phase for Devices\n\n* If there is a `ZTP Phase Started` time the device is currently executing a ZTP Phase as identified by the `ZTP Phase` field. \n* If there is a `ZTP Phase Completed` time then the device has recently completed a ZTP Phase \n* **ZTP Profiles** are removed, or set to `None`, by default unless the ZTP Profile has `Retain Profile Assignment` enabled. If the system has a backlog of executions then removing a completed ZTP Profile, which comes from a record trigger, might take some time as the system catches up.  \n\nUse the Dashboard link to `ZTP Profile and Phase Summary`, on the left, to see a Summary of all devices and their respective ZTP Profiles and Phases."
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "8b6203f5-fea3-4592-a7f7-8f663e7fd2d0",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "grid",
+                                "config": {
+                                    "wid": "a239503b-c7b2-4b0c-b518-79a4bd18b6e8",
+                                    "module": "devices",
+                                    "columns": [
+                                        "managers",
+                                        "deviceName",
+                                        "managementModeHTML",
+                                        "vDOM",
+                                        "zTPProfiles",
+                                        "deviceMetadataHTML",
+                                        "zTPPhase",
+                                        "zTPPhaseStarted",
+                                        "zTPPhaseCompleted",
+                                        "zTPPhaseLast",
+                                        "zTPStatusHTML"
+                                    ],
+                                    "expandableCol": [
+                                        {
+                                            "openTab": false,
+                                            "name": "deviceMetadataHTML"
+                                        },
+                                        {
+                                            "openTab": false,
+                                            "name": "reportMarkdown"
+                                        }
+                                    ],
+                                    "relationshipField": [],
+                                    "checkboxStatus": true,
+                                    "editableFields": false,
+                                    "actionButtons": [
+                                        {
+                                            "id": "\/api\/3\/workflows\/42e6e0f7-2ff2-4fc3-b2b1-c7aa6cf8c7ef",
+                                            "name": "Start ZTP Phase on Device",
+                                            "icon": "icon icon-running-playbooks"
+                                        }
+                                    ],
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "direction": "DESC",
+                                                "field": "zTPPhaseCompleted",
+                                                "_fieldTitle": "ZTP Phase Completed",
+                                                "_fieldName": "zTPPhaseCompleted"
+                                            }
+                                        ],
+                                        "limit": 1000,
+                                        "logic": "OR",
+                                        "filters": [
+                                            {
+                                                "logic": "AND",
+                                                "filters": [
+                                                    {
+                                                        "field": "zTPPhaseCompleted",
+                                                        "operator": "gt",
+                                                        "value": "{{getRelativeDate(0,0,0,0,-15,\"end\")}}",
+                                                        "type": "datetime"
+                                                    }
+                                                ],
+                                                "_field": "zTPPhaseCompleted",
+                                                "_value": {
+                                                    "differenceType": "mins",
+                                                    "differenceValue": -15
+                                                },
+                                                "_operator": "gt",
+                                                "type": "datetime"
+                                            },
+                                            {
+                                                "field": "zTPPhaseStarted",
+                                                "value": "false",
+                                                "operator": "isnull",
+                                                "type": "datetime"
+                                            },
+                                            {
+                                                "field": "zTPProfiles",
+                                                "operator": "isnull",
+                                                "value": "false",
+                                                "_value": {
+                                                    "display": "",
+                                                    "itemValue": "",
+                                                    "@id": "false"
+                                                },
+                                                "type": "object"
+                                            }
+                                        ]
+                                    },
+                                    "title": "Devices with ZTP Phases",
+                                    "enableHorizontalScroll": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "ee6302d7-8d07-4e1f-8669-fd50b2edf4e8",
+                "_collapsed": false
+            }
+        ],
+        "wid": "7c2df80f-9fa5-4e57-92fd-d3209a34ed3a",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        },
+        "readOnlyFlag": false,
+        "refreshInterval": 10
+    },
+    "filterArray": [],
+    "updateDate": null
+}

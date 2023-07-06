@@ -1,0 +1,153 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "On Create of Manager Record",
+    "aliasName": null,
+    "tag": null,
+    "description": "On creating a new manager that does have the JSON-RPC Admin filled out then execute.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/5c327ce2-21cc-4a78-bdb8-1edd566042b2",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/69790070-1603-4d6b-95a3-662f3bc57439",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "resource": "managers",
+                "resources": [
+                    "managers"
+                ],
+                "step_variables": {
+                    "input": {
+                        "params": [],
+                        "records": [
+                            "{{vars.input.records[0]}}"
+                        ]
+                    }
+                },
+                "fieldbasedtrigger": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "type": "primitive",
+                            "field": "adminRpcPassword",
+                            "value": "false",
+                            "operator": "isnull",
+                            "_operator": "isnull"
+                        },
+                        {
+                            "type": "primitive",
+                            "field": "adminRpcUser",
+                            "value": "false",
+                            "operator": "isnull",
+                            "_operator": "isnull"
+                        }
+                    ]
+                }
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/ea155646-3821-4542-9702-b246da430a8d",
+            "group": null,
+            "uuid": "69790070-1603-4d6b-95a3-662f3bc57439"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "synch manager info",
+            "description": null,
+            "arguments": {
+                "for_each": {
+                    "item": "{{vars.input.records}}",
+                    "parallel": false,
+                    "condition": ""
+                },
+                "arguments": {
+                    "connector_config": "{{vars.item.managerName}}"
+                },
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/b165d6ba-da8e-47ce-88f6-65b24ae5fc53"
+            },
+            "status": null,
+            "top": "160",
+            "left": "380",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "8d216b5b-5c8c-4b40-9925-e6a1ac0e39b4"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "update connector config",
+            "description": null,
+            "arguments": {
+                "for_each": {
+                    "item": "{{vars.input.records}}",
+                    "parallel": false,
+                    "condition": ""
+                },
+                "arguments": {
+                    "fmg_ip": "{{vars.item.managerIP}}",
+                    "fmg_pass": "{{vars.item.adminRpcPassword}}",
+                    "fmg_user": "{{vars.item.adminRpcUser}}",
+                    "manager_name": "{{vars.item.managerName}}"
+                },
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/a9794bd8-b1a7-4ee8-b79a-b8b93af5a44c"
+            },
+            "status": null,
+            "top": "40",
+            "left": "380",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "3ee5e4d1-6255-4f4f-83a6-561c78abfe5c"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> update connector config",
+            "targetStep": "\/api\/3\/workflow_steps\/3ee5e4d1-6255-4f4f-83a6-561c78abfe5c",
+            "sourceStep": "\/api\/3\/workflow_steps\/69790070-1603-4d6b-95a3-662f3bc57439",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "b9fad3f0-219f-4aca-b03d-0f733bc8cd38"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "update connector config -> sunch manager info",
+            "targetStep": "\/api\/3\/workflow_steps\/8d216b5b-5c8c-4b40-9925-e6a1ac0e39b4",
+            "sourceStep": "\/api\/3\/workflow_steps\/3ee5e4d1-6255-4f4f-83a6-561c78abfe5c",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "5bbca9bc-7411-4270-acff-7864340c7131"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "3a9300f4-2819-416f-b1bc-5cde5f16b61b",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "system",
+        "Trigger",
+        "Managers"
+    ]
+}

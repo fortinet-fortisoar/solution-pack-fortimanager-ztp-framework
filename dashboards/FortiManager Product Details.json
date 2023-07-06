@@ -1,0 +1,234 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "d9772022-ba8b-4351-a707-7b1df8d4eeaf",
+    "displayName": "FortiManager Product Details",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "d9702d71-06aa-4f02-bff1-72257d4cea24",
+                                    "widgetAlwaysDisplay": true,
+                                    "showTabularData": false,
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "platform",
+                                                "field": "platform"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "fieldName": "platform"
+                                    },
+                                    "assignedToSetting": "all",
+                                    "aggregate": true,
+                                    "title": "Total Platforms",
+                                    "resource": "devices",
+                                    "chart": "donut",
+                                    "showCount": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "436a054e-a479-4616-97e5-a5e583545d00",
+                                    "widgetAlwaysDisplay": true,
+                                    "showTabularData": false,
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "managers.managerName",
+                                                "direction": "ASC"
+                                            },
+                                            {
+                                                "field": "platform",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "select",
+                                                "alias": "managers__managerName",
+                                                "field": "managers.managerName"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "managers__uuid",
+                                                "field": "managers.uuid"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "platform",
+                                                "field": "platform"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "firstGrouping": "managers",
+                                        "secondGrouping": "platform"
+                                    },
+                                    "assignedToSetting": "all",
+                                    "aggregate": true,
+                                    "title": "FortiGate Platforms by Manager",
+                                    "resource": "devices",
+                                    "chart": "bar"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    }
+                ],
+                "wid": "5ca1fb88-dcaf-4759-b3ec-155f705e81d5",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "21cc7abb-9d11-481c-b58a-096f17f09c63",
+                                    "widgetAlwaysDisplay": true,
+                                    "showTabularData": false,
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "firmware",
+                                                "field": "firmware"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "fieldName": "firmware"
+                                    },
+                                    "assignedToSetting": "all",
+                                    "aggregate": true,
+                                    "title": "Total Firmware",
+                                    "resource": "devices",
+                                    "chart": "donut",
+                                    "showCount": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "311532d5-b60b-4ac4-91ca-615942f1d53a",
+                                    "widgetAlwaysDisplay": true,
+                                    "showTabularData": false,
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "managers.managerName",
+                                                "direction": "ASC"
+                                            },
+                                            {
+                                                "field": "firmware",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "select",
+                                                "alias": "managers__managerName",
+                                                "field": "managers.managerName"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "managers__uuid",
+                                                "field": "managers.uuid"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "firmware",
+                                                "field": "firmware"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "firstGrouping": "managers",
+                                        "secondGrouping": "firmware"
+                                    },
+                                    "assignedToSetting": "all",
+                                    "aggregate": true,
+                                    "title": "FortiGate Firmware by Manager",
+                                    "resource": "devices",
+                                    "chart": "bar"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    }
+                ],
+                "wid": "7ed21397-fe09-4445-88fa-f6ed4da540ad",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            }
+        ],
+        "wid": "1690986a-7a18-41b6-a1dd-a267a457a77c",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        }
+    },
+    "filterArray": [],
+    "updateDate": null
+}

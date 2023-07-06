@@ -1,0 +1,593 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "08109de5-c682-4b52-b84b-427252a7f7fa",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "name",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "description",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "recordTags",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "createUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "createDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Summary"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "db22defe-b213-476c-80bb-bb22367a438d",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "0c0df006-1f93-466f-96ef-a7e3cab89524",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "orderPriority",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "assignmentMode",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "assignmentSearchType",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "assignmentSearchField",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "assignmentSearch",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "clearLinkedScripts",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "clearLinkedMetafieldTemplates",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "clearDeviceMetadata",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "clearDeviceReports",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "exportMetadataToFortiManager",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "retainProfileAssignment",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "skipDeleteDevice",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Profile Settings"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "f2acc7ac-d9e8-45f9-8775-ead7445a16c2",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "aDOM",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "deviceGroups",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "provisioningTemplateGroup",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "policyPackage",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "profileMode",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "zTPPhaseStart",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "zTPStepMap",
+                                                            "highlightMode": false,
+                                                            "readOnly": true,
+                                                            "renderWidget": "json",
+                                                            "renderWidgetHeight": 300
+                                                        },
+                                                        {
+                                                            "name": "zTPProfileNext",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "deviceMetadataMonitorRegex",
+                                                            "highlightMode": true,
+                                                            "readOnly": true,
+                                                            "renderWidget": "json"
+                                                        },
+                                                        {
+                                                            "name": "deviceMetadataMonitorInterval",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "incompleteMetafieldEmailEnable",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "incompleteMetafieldEmail",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "incompleteMetafieldDeviceMetadataField",
+                                                            "highlightMode": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Provisioning Settings"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    }
+                ],
+                "wid": "e6f4ef1c-ee0a-4adc-b1dd-1345aea676e0",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "relationship.lineItem",
+                                "config": {
+                                    "wid": "11e27860-145f-4b1c-9218-5fb539bd4524",
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "direction": "ASC",
+                                                "field": "orderPriority"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "name"
+                                            }
+                                        ],
+                                        "limit": 20,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": ""
+                                    },
+                                    "assignedToSetting": "all",
+                                    "columns": [
+                                        {
+                                            "column_name": "orderPriority",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "name",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "recordTags",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "metafieldTemplate",
+                                            "display_type": "inline"
+                                        },
+                                        {
+                                            "column_name": "metadataSources",
+                                            "display_type": "inline"
+                                        }
+                                    ],
+                                    "title": "Metafield Templates",
+                                    "module": "metafield_templates",
+                                    "fieldName": "metafieldTemplates"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "relationship.lineItem",
+                                "config": {
+                                    "wid": "ccb5843e-5fdb-4908-8e24-cfa66bd98851",
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "direction": "ASC",
+                                                "field": "orderPriority"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "scriptName"
+                                            }
+                                        ],
+                                        "limit": 20,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": ""
+                                    },
+                                    "assignedToSetting": "all",
+                                    "columns": [
+                                        {
+                                            "column_name": "orderPriority",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "scriptName",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "scriptType",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "recordTags",
+                                            "display_type": "block"
+                                        },
+                                        {
+                                            "column_name": "script",
+                                            "display_type": "inline"
+                                        },
+                                        {
+                                            "column_name": "scriptMetadataSources",
+                                            "display_type": "inline"
+                                        }
+                                    ],
+                                    "title": "Script Templates",
+                                    "module": "scripts",
+                                    "fieldName": "scripts"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-6"
+                    }
+                ],
+                "wid": "ab21e1eb-55f7-499a-9962-2f58bde74ee3",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "tabs",
+                                "config": {
+                                    "tabs": [
+                                        {
+                                            "title": "Related Records",
+                                            "widget": {
+                                                "type": "relationship.subtab",
+                                                "config": {
+                                                    "excludes": [
+                                                        "notes",
+                                                        "comments",
+                                                        "userOwners",
+                                                        "attachments"
+                                                    ],
+                                                    "wid": "313b13c8-447b-47d5-b34e-cfa722592d6f"
+                                                }
+                                            },
+                                            "show": true,
+                                            "visible": true,
+                                            "icon": "icon icon-relationships"
+                                        },
+                                        {
+                                            "title": "ZTP Profile Settings",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "db3a3912-fcf4-4e40-a7e4-d9bf7a55af02",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "orderPriority",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "assignmentMode",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "assignmentSearchType",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "assignmentSearchField",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "assignmentSearch",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-4"
+                                                                },
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "profileMode",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "zTPPhaseStart",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "zTPProfileNext",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "zTPStepMap",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false,
+                                                                            "renderWidget": "json"
+                                                                        },
+                                                                        {
+                                                                            "name": "deviceMetadataMonitorRegex",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false,
+                                                                            "renderWidget": "json"
+                                                                        },
+                                                                        {
+                                                                            "name": "deviceMetadataMonitorInterval",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-4"
+                                                                },
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "clearLinkedScripts",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "clearLinkedMetafieldTemplates",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "clearDeviceMetadata",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "clearDeviceReports",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "exportMetadataToFortiManager",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "retainProfileAssignment",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "skipDeleteDevice",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "incompleteMetafieldEmailEnable",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "incompleteMetafieldEmail",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        },
+                                                                        {
+                                                                            "name": "incompleteMetafieldDeviceMetadataField",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-4"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "title": "Edit Profile Settings that are Read-Only in the Record Display"
+                                                }
+                                            },
+                                            "icon": "icon icon-settings",
+                                            "show": true,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "All Fields",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableForm",
+                                                "config": {
+                                                    "wid": "4b4fe3fe-a289-4ceb-b5ea-d886237a29ee"
+                                                }
+                                            },
+                                            "icon": "icon icon-expand",
+                                            "show": false,
+                                            "visible": true
+                                        }
+                                    ],
+                                    "wid": "b43aa43a-e2a1-4b1b-a5b3-fd36d22202ad"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "502ce7c9-291e-4b50-ae00-4b5d518b3e3b",
+                "_collapsed": false
+            }
+        ],
+        "actionButtons": [],
+        "wid": "980d0ea1-63ac-403d-b017-3f4c7e42eb52",
+        "metadata": []
+    },
+    "uuid": "modules-z_t_p_profiles-detail"
+}
