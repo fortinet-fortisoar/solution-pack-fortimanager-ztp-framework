@@ -479,7 +479,8 @@
                                                                             "name": "zTPStepMap",
                                                                             "highlightMode": true,
                                                                             "readOnly": false,
-                                                                            "renderWidget": "json"
+                                                                            "renderWidget": "json",
+                                                                            "renderWidgetHeight": 500
                                                                         },
                                                                         {
                                                                             "name": "deviceMetadataMonitorRegex",

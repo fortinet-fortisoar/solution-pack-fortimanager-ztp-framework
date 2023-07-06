@@ -1,10 +1,10 @@
 {
-    "name": "fortiManagerZTPFlowDev",
-    "version": "1.0.1",
+    "name": "fortiManagerZTPFlow",
+    "version": "1.0.2",
     "fsrMinCompatibility": "7.4.0",
     "type": "solutionpack",
     "local": true,
-    "label": "FortiManager ZTP Flow Dev",
+    "label": "FortiManager ZTP Flow",
     "dependencies": [],
     "prerequisite": null,
     "publisher": "Community",
@@ -14,7 +14,7 @@
     "supportInfo": null,
     "iconLarge": null,
     "postInstallConfig": null,
-    "date": "2023-06-30T20:42:28+00:00",
+    "date": "2023-07-06T21:23:32+00:00",
     "contents": {
         "picklistNames": [
             {

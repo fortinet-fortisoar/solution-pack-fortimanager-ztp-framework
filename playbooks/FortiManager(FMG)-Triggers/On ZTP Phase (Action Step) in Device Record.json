@@ -91,7 +91,7 @@
                 "device_metadata": "{{vars.input.records[0].deviceMetadata}}",
                 "device_metadata_total": "{{vars.input.records[0].deviceMetafieldTotal}}",
                 "device_metadata_completed": "{{vars.input.records[0].deviceMetafieldCompleted}}",
-                "device_metadata_monitor_regex": "{{vars.input.records[0].zTPProfiles.deviceMetadataMonitorRegex}}"
+                "device_metadata_monitor_regex": "{{vars.input.records[0].zTPProfiles.deviceMetadataMonitorRegex|default({})}}"
             },
             "status": null,
             "top": "140",
@@ -147,7 +147,7 @@
             "name": "metadata_monitor",
             "description": null,
             "arguments": {
-                "metadata_monitor_test": "{# \n  Create an index of metafield matches. \n    match_count:\n    no_match_count:\n    results: field=true or false\n#}\n{%- set md = vars.device_metadata -%}\n{%- set mdrx_data = vars.device_metadata_monitor_regex -%}\n{%- set idx = {} -%}\n{%- set _do = idx.update({\"match_count\":0,\"no_match_count\":0,\"no_match_count\":0}) -%}\n{%- set rxsearch = {} -%}\n{%- for rxk in mdrx_data -%}\n  {%- if rxk in md -%}\n    {%- if md[rxk] | regex_search(mdrx_data[rxk]) -%}\n      {%- set _do = rxsearch.update({rxk:True}) -%}\n        {%- set _do = idx.update({\"match_count\":idx.match_count+1}) -%}\n      {% else -%}\n        {%- set _do = rxsearch.update({rxk:False}) -%}\n        {%- set _do = idx.update({\"no_match_count\":idx.no_match_count+1}) -%}\n    {%- endif -%}\n  {% endif -%}\n{%- endfor -%}\n{%- set _do = idx.update({\"results\":rxsearch}) -%}\n{{idx}}"
+                "metadata_monitor_test": "{# \n  Create an index of metafield matches. \n    match_count:\n    no_match_count:\n    results: field=true or false\n#}\n{%- set md = vars.device_metadata -%}\n{%- set idx = {} -%}\n{%- set _do = idx.update({\"match_count\":0,\"no_match_count\":0,\"no_match_count\":0}) -%}\n{%- set mdrx_data = vars.device_metadata_monitor_regex -%}\n{%- if mdrx_data != None -%}\n  {%- set rxsearch = {} -%}\n  {%- for rxk in mdrx_data -%}\n    {%- if rxk in md -%}\n      {%- if md[rxk] | regex_search(mdrx_data[rxk]) -%}\n        {%- set _do = rxsearch.update({rxk:True}) -%}\n          {%- set _do = idx.update({\"match_count\":idx.match_count+1}) -%}\n        {% else -%}\n          {%- set _do = rxsearch.update({rxk:False}) -%}\n          {%- set _do = idx.update({\"no_match_count\":idx.no_match_count+1}) -%}\n      {%- endif -%}\n    {% endif -%}\n  {%- endfor -%}\n  {%- set _do = idx.update({\"results\":rxsearch}) -%}\n{%- endif -%}\n{{idx}}"
             },
             "status": null,
             "top": "300",
