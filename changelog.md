@@ -1,150 +1,143 @@
 # Change Log
-- 202306300429
+- 20230706
+  - Fix bug related to a null monitor regex field in ztp profiles.
+
+- 20230630
   - Add custom playbook for reading spreadsheet files attached as metadata types.
 
-- 202306290520
+- 20230629
   - Add Retrieve Device Config Phase and Tested.
 
-- 202306140940
+- 20230614
   - Add monitor metadata support.
 
-- 202306130429
+- 20230613
   - Add support for custom playbook metadata sources. 
 
-- 202306070550
+- 20230607
   - Add metadata monitor regex fields and logic. Fixed device in device group bug. 
 
-- 202306010456
+- 20230601
   - Add script error handling. ZTP Phases now go to "Fail" if a joining step has errors. 
 
-- 202305310506
+- 20230531
   - Add error passing on script run to implement error handling. 
 
-- 202305300523
+- 20230530
   - Add support for Report Script Templates. 
 
-- 202305190255
+- 20230519
   - Create Packages if not defined and packages will be named by the device if not defined. 
 
-- 202305150505
+- 20230515
   - First addition to prompting user for metafield on create.
   - Updated the auto assign profile. 
 
-- 202305120526
+- 20230512
   - Add toggle for profile removals.
   - Add new playbooks for metafield handling and for auto assign options.
 
-- 202305110404
+- 20230511
   - Add logic to allow for chainint ZTP Profiles together. 
 
-- 202305090500
+- 20230509
   - Tweak ZTP Auto Assignment and add Step Configuration. 
 
-- 202305080458
+- 20230508
   - Added ZTP Trigger master playbook and implemented first assumed update path. 
 
-- 202305041112
+- 20230504
   - Add new ZTP Phases and begin the ZTP Phase trigger system. 
 
-- 202304280608
+- 20230428
   - Add ZTP Assignment and Mode picklists.
 
-- 202304270403
+- 20230427
   - Rename lots of buttons.
   - Added ZTP Phase data fields. 
 
-- 202304251159
+- 20230425
   - Running Provisioning Templates now assigns devices to groups and uses the ZTP Profile Template Group Name if set...otherwise use the devname. 
 
-- 202304240533
+- 20230424
   - Added lots of provision template playbooks. 
 
-- 202304190457
+- 20230419
   - ZTP Profiles run a link and metadata merge on change. 
 
-- 202304170507
+- 20230417
   - Metdata templates now also support rendering per device.
 
-- 202304140318
+- 20230414
   - Add Metafield Templates and ZTP Profiles.
   - Add RPC Set to Connector.
   - Add playbooks for managing variables. 
 
-- 202304131036
+- 20230413
   - Add record link from managers to devices. 
 
-- 202304120915
+- 20230412
   - Synch Managers now...also now can communicated with FortiCloud. 
   - Can manage metadata keys using records.
   - Support import and export of metafields
 
-- 202304110456
+- 20230411
   - Added metadata key add and delete functions. 
 
-- 202304100415
+- 20230410
   - Add device fields for provisioning and pkg.
 
-- 202304070423
+- 20230407
   - Add script to run on device option. 
-
-- 202304070904
   - Add script to do dynamic var lookups.
 
-- 202304060914
+- 20230406
   - Tweak the create and execute script to function as desired. 
 
-- 202304050458
+- 20230405
   - Export wizard always leaves off new fields.
   - Missing some script module fields now added.
 
-- 202304050456
+- 20230405
   - Create new Script Module and Handle Create/Exec Script
-
-- 202304051158
   - Add run script button. 
   - Migrate install and run script to handle one or more devices.
 
-- 202303310447
+- 20230331
   - Post upgrade 7.4.0.
   - Add spinner to install too.
   - Cleanup of some playbook views.
 
-- 202303290444
+- 20230329
   - Add status spinner.
   - 2x ways to API to FOS.
   - Set devices to delete if no longer found. 
 
-- 202303280400
+- 20230328
   - FOS Helper playbooks now use the util http instead of the http connector. 
 
-- 202303270503
+- 20230327
   - Add config management dashboard. 
  
-- 202303240300
+- 20230324
   - Add connection status as html.
 
-- 202303231141
+- 20230323
   - Repair missing fields from Export wizard. 
-
-- 202303231115
   - Add new button to FMG devices that have been deleted.
-
-- 202303231100
   - Add new playbook, FOS Helpers, for bootstrapping the FMG config on the FG. 
 
-- 202303220454
+- 20230322
   - Move status fields to an html and text version. 
   - Add source data field to devices. 
   - Change button logic to match status fields. 
 
-- 202303201042
+- 20230320
   - Support comma seperated configs on db synch.
   - Delete now also clears status fields. 
 
-- 202303170601
+- 20230317
   - Add synch with status in the playbook.
-
-- 202303170332
   - Multitenant support. 
   - Device Records with comments.
   - Playbooks inclue synch, auth, and delete.
