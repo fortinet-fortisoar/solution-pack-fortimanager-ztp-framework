@@ -1,6 +1,4 @@
-[README](../README.md)
-
-# Example 1
+# [README](../README.md) -> Example 1
 
 ## Unauthorized Devices
 Devices in FortiManager are synchronized to FortiSOAR for handling. 
