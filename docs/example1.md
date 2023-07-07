@@ -7,12 +7,12 @@ In this example we will perform the following provisioning steps on 4x FortiGate
   1) Authorize the FortiGates for management.
   2) Create a pre provisioning device report.
   3) Create local admins with a special `admin_ro` profile. 
-  4) Create VLAN interfaces using a site subnet variable and a VLAN count variable per site. 
+  4) Create VLAN interfaces using a `site_subnet`, `vlan_count`, and `vlan_cidr` variable per site. 
   5) Append all created VLAN Subnets to the site admins using the `admin_ro` profile. 
-  5) Assign each site to the respective `Device Groups`, `Provisioning Template Groups`, and `Policy Package`. 
-  6) Create FortiManager Address Objects for each VLAN at each site. 
-  7) Update the FortiManager Address Group `VLANS` with per Device Mapping of each VLAN at each site to update the FortiMaanger `Policy Package`. 
-  8) Push all the configurations to the site. 
+  5) Assign each site to the respective `Device Groups`, `Provisioning Template Groups`, and `Policy Package` inside FortiManager. 
+  6) Create FortiManager `Address Objects` for each VLAN at each site. 
+  7) Update the FortiManager Address Group `VLANS` with `Per Device Mapping` of each VLAN at each site to update the FortiMaanger `Policy Package`. 
+  8) Push all the configurations to the site via FortiManager using the `Install Device Config` and `Install Policy Package` features in FortiManager. 
 
 ## Unauthorized Devices
 Devices in FortiManager are synchronized to FortiSOAR for handling. 
@@ -21,9 +21,11 @@ Devices in FortiManager are synchronized to FortiSOAR for handling.
 
 ## Assign ZTP Profile
 We will manually select these devices and manually assign the ZTP Profile `Report-and-Onboard`. 
+
 ![](./images/ex1-002.png)
 
 The ZTP Profile describes the steps to be used in the `ZTP Step Map` settings. 
+
 ![](./images/ex1-003.png)
 
 ## Authorize Devices
@@ -54,14 +56,17 @@ Once assigned new phases will start on the devices. Here we can see that device 
 ## FortiManager Setup is Complete
 
 The devices in FortiManager are assigned and green. 
+
 ![](./images/ex1-011.png)
 
 The FortiManager Address Object has been updated with subnets from each site. 
+
 ![](./images/ex1-012.png)
 
 ## ZTP Flow (ZTPF) is Complete
 
 The provisioning in this example used a total of 4 ZTP Profiles to completely onboard each site. Each profile defined instructions for provisioning and can be assigned at any time. Therefore, sites already onboarded or simply modified, can be assigned any ZTP Profile to kick off the same instructions at any time. 
+
 ![](./images/ex1-013.png)
 
 Once complete we can use reporting to confirm that we have provisioned everything as expected. This report can be invoked by assigning the last ZTP Profile, `Device-Post-Report`, at any time to simply perform a device report. 
