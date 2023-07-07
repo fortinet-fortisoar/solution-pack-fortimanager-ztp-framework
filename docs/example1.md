@@ -2,14 +2,14 @@
 
 ## Provisioning Example Flow
 
-In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unathorized. 
+In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unauthorized. 
 
   1) Authorize the FortiGates for management.
   2) Create a pre provisioning device report.
   3) Create local admins with a special `admin_ro` profile. 
   4) Create VLAN interfaces using a site subnet variable and a VLAN count variable per site. 
   5) Append all created VLAN Subnets to the site admins using the `admin_ro` profile. 
-  5) Assign each site to the repsective `Device Groups`, `Provisioning Template Groups`, and `Policy Package`. 
+  5) Assign each site to the respective `Device Groups`, `Provisioning Template Groups`, and `Policy Package`. 
   6) Create FortiManager Address Objects for each VLAN at each site. 
   7) Update the FortiManager Address Group `VLANS` with per Device Mapping of each VLAN at each site to update the FortiMaanger `Policy Package`. 
   8) Push all the configurations to the site. 
@@ -23,7 +23,7 @@ Devices in FortiManager are synchronized to FortiSOAR for handling.
 We will manually select these devices and manually assign the ZTP Profile `Report-and-Onboard`. 
 ![](./images/ex1-002.png)
 
-The ZTP Profile describes the steps to be used in teh `ZTP Step Map` settings. 
+The ZTP Profile describes the steps to be used in the `ZTP Step Map` settings. 
 ![](./images/ex1-003.png)
 
 ## Authorize Devices
@@ -33,7 +33,7 @@ The ZTP Profile kicks off the first ZTP Phase defined which is `Authorize` the d
 
 ## ZTP Profile for Onboard & Reporting
 
-The ZTP Profile also has tempaltes that will run and in onboarding we run these report scripts. 
+The ZTP Profile also has templates that will run and in onboarding we run these report scripts. 
 
 ![](./images/ex1-003b.png)
 
@@ -61,7 +61,7 @@ The FortiManager Address Object has been updated with subnets from each site.
 
 ## ZTP Flow (ZTPF) is Complete
 
-The provisioning in this example used a total of 4 ZTP Profiles to completley onboard each site. Each profile defined instructions for provisioning and can be assigned at any time. Therefore, sites already onboarded or simply modified, can be assigned any ZTP Profile to kick off the same instructions at any time. 
+The provisioning in this example used a total of 4 ZTP Profiles to completely onboard each site. Each profile defined instructions for provisioning and can be assigned at any time. Therefore, sites already onboarded or simply modified, can be assigned any ZTP Profile to kick off the same instructions at any time. 
 ![](./images/ex1-013.png)
 
 Once complete we can use reporting to confirm that we have provisioned everything as expected. This report can be invoked by assigning the last ZTP Profile, `Device-Post-Report`, at any time to simply perform a device report. 
