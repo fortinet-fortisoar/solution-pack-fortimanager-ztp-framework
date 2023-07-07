@@ -2,7 +2,7 @@
 
 ## Provisioning Example Flow
 
-In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unauthorized using one manual step to kick everythinf off. This manual step can be done automaticaly by changing the first ZTP Profile to `auto assign mode`. 
+In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unauthorized using one manual step to kick everything off. This manual step can be done automatically by changing the first ZTP Profile to `auto assign mode`. 
 
   1) Authorize the FortiGates for management.
   2) Create a pre provisioning device report.
@@ -11,8 +11,8 @@ In this example we will perform the following provisioning steps on 4x FortiGate
   5) Append all created VLAN Subnets to the site admins using the `admin_ro` profile. 
   5) Assign each site to the respective `Device Groups`, `Provisioning Template Groups`, and `Policy Package` inside FortiManager. 
   6) Create FortiManager `Address Objects` for each VLAN at each site. 
-  7) Update the FortiManager Address Group `VLANS` with `Per Device Mapping` of each VLAN at each site to update the FortiMaanger `Policy Package`. 
-  8) Push all the configurations to the site via FortiManager using the `Install Device Config` and `Install Policy Package` features in FortiManager. 
+  7) Update the FortiManager Address Group `VLANS` with `Per Device Mapping` of each VLAN at each site to update the FortiManager `Policy Package`. 
+  8) Push all the configurations to the sites using the `Install Device Config` and `Install Policy Package` features in FortiManager. 
 
 ## Unauthorized Devices
 Devices in FortiManager are synchronized to FortiSOAR for handling. 
@@ -20,7 +20,7 @@ Devices in FortiManager are synchronized to FortiSOAR for handling.
 ![](./images/ex1-001.png)
 
 ## Assign ZTP Profile
-We will manually select these devices and manually assign the ZTP Profile `Report-and-Onboard`. 
+We will first manually select these devices and then assign the ZTP Profile `Report-and-Onboard`. 
 
 ![](./images/ex1-002.png)
 
