@@ -3,6 +3,7 @@
  - **Certified**: unknown
  - **Publisher**: Fortinet CSE
  - **Compatible Version**: FortiSOAR v7.4.1 and later
+ - [**Changelog**](./docs/changelog.md)
 
 # Overview
 
