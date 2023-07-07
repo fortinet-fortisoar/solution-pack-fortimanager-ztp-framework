@@ -2,7 +2,7 @@
 
 ## Provisioning Example Flow
 
-In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unauthorized. 
+In this example we will perform the following provisioning steps on 4x FortiGates that are in FortiManager and Unauthorized using one manual step to kick everythinf off. This manual step can be done automaticaly by changing the first ZTP Profile to `auto assign mode`. 
 
   1) Authorize the FortiGates for management.
   2) Create a pre provisioning device report.
