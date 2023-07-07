@@ -31,3 +31,6 @@ Scripts in FortiSOAR for this Solution Pack can be used for creating customized 
 
 ## ZTP Profiles
 The ZTP Profiles module describes how to handle provisioning of each device maintained by the respective FortiManager. As a device shows up in the FortiManager Device DB, unauthorized or modeled, when ZTP Profiles are assigned to those devices the defined device templates and provisioning steps are applied and reported per device. ZTP Profiles can be assigned on demand or automatically assigned when devices are created in FortiManger regardless of how the devices were created.
+
+# Examples
+ - [Example1](./docs/example1.md): Provision of 4x Unauthorized FortiGates VMs in FortiManager starting by simply assigning a ZTP Profile.
