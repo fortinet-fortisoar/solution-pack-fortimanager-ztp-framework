@@ -7,9 +7,11 @@
 
 # Overview
 
-The FortiManager ZTP Flow (ZTPF) Framework is for streamlining provisioning and operational solutions with multiple FortiManagers. The power of FortiSOAR workflow and automation provides flexible solutions for onboarding, lifecycle, and offboarding objectives. FortiSOAR integrates with one or more FortiManagers via API and consumes asset details to be used for provisioning objectives. 
+The FortiManager ZTP Flow (ZTPF) Framework is a NOSOAR (Not Only SOAR) solution for streamlining provisioning and operational objectives on multiple FortiManagers. The power of FortiSOAR workflow and automation provides flexible solutions for onboarding, lifecycle, and offboarding objectives. FortiSOAR integrates with one or more FortiManagers via API and consumes asset details to be used for provisioning objectives. 
 
 Playbook automations focused on FortiManager functions can streamline common tasks, such as but not limited to, metadata management, provisioning templates, custom device scripts, policy object templates, and device configuration installations. Workflows can be customized to integrate external systems, engage operational teams, or simple respond to conditions of network elements to achieve network operational tasks. Use FortiSOAR as a portal to multiple FortiManagers or run in the background as an automated solution to ensure your Fortinet Security Fabric is managed to your exactly specifications. 
+
+![](./docs/images/fortisoar-fortimanager-summary-visual.png)
 
 # Module Summary
 
