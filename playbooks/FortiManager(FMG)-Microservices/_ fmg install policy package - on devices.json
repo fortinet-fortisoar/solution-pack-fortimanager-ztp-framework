@@ -66,7 +66,7 @@
                 ]
             },
             "status": null,
-            "top": "260",
+            "top": "240",
             "left": "800",
             "stepType": "\/api\/3\/workflow_step_types\/12254cf5-5db7-4b1a-8cb1-3af081924b28",
             "group": null,
@@ -81,7 +81,7 @@
                 "device_scope_test": "{\n      \"name\": \"FG1\",\n      \"vdom\": \"root\"\n    },\n    {\n      \"name\": \"FG2\",\n      \"vdom\": \"root\"\n    },\n    {\n      \"name\": \"FG3\",\n      \"vdom\": \"root\"\n    }"
             },
             "status": null,
-            "top": "300",
+            "top": "320",
             "left": "460",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -95,7 +95,7 @@
                 "fmg_data_payload": "{\n  \"data\": {    \n    \"adom\": \"{{vars.input.params.adom}}\",\n    \"pkg\": \"{{vars.input.params.package}}\",\n    \"flags\": [\"auto_lock_ws\"],\n    \"scope\": {{vars.device_scope}}\n  }\n}"
             },
             "status": null,
-            "top": "400",
+            "top": "420",
             "left": "460",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -133,7 +133,7 @@
                 "workflowReference": "\/api\/3\/workflows\/466ac365-4522-4dfd-8a0d-cb7068fe9565"
             },
             "status": null,
-            "top": "100",
+            "top": "80",
             "left": "460",
             "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
             "group": null,
@@ -159,7 +159,7 @@
                 "step_variables": []
             },
             "status": null,
-            "top": "500",
+            "top": "520",
             "left": "460",
             "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
             "group": null,
@@ -174,7 +174,7 @@
                 "assign_device_flag": "{{vars.input.params['assign_device_flag']|default(True)}}"
             },
             "status": null,
-            "top": "220",
+            "top": "180",
             "left": "460",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,

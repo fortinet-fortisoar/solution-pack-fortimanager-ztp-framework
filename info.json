@@ -1,6 +1,6 @@
 {
     "name": "fortiManagerZTPFlow",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "fsrMinCompatibility": "7.4.0",
     "type": "solutionpack",
     "local": true,
@@ -10,11 +10,22 @@
     "publisher": "Community",
     "description": "A solution framework to manage one or more FortiManagers and attached Fortinet Devices. Build a ZTP Flow that will perform onboarding, lifecycle, and/or offboarding objectives for devices. Create a single pane of glass dashboard for multiple FortiManagers and attached devices. Create reports for devices using jinja to simplify data collection. Interact with external users and/or systems to collect device metadata required for various tasks.",
     "help": null,
-    "category": [],
+    "category": [
+        "Compliance and Reporting",
+        "DevOps and Digital Operations",
+        "Centralized Security Management",
+        "Utilities"
+    ],
     "supportInfo": null,
     "iconLarge": "fsr-icon-large.png",
-    "postInstallConfig": null,
-    "date": "2023-07-07T14:52:09+00:00",
+    "postInstallConfig": {
+        "enabled": false
+    },
+    "recordTags": [
+        "ZTP",
+        "FortiManager"
+    ],
+    "date": "2023-07-07T16:00:36+00:00",
     "contents": {
         "picklistNames": [
             {
