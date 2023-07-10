@@ -47,4 +47,4 @@ If your Manager record worked you should see the FortiManager details auto-popul
 
 ![](images/setup/setup-011.png)
 
-This means you are ready to start synchronizing the FortiManager Device DB and perform actions on those devices.
+You are now ready to start synchronizing the FortiManager Device DB and perform actions on those devices.
