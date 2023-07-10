@@ -6,6 +6,7 @@
    - FortiSOAR v7.4.0 and later
    - FortiManager v7.2.0 and later for full features. Limited features for earlier FortiManager versions. 
  - [**Changelog**](./docs/changelog.md)
+ - **Install**: Follow steps outlined in the [Setup](docs/setup.md) Guide to get started.
 
 # Overview
 
