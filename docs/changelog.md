@@ -1,3 +1,5 @@
+[README](../README.md)
+
 # Change Log
 - 20230607
   - Update device record comments with status/details from install config and policy package. 

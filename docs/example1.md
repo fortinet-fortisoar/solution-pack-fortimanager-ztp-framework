@@ -1,4 +1,4 @@
-# [README](../README.md) -> Example1
+[README](../README.md)
 
 ## Provisioning Example Flow
 

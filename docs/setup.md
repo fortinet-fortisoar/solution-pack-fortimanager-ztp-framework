@@ -1,3 +1,5 @@
+[README](../README.md)
+
 # Setup FortiManager ZTP Flow (ZTPF) Frameworkimages/setup/setup
 
 Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot how you want to use the solution pack. The general order of setup consists of the following tasks and will vary based on what objectives you are trying to accomplish:
