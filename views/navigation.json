@@ -1,0 +1,92 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "app",
+    "config": {
+        "navigation": [
+            {
+                "icon": "icon icon-manual-task",
+                "items": [
+                    {
+                        "title": "Managers",
+                        "require": {
+                            "module": "managers",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "managers"
+                            }
+                        },
+                        "icon": "fa fa-server",
+                        "editMode": false
+                    },
+                    {
+                        "icon": "fa fa-fire",
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "devices"
+                            }
+                        },
+                        "title": "Devices",
+                        "require": {
+                            "action": "read",
+                            "module": "devices"
+                        },
+                        "editMode": false
+                    },
+                    {
+                        "title": "Metafield Templates",
+                        "require": {
+                            "module": "metafield_templates",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "metafield_templates"
+                            }
+                        },
+                        "icon": "icon icon-source-code",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Scripts",
+                        "require": {
+                            "module": "scripts",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "scripts"
+                            }
+                        },
+                        "icon": "icon icon-description",
+                        "editMode": false
+                    },
+                    {
+                        "title": "ZTP Profiles",
+                        "require": {
+                            "module": "z_t_p_profiles",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "z_t_p_profiles"
+                            }
+                        },
+                        "icon": "fa fa-fighter-jet",
+                        "editMode": false
+                    }
+                ],
+                "title": "FortiManager",
+                "editMode": false
+            }
+        ]
+    },
+    "uuid": "navigation"
+}

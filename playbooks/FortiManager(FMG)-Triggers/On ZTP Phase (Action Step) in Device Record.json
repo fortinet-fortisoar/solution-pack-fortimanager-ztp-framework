@@ -122,7 +122,7 @@
             "description": null,
             "arguments": [],
             "status": null,
-            "top": "960",
+            "top": "940",
             "left": "900",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -136,7 +136,7 @@
                 "policy_package": "{# Policy Package Name Logic (order)\n   - Device Metadata \"Policy Package\" set.\n   - ZTP Profile\n   - Current Device Policy Package\n   - Device Name\n#}\n{%- set policy = vars.input.records[0].deviceName -%}\n{%- set md = vars.input.records[0].deviceMetadata | toDict -%}\n\n{# Device Record #}\n{%- if vars.input.records[0].policyPackage != ''\n      and vars.input.records[0].policyPackage != None\n-%}\n  {%- set policy = vars.input.records[0].policyPackage -%}\n{%- endif -%}\n\n{# ZTP Profile Record #}\n{%- if \"policyPackage\" in vars.input.records[0].zTPProfiles \n      and vars.input.records[0].zTPProfiles.policyPackage != '' \n      and vars.input.records[0].zTPProfiles.policyPackage != None \n-%}\n  {%- set policy = vars.input.records[0].zTPProfiles.policyPackage -%}\n{%- endif -%}\n\n{# Device Metadata #}\n{%- if \"policy_package\" in md \n      and md['policy_package'] != ''\n      and md['policy_package'] != None\n-%}\n  {%- set policy = md['policy_package'] -%}\n{%- endif -%}\n\n{{policy}}"
             },
             "status": null,
-            "top": "1060",
+            "top": "1040",
             "left": "780",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -283,6 +283,14 @@
             "name": "retrieve_device_config",
             "description": null,
             "arguments": {
+                "message": {
+                    "tags": [],
+                    "type": "\/api\/3\/picklists\/ff599189-3eeb-4c86-acb0-a7915e85ac3b",
+                    "tenant": "",
+                    "thread": false,
+                    "content": "<p><strong>Retrieve Device Config<\/strong><\/p>\n<p>&nbsp;<\/p>\n<p>Message: {{vars.steps.retrieve_device_config.output.msg}}<\/p>\n<p>Error: {{vars.steps.retrieve_device_config.output.error}}<\/p>\n<p>&nbsp;<\/p>\n<p>{%- if \"id\" in vars.steps.retrieve_device_config.output.script_data.data.task_response -%}<\/p>\n<p>TaskID:&nbsp;<\/p>\n<p>{{vars.steps.retrieve_device_config.output.script_data.data.task_response.id}}<\/p>\n<p>{%- endif -%}<\/p>\n<p>&nbsp;<\/p>\n<p>{%- if \"id\" in vars.steps.retrieve_device_config.output.script_data.data.task_response -%}<\/p>\n<p>Line:&nbsp;<\/p>\n<p>{{vars.steps.retrieve_device_config.output.script_data.data.task_response.line|json_query('[].[name,state]')}}<\/p>\n<p>{%- endif -%}<\/p>",
+                    "records": ""
+                },
                 "arguments": {
                     "tag": "{{vars.config_tag}}",
                     "adom": "{{vars.input.records[0].aDOM}}",
@@ -290,7 +298,9 @@
                     "connector_config": "{{vars.input.records[0].connectorConfig}}"
                 },
                 "apply_async": false,
-                "step_variables": [],
+                "step_variables": {
+                    "phase_results": "{{vars.steps.retrieve_device_config}}"
+                },
                 "pass_parent_env": false,
                 "pass_input_record": false,
                 "workflowReference": "\/api\/3\/workflows\/fcf7033d-7cb6-444d-8c4d-c5111fc97f05"
@@ -361,7 +371,7 @@
                 "workflowReference": "\/api\/3\/workflows\/e2a6fb3a-394a-472f-bf2b-82a42296360e"
             },
             "status": null,
-            "top": "960",
+            "top": "940",
             "left": "1240",
             "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
             "group": null,
@@ -397,7 +407,7 @@
                 "workflowReference": "\/api\/3\/workflows\/ad544501-706a-48af-972e-e1035f81c021"
             },
             "status": null,
-            "top": "1060",
+            "top": "1040",
             "left": "1160",
             "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
             "group": null,

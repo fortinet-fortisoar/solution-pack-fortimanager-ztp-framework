@@ -147,7 +147,8 @@
                                             ],
                                             "wid": "085294b5-eff9-40ed-8abc-ca3d933d0e48",
                                             "collapsible": false,
-                                            "collapsibleIndex": 0
+                                            "collapsibleIndex": 0,
+                                            "_collapsed": false
                                         }
                                     ]
                                 }
@@ -179,9 +180,14 @@
                                         "recordTags",
                                         "modifyDate"
                                     ],
-                                    "expandableCol": [],
+                                    "expandableCol": [
+                                        {
+                                            "openTab": false,
+                                            "name": "description"
+                                        }
+                                    ],
                                     "relationshipField": [],
-                                    "checkboxStatus": false,
+                                    "checkboxStatus": true,
                                     "editableFields": false,
                                     "actionButtons": [],
                                     "query": {

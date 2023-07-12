@@ -1,10 +1,11 @@
 [README](../README.md)
 
 # Change Log
-- 20230607
-  - Update device record comments with status/details from install config and policy package. 
+- 20230712 (1.0.4)
+  - Update device record comments with status/details from retreive device config.
 
 - 20230706
+  - Update device record comments with status/details from install config and policy package. 
   - Fix bug related to a null monitor regex field in ztp profiles.
 
 - 20230630
