@@ -74,11 +74,11 @@
                                         "vDOM",
                                         "zTPProfiles",
                                         "deviceMetadataHTML",
+                                        "zTPStatusHTML",
                                         "zTPPhase",
                                         "zTPPhaseStarted",
                                         "zTPPhaseCompleted",
-                                        "zTPPhaseLast",
-                                        "zTPStatusHTML"
+                                        "zTPPhaseLast"
                                     ],
                                     "expandableCol": [
                                         {

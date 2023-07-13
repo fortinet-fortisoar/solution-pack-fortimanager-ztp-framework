@@ -1,6 +1,9 @@
 [README](../README.md)
 
 # Change Log
+- 20230713 (1.0.5)
+  - Add comment when assigning ZTP Profile. 
+  
 - 20230712 (1.0.4)
   - Update device record comments with status/details from retreive device config.
 

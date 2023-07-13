@@ -168,7 +168,7 @@
     ],
     "schedules": [
         {
-            "id": "gAAAAABkrsjpL_GtIOfBK7vlPj_6yh10zH88lqaisI0y-smqOYpe50yVzuZcHQ1KPqb-6iRoWVnMhfgUEz1OJ6ol7AW3w4bXLw==",
+            "id": "gAAAAABksFWskb8R5qQUS72LJAPRcD768Zyv4r3L71CdgaRjsq2AHOErC_q8IfonlBlRcgHwYkoBokvSpWfXhvOYKmWgUhkpkA==",
             "crontab": {
                 "id": 11,
                 "minute": "*\/2",
@@ -220,10 +220,10 @@
             "expire_seconds": null,
             "one_off": false,
             "start_time": null,
-            "enabled": true,
-            "last_run_at": "2023-07-12T15:36:00.040609Z",
-            "total_run_count": 3561,
-            "date_changed": "2023-07-12T15:37:05.130691Z",
+            "enabled": false,
+            "last_run_at": null,
+            "total_run_count": 3629,
+            "date_changed": "2023-07-12T17:53:41.654497Z",
             "description": "Synch FMG1",
             "solar": null,
             "clocked": null

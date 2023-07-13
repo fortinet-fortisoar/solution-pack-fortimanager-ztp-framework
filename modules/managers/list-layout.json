@@ -174,7 +174,8 @@
                                             ],
                                             "wid": "b6b14e35-8a17-49fa-b4c6-d3d84783ef99",
                                             "collapsible": false,
-                                            "collapsibleIndex": 0
+                                            "collapsibleIndex": 0,
+                                            "_collapsed": false
                                         }
                                     ]
                                 }
@@ -198,7 +199,15 @@
                                     "wid": "aaf03387-af09-4e69-bd9b-8cda1c036e08",
                                     "module": "managers",
                                     "columns": [
-                                        "id"
+                                        "id",
+                                        "adminStatus",
+                                        "managerName",
+                                        "sN",
+                                        "managerIP",
+                                        "adminRpcUser",
+                                        "platform",
+                                        "firmware",
+                                        "modifyDate"
                                     ],
                                     "expandableCol": [],
                                     "relationshipField": [],
