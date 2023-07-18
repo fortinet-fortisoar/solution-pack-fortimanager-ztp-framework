@@ -49,16 +49,6 @@
             "@type": "ModulePermission",
             "canCreate": false,
             "canExecute": false,
-            "canRead": true,
-            "canUpdate": false,
-            "canDelete": false,
-            "fieldPermissions": [],
-            "module": "application"
-        },
-        {
-            "@type": "ModulePermission",
-            "canCreate": false,
-            "canExecute": false,
             "canRead": false,
             "canUpdate": false,
             "canDelete": false,
@@ -411,19 +401,43 @@
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "autoInstallConfig",
-                    "canRead": true,
-                    "canWrite": false
-                },
-                {
-                    "@type": "FieldPermission",
-                    "field": "autoInstallPolicy",
-                    "canRead": true,
-                    "canWrite": false
-                },
-                {
-                    "@type": "FieldPermission",
                     "field": "comments",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "configDBStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "configDBStatusHTML",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "configStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "configStatusHTML",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "connectionStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "connectionStatusHTML",
                     "canRead": true,
                     "canWrite": false
                 },
@@ -435,25 +449,43 @@
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "createDate",
-                    "canRead": true,
-                    "canWrite": false
-                },
-                {
-                    "@type": "FieldPermission",
-                    "field": "createUser",
-                    "canRead": true,
-                    "canWrite": false
-                },
-                {
-                    "@type": "FieldPermission",
                     "field": "description",
                     "canRead": true,
-                    "canWrite": false
+                    "canWrite": true
                 },
                 {
                     "@type": "FieldPermission",
                     "field": "deviceGroups",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "deviceIP",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "deviceMetadata",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "deviceMetadataHTML",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "deviceMetafieldCompleted",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "deviceMetafieldTotal",
                     "canRead": true,
                     "canWrite": false
                 },
@@ -471,21 +503,33 @@
                 },
                 {
                     "@type": "FieldPermission",
+                    "field": "hostName",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
                     "field": "managementMode",
                     "canRead": true,
                     "canWrite": false
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "modifyDate",
+                    "field": "managementModeHTML",
                     "canRead": true,
                     "canWrite": false
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "modifyUser",
+                    "field": "managers",
                     "canRead": true,
                     "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "metafieldTemplates",
+                    "canRead": true,
+                    "canWrite": true
                 },
                 {
                     "@type": "FieldPermission",
@@ -495,13 +539,67 @@
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "recordTags",
+                    "field": "policyPackage",
                     "canRead": true,
                     "canWrite": false
                 },
                 {
                     "@type": "FieldPermission",
+                    "field": "policyPackageHTML",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "policyPackageStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "provisioningTemplates",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "provisioningTemplatesHTML",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "provisioningTemplatesStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "recordTags",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "reportMarkdown",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "scripts",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
                     "field": "sn",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "sourceData",
                     "canRead": true,
                     "canWrite": false
                 },
@@ -513,7 +611,43 @@
                 },
                 {
                     "@type": "FieldPermission",
-                    "field": "vDOMMODE",
+                    "field": "zTPPhase",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPPhaseCompleted",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPPhaseLast",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPPhaseStarted",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPProfiles",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPStatusHTML",
                     "canRead": true,
                     "canWrite": false
                 }
@@ -547,7 +681,164 @@
             "canRead": true,
             "canUpdate": true,
             "canDelete": true,
-            "fieldPermissions": [],
+            "fieldPermissions": [
+                {
+                    "@type": "FieldPermission",
+                    "field": "aDOMMode",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "adminPassword",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "adminRpcPassword",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "adminRpcUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "adminStatus",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "adminUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "comments",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "createDate",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "createUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "description",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "devices",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "firmware",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "licenseStatus",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "managerIP",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "managerMetadata",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "managerName",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "maxADOMS",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "maxDevices",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "modifyDate",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "modifyUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "platform",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "recordTags",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "sN",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "scripts",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "sourceData",
+                    "canRead": true,
+                    "canWrite": false
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "timeZone",
+                    "canRead": true,
+                    "canWrite": false
+                }
+            ],
             "module": "managers"
         },
         {
@@ -567,7 +858,86 @@
             "canRead": true,
             "canUpdate": true,
             "canDelete": true,
-            "fieldPermissions": [],
+            "fieldPermissions": [
+                {
+                    "@type": "FieldPermission",
+                    "field": "createDate",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "createUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "description",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "devices",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "metadataSources",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "metafieldTemplate",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "modifyDate",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "modifyUser",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "name",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "orderPriority",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "recordTags",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "scripts",
+                    "canRead": true,
+                    "canWrite": true
+                },
+                {
+                    "@type": "FieldPermission",
+                    "field": "zTPProfiles",
+                    "canRead": true,
+                    "canWrite": true
+                }
+            ],
             "module": "metafield_templates"
         },
         {
@@ -579,6 +949,16 @@
             "canDelete": true,
             "fieldPermissions": [],
             "module": "z_t_p_profiles"
+        },
+        {
+            "@type": "ModulePermission",
+            "canCreate": false,
+            "canExecute": false,
+            "canRead": false,
+            "canUpdate": false,
+            "canDelete": false,
+            "fieldPermissions": [],
+            "module": "application"
         }
     ],
     "uuid": "c57340f1-c387-474b-9c24-effc9e3c41aa"

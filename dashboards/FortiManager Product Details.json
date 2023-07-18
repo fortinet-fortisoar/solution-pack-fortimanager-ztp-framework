@@ -5,7 +5,9 @@
     "displayName": "FortiManager Product Details",
     "type": "rows",
     "templateType": "dashboard",
-    "roles": [],
+    "roles": [
+        "\/api\/3\/roles\/c57340f1-c387-474b-9c24-effc9e3c41aa"
+    ],
     "parentTemplateId": null,
     "config": {
         "rows": [

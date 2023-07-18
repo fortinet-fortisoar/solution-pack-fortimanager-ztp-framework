@@ -16,6 +16,53 @@
                     {
                         "widgets": [
                             {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "362f28f7-b0cd-41f8-a6f6-57957da062f8",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p><span class=\"cs-richtext-field\" title=\"Announcements ID 1 - Description\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "b504bba8-8d69-47a1-bae1-521376613816",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p>Inspect <a href=\"\/modules\/metafield_templates\">Metafield Template<\/a> assignments and Metadata results per <a href=\"\/modules\/managers\">FortiManager<\/a>.<\/p>"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "8ff9d115-699a-45c2-9ce1-bc63d132d467",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
                                 "type": "readonlyFormGroup",
                                 "config": {
                                     "wid": "3a2147e4-e301-40d9-a0f9-d61406607e30",
@@ -193,20 +240,20 @@
             "expression": "{{manager}}",
             "defaultValue": "",
             "defaultLookupValue": {
-                "id": 16,
-                "sN": "FMG-VMTM23002142",
-                "@id": "\/api\/3\/managers\/d0d14dcf-e310-403e-8cf1-471739164a48",
-                "uuid": "d0d14dcf-e310-403e-8cf1-471739164a48",
+                "id": 32,
+                "sN": "FMG-VMTM23002136",
+                "@id": "\/api\/3\/managers\/a0ea8489-3959-49a9-b7e8-41d5743f4c36",
+                "uuid": "a0ea8489-3959-49a9-b7e8-41d5743f4c36",
                 "@type": "Manager",
                 "display": "FMG1",
-                "aDOMMode": "Disabled",
+                "aDOMMode": "Enabled",
                 "firmware": "v7.2.2-build1334 230201 (GA)",
                 "maxADOMS": 10000,
                 "platform": "FortiManager-VM64-KVM",
                 "timeZone": "US\/Pacific",
                 "adminUser": null,
-                "managerIP": "10.99.231.65",
-                "createDate": 1683038668.065086,
+                "managerIP": "10.99.228.246",
+                "createDate": 1689012175.592159,
                 "createUser": {
                     "id": 3,
                     "@id": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
@@ -236,7 +283,7 @@
                     "phoneMobile": null
                 },
                 "maxDevices": 10000,
-                "modifyDate": 1683224112.54376,
+                "modifyDate": 1689012205.75312,
                 "modifyUser": {
                     "id": 1,
                     "@id": "\/api\/3\/appliances\/57545210-2adc-472b-a24f-2df6ee8dfe63",
@@ -251,10 +298,8 @@
                     "modifyDate": 1681331179.888912,
                     "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce"
                 },
-                "recordTags": [
-                    "testbed1"
-                ],
-                "sourceData": "{\"TZ\": \"US\/Pacific\", \"Build\": \"1334\", \"Major\": 7, \"Minor\": 2, \"Patch\": 2, \"HA Mode\": \"Stand Alone\", \"Version\": \"v7.2.2-build1334 230201 (GA)\", \"Hostname\": \"FMG1.1\", \"FIPS Mode\": \"Disabled\", \"Time Zone\": \"(GMT-8:00) Pacific Time (US & Canada).\", \"BIOS version\": \"04000002\", \"Branch Point\": \"1334\", \"Current Time\": \"Thu May 04 11:15:11 PDT 2023\", \"Offline Mode\": \"Disabled\", \"Platform Type\": \"FMG-VM64-KVM\", \"Serial Number\": \"FMG-VMTM23002142\", \"License Status\": \"Valid\", \"Platform Full Name\": \"FortiManager-VM64-KVM\", \"x86-64 Applications\": \"Yes\", \"Daylight Time Saving\": \"Yes\", \"Admin Domain Configuration\": \"Disabled\", \"Max Number of Admin Domains\": 10000, \"Max Number of Device Groups\": 10000, \"Release Version Information\": \" (GA)\"}",
+                "recordTags": [],
+                "sourceData": "{\"TZ\": \"US\/Pacific\", \"Build\": \"1334\", \"Major\": 7, \"Minor\": 2, \"Patch\": 2, \"HA Mode\": \"Stand Alone\", \"Version\": \"v7.2.2-build1334 230201 (GA)\", \"Hostname\": \"FMG1.1\", \"FIPS Mode\": \"Disabled\", \"Time Zone\": \"(GMT-8:00) Pacific Time (US & Canada).\", \"BIOS version\": \"04000002\", \"Branch Point\": \"1334\", \"Current Time\": \"Mon Jul 10 11:03:25 PDT 2023\", \"Offline Mode\": \"Disabled\", \"Platform Type\": \"FMG-VM64-KVM\", \"Serial Number\": \"FMG-VMTM23002136\", \"License Status\": \"Valid\", \"Platform Full Name\": \"FortiManager-VM64-KVM\", \"x86-64 Applications\": \"Yes\", \"Daylight Time Saving\": \"Yes\", \"Admin Domain Configuration\": \"Enabled\", \"Max Number of Admin Domains\": 10000, \"Max Number of Device Groups\": 10000, \"Release Version Information\": \" (GA)\"}",
                 "adminStatus": {
                     "id": 393,
                     "@id": "\/api\/3\/picklists\/2fb3c567-8917-445b-9c42-2fc590bf4e0b",
@@ -273,6 +318,7 @@
                 "adminPassword": null,
                 "licenseStatus": "Valid",
                 "displayTemplate": "{{ managerName }}",
+                "managerMetadata": null,
                 "adminRpcPassword": "fortinet"
             },
             "selectedLookupField": {

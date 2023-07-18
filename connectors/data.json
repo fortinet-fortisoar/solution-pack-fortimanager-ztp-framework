@@ -6,29 +6,9 @@
         "description": "Execute code snippets as part of your Playbooks",
         "publisher": null,
         "operation_roles": [],
-        "configurations": [
-            {
-                "id": 31,
-                "config_id": "6452db36-dc11-44a1-9a7f-231a9b569ef5",
-                "status": 1,
-                "name": "Default",
-                "default": true,
-                "config": {
-                    "allow_imports": true
-                },
-                "remote_status": [],
-                "health_status": [],
-                "connector": 4,
-                "agent": "f8be236bf806712a32ea688b654f15b8",
-                "teams": []
-            }
-        ],
+        "configurations": [],
         "dataImports": [],
-        "install_mode": "rpm",
-        "ingestionPlaybooks": {
-            "collections": [],
-            "exported_tags": []
-        }
+        "install_mode": "rpm"
     },
     {
         "name": "fortinet-fortimanager_dev",
