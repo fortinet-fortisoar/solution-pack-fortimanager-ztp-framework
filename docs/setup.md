@@ -1,9 +1,22 @@
-[README](../README.md)
+| [Home](../README.md) |
+|--------------------------------------------|
 
-# Setup FortiManager ZTP Flow (ZTPF) Frameworkimages/setup/setup
+## Installation
+
+Install the Solution Pack. This is an example screenshot and what you see in the content hub may defer in version and details. 
+
+![](res/setup/setup-001.png)
+
+# Configuration
+ 
+ * Modify the System `Settings > Appliances > Playbook` user to have the `FortiManager-Playbook-Appliance` Role.
+ * Modify System `Settings > Users`, that will be using this solution, to have the `FortiManager-Admin` Role.
+ * Navigate to `Automation > Connectors` and look for `Code Snippet`. Make sure this is installed and has a configuration marked as `Mark as default configuration`.
+
+
+## Setup FortiManager ZTP Flow (ZTPF) Frameworkres/setup/setup
 
 Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot how you want to use the solution pack. The general order of setup consists of the following tasks and will vary based on what objectives you are trying to accomplish:
-  - [Install](#install-the-solution-pack) the solution pack.
   - Create an [API User](#fortimanager-api-user) on your FortiManager. 
   - [Add a Manager Record](#add-manager-to-fortisoar) for your FortiManager.
   - Synchronize your FortiManager Device Database in FortiSOAR.
@@ -12,17 +25,11 @@ Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot 
   - Create a ZTP Profile and link required Metafield Templates and Scripts.
   - Assign a ZTP Profile to a ForiManager Device using a manual assignment or an auto assignment.
 
-## Install the Solution Pack
-
-Install the Solution Pack. This is an example screenshot and what you see in the content hub may defer in version and details. 
-
-![](images/setup/setup-001.png)
-
 ## FortiManager API User
 
 Add a FortiSOAR API user to your FMG that has RPC read-write permissions. Below is an example user that includes a FortiSOAR avatar. Edit the avatar, username, password, and/or profile to meet your needs. The most important setting is `set rpc-permit read-write` for API access.
 
-![](images/setup/setup-002.png)
+![](res/setup/setup-002.png)
 
 ```
 config system admin user
@@ -39,14 +46,14 @@ end
 
 Navigate to the Manager Module under the **FortiManager** solution records.
 
-![](images/setup/setup-007.png)
+![](res/setup/setup-007.png)
 
 **Add** a new **Manager** (FortiManager) record into FortiSOAR and input the required fields. 
 
-![](images/setup/setup-008.png) ![](images/setup/setup-010.png)
+![](res/setup/setup-008.png) ![](res/setup/setup-010.png)
 
 If your Manager record worked you should see the FortiManager details auto-populate fields, such as `Platform`, `SN`, `Firmware`, `Time Zone`, and etc. The `Source Data` tab shows you all the avaialble data from the System Info API call to FortiManager. 
 
-![](images/setup/setup-011.png)
+![](res/setup/setup-011.png)
 
 You are now ready to start synchronizing the FortiManager Device DB and perform actions on those devices.
