@@ -24,4 +24,4 @@ The ZTP Profiles module describes how to handle provisioning of each device main
 
 # Examples
 
- * [Example1](./docs/example1.md): Provision of 4x Unauthorized FortiGates VMs in FortiManager starting by simply assigning a ZTP Profile.
+ * [Example1](example1.md): Provision of 4x Unauthorized FortiGates VMs in FortiManager starting by simply assigning a ZTP Profile.
