@@ -13,7 +13,6 @@ Install the Solution Pack. This is an example screenshot and what you see in the
  * Modify System `Settings > Users`, that will be using this solution, to have the `FortiManager-Admin` Role.
  * Navigate to `Automation > Connectors` and look for `Code Snippet`. Make sure this is installed and has a configuration marked as `Mark as default configuration`.
 
-
 ## Setup FortiManager ZTP Flow (ZTPF) Frameworkres/setup/setup
 
 Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot how you want to use the solution pack. The general order of setup consists of the following tasks and will vary based on what objectives you are trying to accomplish:
