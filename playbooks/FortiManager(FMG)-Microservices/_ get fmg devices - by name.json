@@ -43,8 +43,8 @@
                     "url": "\/dvmdb\/device",
                     "data": "{  \"option\": [    \"extra info\",    \"assignment info\", \"get meta\"  ],  \"filter\": [    \"name\",    \"==\",    \"{{vars.input.params['device_name']}}\"  ]}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,
@@ -124,9 +124,9 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
-        "output",
-        "device_name"
+        "device_name",
+        "json_rpc",
+        "output"
     ]
 }

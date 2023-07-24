@@ -157,11 +157,11 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "adom",
         "connector_config",
-        "output",
         "device_name",
+        "json_rpc",
+        "output",
         "vdom"
     ]
 }

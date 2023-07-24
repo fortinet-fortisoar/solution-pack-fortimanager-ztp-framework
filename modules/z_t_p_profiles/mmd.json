@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/b15241e0-7c72-42cc-ae9a-84014d773e01",
+    "@id": "\/api\/3\/staging_model_metadatas\/04cd5780-2f00-4131-9b3e-47e48501675b",
     "@type": "StagingModelMetadata",
     "type": "z_t_p_profiles",
     "parentType": null,
@@ -1663,7 +1663,7 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "b15241e0-7c72-42cc-ae9a-84014d773e01",
+    "uuid": "04cd5780-2f00-4131-9b3e-47e48501675b",
     "displayName": "{{ name }}",
     "descriptions": {
         "singular": "ZTP Profile",

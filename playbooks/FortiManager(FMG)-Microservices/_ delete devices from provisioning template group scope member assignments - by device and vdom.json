@@ -143,8 +143,8 @@
                     "url": "\/pm\/tmplgrp\/adom\/{{vars.input.params.adom}}\/{{vars.input.params.template_group}}\/",
                     "data": "{{vars.payload}}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_set",
                 "operationTitle": "JSON RPC Set",
                 "pickFromTenant": false,
@@ -238,11 +238,11 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "adom",
         "connector_config",
-        "vdom",
         "devices",
-        "template_group"
+        "json_rpc",
+        "template_group",
+        "vdom"
     ]
 }

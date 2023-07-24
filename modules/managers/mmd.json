@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/379e7f33-57ac-4fbb-99a9-0f615115bcb0",
+    "@id": "\/api\/3\/staging_model_metadatas\/571d0f32-3366-432a-a169-e965075d0e5a",
     "@type": "StagingModelMetadata",
     "type": "managers",
     "parentType": null,
@@ -991,7 +991,7 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "379e7f33-57ac-4fbb-99a9-0f615115bcb0",
+    "uuid": "571d0f32-3366-432a-a169-e965075d0e5a",
     "displayName": "{{ managerName }}",
     "descriptions": {
         "singular": "Manager",

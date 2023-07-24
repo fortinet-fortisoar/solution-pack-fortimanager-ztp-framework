@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/38946e58-f912-4447-9518-84453716a618",
+    "@id": "\/api\/3\/staging_model_metadatas\/6b855b7f-cc3a-4989-a581-61d1547dbe16",
     "@type": "StagingModelMetadata",
     "type": "devices",
     "parentType": null,
@@ -2262,7 +2262,7 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "38946e58-f912-4447-9518-84453716a618",
+    "uuid": "6b855b7f-cc3a-4989-a581-61d1547dbe16",
     "displayName": "{{ connectorConfig }} {{ deviceName }}",
     "descriptions": {
         "singular": "Device",

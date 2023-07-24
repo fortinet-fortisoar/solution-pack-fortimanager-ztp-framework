@@ -2,7 +2,7 @@
     {
         "id": 7,
         "name": "Server_fqhn",
-        "value": "10.99.230.22",
+        "value": "FSR1",
         "default_value": "master.fortisoar.in"
     }
 ]

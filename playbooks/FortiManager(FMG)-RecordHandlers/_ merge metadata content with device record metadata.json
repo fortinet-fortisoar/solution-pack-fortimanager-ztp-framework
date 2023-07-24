@@ -165,9 +165,9 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "output",
         "device_record_id",
         "metadata",
+        "output",
         "overwrite_existing_keys"
     ]
 }

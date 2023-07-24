@@ -31,8 +31,8 @@
                     "url": "\/dvmdb\/adom\/{{vars.input.params['adom']}}\/group\/{{vars.input.params['device_group']}}\/object member",
                     "data": "{{vars.device_scope}}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_add",
                 "operationTitle": "JSON RPC Add",
                 "pickFromTenant": false,
@@ -305,7 +305,7 @@
         "Subroutine",
         "adom",
         "connector_config",
-        "devices",
-        "device_group"
+        "device_group",
+        "devices"
     ]
 }

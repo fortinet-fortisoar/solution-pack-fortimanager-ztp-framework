@@ -1,7 +1,7 @@
 {
     "name": "fortiManagerZTPFlow",
     "version": "1.0.0",
-    "fsrMinCompatibility": "7.4.0",
+    "fsrMinCompatibility": "7.2.0",
     "type": "solutionpack",
     "local": true,
     "label": "FortiManager ZTP Flow",
@@ -13,8 +13,8 @@
     "category": [
         "Compliance and Reporting",
         "DevOps and Digital Operations",
-        "Centralized Security Management",
-        "Utilities"
+        "Utilities",
+        "Centralized Security Management"
     ],
     "supportInfo": null,
     "iconLarge": "fsr-icon-large.png",
@@ -25,7 +25,7 @@
         "ZTP",
         "FortiManager"
     ],
-    "date": "2023-07-18T14:50:15+00:00",
+    "date": "2023-07-24T17:45:27+00:00",
     "contents": {
         "picklistNames": [
             {
@@ -51,10 +51,6 @@
             }
         ],
         "modules": {
-            "announcements": {
-                "name": "Announcements",
-                "apiName": "announcements"
-            },
             "devices": {
                 "name": "Devices",
                 "apiName": "devices"
@@ -163,7 +159,7 @@
             {
                 "id": 7,
                 "name": "Server_fqhn",
-                "value": "10.99.230.22",
+                "value": "FSR1",
                 "default_value": "master.fortisoar.in"
             }
         ],
@@ -212,13 +208,9 @@
         ],
         "connectors": [
             {
-                "name": "Code Snippet",
-                "apiName": "code-snippet"
-            },
-            {
-                "name": "Fortinet FortiManager Custom",
-                "apiName": "fortinet-fortimanager_dev",
-                "version": "3.0.0"
+                "name": "Fortinet FortiManager JSON RPC",
+                "apiName": "fortinet_fortimanager_json_rpc",
+                "version": "1.0.0"
             }
         ],
         "recordSets": [

@@ -442,8 +442,8 @@
     "deletedAt": null,
     "recordTags": [
         "system",
-        "devices",
         "Trigger",
+        "devices",
         "phase_monitor"
     ]
 }

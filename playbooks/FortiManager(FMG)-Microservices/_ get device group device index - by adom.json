@@ -149,7 +149,7 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
-        "adom"
+        "adom",
+        "json_rpc"
     ]
 }

@@ -180,8 +180,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
+        "metadata_key_list",
         "output",
-        "record_id_list",
-        "metadata_key_list"
+        "record_id_list"
     ]
 }

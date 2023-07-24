@@ -123,8 +123,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
+        "json_rpc",
         "output"
     ]
 }

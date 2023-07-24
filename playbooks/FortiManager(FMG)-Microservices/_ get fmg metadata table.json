@@ -46,8 +46,8 @@
                     "url": "{{vars.input.params['url']}}",
                     "data": "{\n  \"option\": [\n    \"extra info\",\n    \"assignment info\"\n  ]\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,
@@ -109,8 +109,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
+        "json_rpc",
         "output"
     ]
 }

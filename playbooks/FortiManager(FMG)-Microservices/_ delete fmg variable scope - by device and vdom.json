@@ -32,8 +32,8 @@
                     "url": "\/pm\/config\/adom\/{{vars.input.params['adom']}}\/obj\/fmg\/variable\/{{vars.input.params.variable}}\/dynamic_mapping\/{{vars.input.params.device}}\/{{vars.input.params.vdom}}",
                     "data": "{\n  \"option\": []\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_delete",
                 "operationTitle": "JSON RPC Delete",
                 "pickFromTenant": false,
@@ -109,12 +109,12 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "adom",
         "connector_config",
+        "device",
+        "json_rpc",
         "output",
-        "vdom",
         "variable",
-        "device"
+        "vdom"
     ]
 }

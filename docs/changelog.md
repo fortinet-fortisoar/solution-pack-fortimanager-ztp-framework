@@ -2,6 +2,10 @@
 |--------------------------------------------|
 
 # Change Log
+
+- 20230724
+ - Migrate FortiManager microservices playbooks connector usage from the custom 3.0.0 version to the json_rpc 1.0.0 version. 
+
 - 20230713
   - Add comment when assigning ZTP Profile. 
   

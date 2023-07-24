@@ -62,8 +62,8 @@
                     "data": "{{vars.fmg_data_payload}}",
                     "track_task": true
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_execute",
                 "operationTitle": "JSON RPC Exec",
                 "pickFromTenant": false,
@@ -184,12 +184,12 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "adom",
         "connector_config",
-        "output",
-        "vdom",
         "devices",
-        "script_type"
+        "json_rpc",
+        "output",
+        "script_type",
+        "vdom"
     ]
 }

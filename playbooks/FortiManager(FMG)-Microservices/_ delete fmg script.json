@@ -30,8 +30,8 @@
                     "url": "\/dvmdb\/adom\/{{vars.input.params.adom}}\/script\/{{vars.input.params['script_name']}}",
                     "data": "{\n  \"options\": []\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_delete",
                 "operationTitle": "JSON RPC Delete",
                 "pickFromTenant": false,

@@ -30,8 +30,8 @@
                     "data": "{\n  \"data\": {\n    \"device\": \"{{vars.input.params['device_name']}}\",\n    \"adom\": \"root\",\n    \"flags\": [\n      \"create_task\",\n      \"nonblocking\"\n    ]\n  }\n}",
                     "track_task": true
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_execute",
                 "operationTitle": "JSON RPC Exec",
                 "pickFromTenant": false,
@@ -213,8 +213,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
-        "device_name"
+        "device_name",
+        "json_rpc"
     ]
 }

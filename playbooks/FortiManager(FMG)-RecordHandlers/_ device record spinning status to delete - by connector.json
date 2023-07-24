@@ -170,8 +170,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
-        "device_name"
+        "device_name",
+        "json_rpc"
     ]
 }

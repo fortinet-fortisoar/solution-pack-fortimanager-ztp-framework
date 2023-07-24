@@ -43,8 +43,8 @@
                     "url": "\/pm\/pkg\/adom\/{{vars.input.params.adom}}",
                     "data": "{\n  \"option\": [\"object member\"],\n  \"filter\": []\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,
@@ -106,8 +106,8 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "adom",
-        "connector_config"
+        "connector_config",
+        "json_rpc"
     ]
 }

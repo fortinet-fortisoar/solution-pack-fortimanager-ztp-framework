@@ -256,8 +256,8 @@
     "deletedAt": null,
     "recordTags": [
         "system",
-        "Devices",
         "Trigger",
+        "Devices",
         "Run Linked Scripts"
     ]
 }

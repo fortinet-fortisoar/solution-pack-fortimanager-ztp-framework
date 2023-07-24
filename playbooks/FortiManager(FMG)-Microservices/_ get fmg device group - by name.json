@@ -44,8 +44,8 @@
                     "url": "\/dvmdb\/adom\/{{vars.input.params['adom']}}\/group",
                     "data": "{\n  \"option\": \"object member\",\n  \"filter\": [\n    [\n      \"name\",\n      \"==\",\n      \"{{vars.device_group}}\"\n    ]\n  ]\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,
@@ -108,9 +108,9 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
-        "output",
-        "device_name"
+        "device_name",
+        "json_rpc",
+        "output"
     ]
 }

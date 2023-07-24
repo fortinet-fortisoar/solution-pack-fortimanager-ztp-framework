@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/135084e2-fe86-47cc-a097-a702f7a419b2",
+    "@id": "\/api\/3\/staging_model_metadatas\/d721ea0b-59db-4a90-9637-feb459499a15",
     "@type": "StagingModelMetadata",
     "type": "metafield_templates",
     "parentType": null,
@@ -380,7 +380,7 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "135084e2-fe86-47cc-a097-a702f7a419b2",
+    "uuid": "d721ea0b-59db-4a90-9637-feb459499a15",
     "displayName": "{{ name }}",
     "descriptions": {
         "singular": "Metafield Template",

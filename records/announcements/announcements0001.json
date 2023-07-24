@@ -11,9 +11,6 @@
         "createDate": 1683310998.634097,
         "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
         "modifyDate": 1686852909.873156,
-        "tenant": "\/api\/3\/tenants\/b3a700f7-00be-4ef9-90c6-3c8fe6e1be63",
-        "conflict": false,
-        "tenantRecordId": 1,
         "id": 1,
         "recordTags": []
     }

@@ -30,8 +30,8 @@
                     "url": "\/pm\/config\/adom\/{{vars.input.params.adom}}\/obj\/cli\/template-group\/{{vars.input.params['group_name']}}",
                     "data": "{{vars.payload}}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_delete",
                 "operationTitle": "JSON RPC Delete",
                 "pickFromTenant": false,
@@ -155,7 +155,7 @@
         "Subroutine",
         "adom",
         "connector_config",
-        "output",
-        "group_name"
+        "group_name",
+        "output"
     ]
 }

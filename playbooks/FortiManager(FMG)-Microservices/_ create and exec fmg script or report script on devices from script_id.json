@@ -913,8 +913,8 @@
         "adom",
         "connector_config",
         "output",
-        "script_name",
         "script_contents",
+        "script_name",
         "script_type"
     ]
 }

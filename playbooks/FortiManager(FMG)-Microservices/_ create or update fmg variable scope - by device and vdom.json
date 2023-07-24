@@ -79,8 +79,8 @@
                     "url": "\/pm\/config\/adom\/{{vars.input.params['adom']}}\/obj\/fmg\/variable\/{{vars.input.params.variable}}\/dynamic_mapping",
                     "data": "{{vars.payload}}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_set",
                 "operationTitle": "JSON RPC Set",
                 "pickFromTenant": false,
@@ -134,9 +134,9 @@
     "deletedAt": null,
     "recordTags": [
         "Subroutine",
-        "json_rpc",
         "connector_config",
-        "output",
-        "device_name"
+        "device_name",
+        "json_rpc",
+        "output"
     ]
 }
