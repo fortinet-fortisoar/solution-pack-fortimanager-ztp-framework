@@ -3,7 +3,7 @@ This is the initial release of the `FortiManager ZTP Flow` (ZTPF) Solution Pack.
 
 # Known Bugs
 
-## Dashboard Dynamic Content
+## Dashboard Dynamic Content ( 0932566 )
 
 If you are updating an exsiting solution pack then the included Announcment might be auto-incremented. This impacts the Dashboard Quick Links. To fix this SSH into FortiSOAR and run the following command until this is fixed. 
 
