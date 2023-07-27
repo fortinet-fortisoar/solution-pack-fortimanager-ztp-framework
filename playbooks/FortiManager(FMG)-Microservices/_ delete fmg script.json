@@ -24,7 +24,7 @@
             "name": "delete_script",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/dvmdb\/adom\/{{vars.input.params.adom}}\/script\/{{vars.input.params['script_name']}}",

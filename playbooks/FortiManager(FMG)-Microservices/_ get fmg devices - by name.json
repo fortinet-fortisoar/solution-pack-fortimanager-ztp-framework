@@ -37,7 +37,7 @@
             "name": "get_fmg_device_by_name",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/dvmdb\/device",

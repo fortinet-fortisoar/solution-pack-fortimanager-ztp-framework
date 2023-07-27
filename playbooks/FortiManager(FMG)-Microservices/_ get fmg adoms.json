@@ -36,7 +36,7 @@
             "name": "get fmg adoms",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON RPC",
                 "config": "{{vars.input.params['fortimanager_config']}}",
                 "params": {
                     "url": "\/dvmdb\/adom",

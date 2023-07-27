@@ -26,7 +26,7 @@
             "name": "delete_fmg_variable_scope",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/pm\/config\/adom\/{{vars.input.params['adom']}}\/obj\/fmg\/variable\/{{vars.input.params.variable}}\/dynamic_mapping\/{{vars.input.params.device}}\/{{vars.input.params.vdom}}",

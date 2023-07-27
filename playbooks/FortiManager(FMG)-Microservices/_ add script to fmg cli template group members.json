@@ -83,7 +83,7 @@
             "name": "update_script_group",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/pm\/config\/adom\/{{vars.input.params.adom}}\/obj\/cli\/template-group\/{{vars.input.params['group_name']}}\/member\/",
