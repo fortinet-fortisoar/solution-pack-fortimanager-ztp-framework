@@ -28,7 +28,7 @@
             "name": "Create Model Device from Serial",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON-RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/dvm\/cmd\/add\/device",

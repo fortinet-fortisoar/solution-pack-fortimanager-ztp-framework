@@ -24,7 +24,7 @@
             "name": "delete_template_group",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON-RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/pm\/tmplgrp\/adom\/{{vars.input.params.adom}}\/{{vars.input.params['template_group']}}",

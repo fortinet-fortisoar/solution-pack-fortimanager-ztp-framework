@@ -38,7 +38,7 @@
             "name": "get_fmg_template_groups",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager Custom",
+                "name": "Fortinet FortiManager JSON-RPC",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/pm\/tmplgrp\/adom\/{{vars.input.params.adom}}",
