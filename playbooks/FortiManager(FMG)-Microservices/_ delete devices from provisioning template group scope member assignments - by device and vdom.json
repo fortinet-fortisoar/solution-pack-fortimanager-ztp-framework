@@ -137,7 +137,7 @@
             "name": "update_fmg_variable",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager JSON RPC",
+                "name": "Fortinet FortiManager Custom",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/pm\/tmplgrp\/adom\/{{vars.input.params.adom}}\/{{vars.input.params.template_group}}\/",

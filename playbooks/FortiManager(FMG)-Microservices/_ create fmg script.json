@@ -26,7 +26,7 @@
             "name": "create_script",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager JSON RPC",
+                "name": "Fortinet FortiManager Custom",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/dvmdb\/adom\/{{vars.input.params.adom}}\/script\/",

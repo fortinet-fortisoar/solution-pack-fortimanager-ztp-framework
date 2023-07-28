@@ -25,7 +25,7 @@
         "ZTP",
         "FortiManager"
     ],
-    "date": "2023-07-24T17:45:27+00:00",
+    "date": "2023-07-28T13:49:10+00:00",
     "contents": {
         "picklistNames": [
             {
@@ -156,6 +156,12 @@
             }
         ],
         "globalVariables": [
+            {
+                "id": 7,
+                "name": "Server_fqhn",
+                "value": "FSR1",
+                "default_value": "master.fortisoar.in"
+            }
         ],
         "playbookBlocks": [
             {

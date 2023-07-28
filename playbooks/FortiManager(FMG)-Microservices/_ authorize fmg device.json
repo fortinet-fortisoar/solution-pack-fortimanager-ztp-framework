@@ -24,7 +24,7 @@
             "name": "authorize fmg device",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager JSON RPC",
+                "name": "Fortinet FortiManager Custom",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/dvm\/cmd\/add\/device",

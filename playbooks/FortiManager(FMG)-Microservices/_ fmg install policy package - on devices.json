@@ -144,7 +144,7 @@
             "name": "install_pkg",
             "description": null,
             "arguments": {
-                "name": "Fortinet FortiManager JSON RPC",
+                "name": "Fortinet FortiManager Custom",
                 "config": "{{vars.input.params['connector_config']}}",
                 "params": {
                     "url": "\/securityconsole\/install\/package",
