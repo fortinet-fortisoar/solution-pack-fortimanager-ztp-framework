@@ -33,8 +33,8 @@
                     "data": "{\n  \"data\": {\n    \"adom\": \"root\",\n    \"script\": \"diagnose_log_test\",\n    \"scope\": [\n      {\n        \"name\": \"FG1\",\n        \"vdom\": \"root\"\n      }\n    ]\n  }\n}",
                     "track_task": true
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_execute",
                 "operationTitle": "JSON RPC Exec",
                 "pickFromTenant": false,

@@ -42,8 +42,8 @@
                     "url": "\/dvmdb\/device",
                     "data": "{\n  \"option\": [\n    \"extra info\",\n    \"assignment info\",\n    \"get meta\"\n  ],\n  \"filter\": [\n    \"os_type\",\n    \"==\",\n    \"fos\"\n  ]\n}"
                 },
-                "version": "3.0.0",
-                "connector": "fortinet-fortimanager_dev",
+                "version": "1.0.0",
+                "connector": "fortinet_fortimanager_json_rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,

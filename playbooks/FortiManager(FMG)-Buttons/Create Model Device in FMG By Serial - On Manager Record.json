@@ -173,9 +173,9 @@
             "name": "Set Vars",
             "description": null,
             "arguments": {
-                "connector_name": "fortinet-fortimanager_dev",
+                "connector_name": "fortinet_fortimanager_json_rpc",
                 "connector_config": "{{vars.input.records[0].managerName}}",
-                "connector_version": "3.0.0"
+                "connector_version": "1.0.0"
             },
             "status": null,
             "top": "160",
