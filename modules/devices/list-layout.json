@@ -1,0 +1,272 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "9d53a008-3646-4727-b148-142e4b72a751",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p><span class=\"cs-richtext-field\" title=\"Announcements ID 1 - Description\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "rows",
+                                "config": {
+                                    "wid": "893e6e5b-79a2-4777-9a96-d959c0868355",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "chart",
+                                                            "config": {
+                                                                "wid": "993eec0c-9bbf-4002-ad46-aca59dcc27d3",
+                                                                "widgetAlwaysDisplay": true,
+                                                                "showTabularData": false,
+                                                                "query": {
+                                                                    "sort": [],
+                                                                    "limit": 2147483647,
+                                                                    "logic": "AND",
+                                                                    "filters": [],
+                                                                    "aggregates": [
+                                                                        {
+                                                                            "operator": "countdistinct",
+                                                                            "field": "*",
+                                                                            "alias": "total"
+                                                                        },
+                                                                        {
+                                                                            "operator": "groupby",
+                                                                            "alias": "connectionStatus",
+                                                                            "field": "connectionStatus"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "fieldName": "connectionStatus"
+                                                                },
+                                                                "assignedToSetting": "all",
+                                                                "aggregate": true,
+                                                                "title": "Management Tunnel",
+                                                                "resource": "devices",
+                                                                "chart": "pie"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "chart",
+                                                            "config": {
+                                                                "wid": "f5f37896-36b3-4af5-9bab-ff5d2d9bcd06",
+                                                                "widgetAlwaysDisplay": true,
+                                                                "showTabularData": false,
+                                                                "query": {
+                                                                    "sort": [],
+                                                                    "limit": 2147483647,
+                                                                    "logic": "AND",
+                                                                    "filters": [],
+                                                                    "aggregates": [
+                                                                        {
+                                                                            "operator": "countdistinct",
+                                                                            "field": "*",
+                                                                            "alias": "total"
+                                                                        },
+                                                                        {
+                                                                            "operator": "groupby",
+                                                                            "alias": "configStatus",
+                                                                            "field": "configStatus"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "fieldName": "configStatus"
+                                                                },
+                                                                "assignedToSetting": "all",
+                                                                "aggregate": true,
+                                                                "title": "Config Status",
+                                                                "resource": "devices",
+                                                                "chart": "pie"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "chart",
+                                                            "config": {
+                                                                "wid": "b001c898-d973-477f-92fb-ff0f38ec8e87",
+                                                                "widgetAlwaysDisplay": true,
+                                                                "showTabularData": false,
+                                                                "query": {
+                                                                    "sort": [],
+                                                                    "limit": 2147483647,
+                                                                    "logic": "AND",
+                                                                    "filters": [],
+                                                                    "aggregates": [
+                                                                        {
+                                                                            "operator": "countdistinct",
+                                                                            "field": "*",
+                                                                            "alias": "total"
+                                                                        },
+                                                                        {
+                                                                            "operator": "groupby",
+                                                                            "alias": "configDBStatus",
+                                                                            "field": "configDBStatus"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "fieldName": "configDBStatus"
+                                                                },
+                                                                "assignedToSetting": "all",
+                                                                "aggregate": true,
+                                                                "title": "ConfigDB Status",
+                                                                "resource": "devices",
+                                                                "chart": "pie"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                }
+                                            ],
+                                            "wid": "d0bb5115-9221-4688-bb27-b57deb6b9a2b",
+                                            "collapsible": false,
+                                            "collapsibleIndex": 0,
+                                            "_collapsed": false
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "9277e93a-cbc9-4e9e-9974-5f5900d2969e",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "grid",
+                                "config": {
+                                    "wid": "95fff0f8-fe92-4a28-8e55-2003258df05a",
+                                    "module": "devices",
+                                    "columns": [
+                                        "managers",
+                                        "aDOM",
+                                        "deviceName",
+                                        "sn",
+                                        "vDOM",
+                                        "platform",
+                                        "firmware",
+                                        "managementModeHTML",
+                                        "connectionStatusHTML",
+                                        "zTPProfiles",
+                                        "zTPPhase",
+                                        "recordTags"
+                                    ],
+                                    "expandableCol": [
+                                        {
+                                            "openTab": false,
+                                            "name": "deviceMetadataHTML"
+                                        },
+                                        {
+                                            "openTab": false,
+                                            "name": "reportMarkdown"
+                                        }
+                                    ],
+                                    "relationshipField": [],
+                                    "checkboxStatus": true,
+                                    "editableFields": false,
+                                    "actionButtons": [
+                                        {
+                                            "id": "\/api\/3\/workflows\/a9be0325-b407-4fd3-81b2-a3e5f1e2dc3e",
+                                            "name": "Synchronize FMG Device DB",
+                                            "icon": "fa fa-retweet"
+                                        },
+                                        {
+                                            "id": "\/api\/3\/workflows\/963a354f-7784-4b94-a87f-170f5ff4ee3d",
+                                            "name": "Authorize All Devices",
+                                            "icon": "fa fa-check"
+                                        }
+                                    ],
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "direction": "ASC",
+                                                "field": "connectorConfig",
+                                                "_fieldTitle": "Connector Config",
+                                                "_fieldName": "connectorConfig"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "aDOM",
+                                                "_fieldTitle": "ADOM",
+                                                "_fieldName": "aDOM"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "deviceName",
+                                                "_fieldTitle": "Device Name",
+                                                "_fieldName": "deviceName"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "vDOM",
+                                                "_fieldTitle": "VDOM",
+                                                "_fieldName": "vDOM"
+                                            }
+                                        ],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "title": "FortiManager Devices",
+                                    "enableHorizontalScroll": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "f65b5d69-3edc-450d-911e-61a2d86f7eb8",
+                "_collapsed": false
+            }
+        ],
+        "wid": "6bdce2ad-dbe5-409a-81e6-d7a4ea3f681a",
+        "metadata": {
+            "customTemplateTitle": "Devices",
+            "originalTemplateTitle": "Devices"
+        }
+    },
+    "uuid": "modules-devices-list"
+}

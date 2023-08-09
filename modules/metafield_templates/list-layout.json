@@ -1,0 +1,216 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "9745cf5c-fb25-44cc-abd6-df79a2302eaa",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p><span class=\"cs-richtext-field\" title=\"Announcements ID 1 - Description\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "rows",
+                                "config": {
+                                    "wid": "b5fc12d6-d90e-4dd7-bee1-7e553a302b2a",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "relationshipCount",
+                                                            "config": {
+                                                                "wid": "e1f6e115-4fdc-4226-9401-1941038c09f2",
+                                                                "widgetAlwaysDisplay": true,
+                                                                "showTabularData": false,
+                                                                "query": {
+                                                                    "sort": [
+                                                                        {
+                                                                            "field": "name",
+                                                                            "direction": "ASC"
+                                                                        }
+                                                                    ],
+                                                                    "limit": 2147483647,
+                                                                    "logic": "AND",
+                                                                    "filters": [],
+                                                                    "aggregates": [
+                                                                        {
+                                                                            "operator": "count",
+                                                                            "alias": "total",
+                                                                            "field": "zTPProfiles.uuid"
+                                                                        },
+                                                                        {
+                                                                            "operator": "groupby",
+                                                                            "alias": "name",
+                                                                            "field": "name"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "firstGrouping": "name",
+                                                                    "secondGrouping": "devices"
+                                                                },
+                                                                "assignedToSetting": "all",
+                                                                "aggregate": true,
+                                                                "title": "MetaField Template to ZTP Profile Count",
+                                                                "chart": "relationshipBar",
+                                                                "resource": "metafield_templates",
+                                                                "primaryDataSourceLabel": "Templates",
+                                                                "resourceRelationship": "zTPProfiles",
+                                                                "queryRelationship": {
+                                                                    "sort": [],
+                                                                    "limit": 30,
+                                                                    "logic": "AND",
+                                                                    "filters": []
+                                                                },
+                                                                "relatedDataSourceLabel": "ZTP Profiles"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                },
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "relationshipCount",
+                                                            "config": {
+                                                                "wid": "04ea174f-d48d-41b3-b3e6-208243f881e4",
+                                                                "widgetAlwaysDisplay": true,
+                                                                "showTabularData": false,
+                                                                "query": {
+                                                                    "sort": [
+                                                                        {
+                                                                            "field": "name",
+                                                                            "direction": "ASC"
+                                                                        }
+                                                                    ],
+                                                                    "limit": 2147483647,
+                                                                    "logic": "AND",
+                                                                    "filters": [],
+                                                                    "aggregates": [
+                                                                        {
+                                                                            "operator": "count",
+                                                                            "alias": "total",
+                                                                            "field": "devices.uuid"
+                                                                        },
+                                                                        {
+                                                                            "operator": "groupby",
+                                                                            "alias": "name",
+                                                                            "field": "name"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "firstGrouping": "name",
+                                                                    "secondGrouping": "devices"
+                                                                },
+                                                                "assignedToSetting": "all",
+                                                                "aggregate": true,
+                                                                "title": "MetaField Template to Device Count",
+                                                                "chart": "relationshipBar",
+                                                                "resource": "metafield_templates",
+                                                                "primaryDataSourceLabel": "Templates",
+                                                                "resourceRelationship": "devices",
+                                                                "queryRelationship": {
+                                                                    "sort": [],
+                                                                    "limit": 30,
+                                                                    "logic": "AND",
+                                                                    "filters": []
+                                                                },
+                                                                "relatedDataSourceLabel": "Devices"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                }
+                                            ],
+                                            "wid": "085294b5-eff9-40ed-8abc-ca3d933d0e48",
+                                            "collapsible": false,
+                                            "collapsibleIndex": 0,
+                                            "_collapsed": false
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "b0c5f3fe-d48d-49aa-9ef3-6b91547461dc",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "grid",
+                                "config": {
+                                    "wid": "d8cb723a-03ff-40a3-b62f-98569ad33531",
+                                    "module": "metafield_templates",
+                                    "columns": [
+                                        "orderPriority",
+                                        "name",
+                                        "description",
+                                        "metafieldTemplate",
+                                        "metadataSources",
+                                        "recordTags",
+                                        "modifyDate"
+                                    ],
+                                    "expandableCol": [
+                                        {
+                                            "openTab": false,
+                                            "name": "description"
+                                        }
+                                    ],
+                                    "relationshipField": [],
+                                    "checkboxStatus": true,
+                                    "editableFields": false,
+                                    "actionButtons": [],
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    }
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "15c8640a-573f-4a70-b2d5-837c18e28869",
+                "_collapsed": false
+            }
+        ],
+        "wid": "9814e88e-5231-4a19-8119-ce4572f169d1",
+        "metadata": {
+            "customTemplateTitle": "Metafield Templates",
+            "originalTemplateTitle": "Metafield Templates"
+        }
+    },
+    "uuid": "modules-metafield_templates-list"
+}

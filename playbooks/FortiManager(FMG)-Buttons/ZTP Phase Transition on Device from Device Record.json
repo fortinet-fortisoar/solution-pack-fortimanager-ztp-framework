@@ -1,0 +1,217 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "ZTP Phase Transition on Device from Device Record",
+    "aliasName": null,
+    "tag": null,
+    "description": "Find all devices linked to this ztp profile and change the phase.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/471dbb4c-2adf-4c66-af86-b5fd05011ee9",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/22c7ff35-713a-4063-a62b-388fb3bdbb6c",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "91074a4b-4e8c-4176-ae0a-5881105a21e2",
+                "title": "Start ZTP Phase on Device",
+                "resources": [
+                    "devices"
+                ],
+                "inputVariables": [
+                    {
+                        "name": "zTPPhase",
+                        "type": "picklists",
+                        "label": "ZTP Phase",
+                        "title": "Picklist",
+                        "usable": true,
+                        "tooltip": "",
+                        "dataType": "picklist",
+                        "formType": "picklist",
+                        "required": true,
+                        "_expanded": true,
+                        "mmdUpdate": true,
+                        "collection": false,
+                        "dataSource": {
+                            "model": "picklists",
+                            "query": {
+                                "sort": [
+                                    {
+                                        "field": "orderIndex",
+                                        "direction": "ASC"
+                                    }
+                                ],
+                                "logic": "AND",
+                                "filters": [
+                                    {
+                                        "field": "listName__name",
+                                        "value": "ZTP Phase",
+                                        "operator": "eq"
+                                    }
+                                ]
+                            },
+                            "displayConditions": {
+                                "13f004dd-e1e9-4dbc-8ed2-967ced8f8d99": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "1d8b9c23-9bbb-4fbb-8bc0-4eb0f41547e5": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "2992855d-1a23-4c4d-9263-d1c75a76b4c9": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "2c58d669-3dfa-452f-b0f1-2adc302f3630": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "32d675a0-1c16-476c-b249-8da4a05c3a84": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "49ac6717-17c9-42dd-ac92-4d2ddff4399e": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "4c2a1f21-06f0-41b8-829b-5bf26b6f41a5": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "4fbb435e-5bee-45ea-bfd2-5a80cca69636": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "8facfd8e-4927-4a88-9019-a7bbcf8f8ef6": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "97f72cac-62ef-4942-8d7e-45351a5e89fa": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                },
+                                "e5b72509-059f-4101-8576-4ae63a25d2d9": {
+                                    "conditions": null,
+                                    "visibility": "visible"
+                                }
+                            }
+                        },
+                        "searchable": false,
+                        "templateUrl": "app\/components\/form\/fields\/typeahead.html",
+                        "defaultValue": null,
+                        "_previousName": "",
+                        "playbookField": true,
+                        "displayTemplate": "%7B%7B%20itemValue%20%7D%7D",
+                        "lengthConstraint": false,
+                        "allowedEncryption": false,
+                        "allowedGridColumn": true,
+                        "jinjaExpressionView": true,
+                        "useRecordFieldDefault": false
+                    }
+                ],
+                "step_variables": {
+                    "input": {
+                        "params": {
+                            "zTPPhase": "{{vars.request.data[\"zTPPhase\"]}}"
+                        },
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "_promptexpanded": true,
+                "displayConditions": {
+                    "devices": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": [
+                            {
+                                "type": "object",
+                                "field": "zTPProfiles",
+                                "value": "false",
+                                "_value": {
+                                    "@id": "false",
+                                    "display": "",
+                                    "itemValue": ""
+                                },
+                                "operator": "isnull"
+                            }
+                        ]
+                    },
+                    "scripts": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    },
+                    "z_t_p_profiles": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": false,
+                "singleRecordExecution": true
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "group": null,
+            "uuid": "22c7ff35-713a-4063-a62b-388fb3bdbb6c"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Update ZTP Phases",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "zTPPhase": "{{\"ZTP Phase\"|picklist(vars.input.params.zTPPhase.itemValue)}}"
+                },
+                "operation": "Append",
+                "collection": "{{vars.input.records[0]['@id']}}",
+                "__recommend": [],
+                "collectionType": "\/api\/3\/devices",
+                "fieldOperation": [],
+                "step_variables": []
+            },
+            "status": null,
+            "top": "140",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928722",
+            "group": null,
+            "uuid": "141cfa7a-e00f-4a90-8459-6a2a0ff07a69"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Update ZTP Phases",
+            "targetStep": "\/api\/3\/workflow_steps\/141cfa7a-e00f-4a90-8459-6a2a0ff07a69",
+            "sourceStep": "\/api\/3\/workflow_steps\/22c7ff35-713a-4063-a62b-388fb3bdbb6c",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "1f3ef34d-1092-4492-9f5c-1f55fb19715d"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "42e6e0f7-2ff2-4fc3-b2b1-c7aa6cf8c7ef",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "Button",
+        "ZTP Profile"
+    ]
+}
