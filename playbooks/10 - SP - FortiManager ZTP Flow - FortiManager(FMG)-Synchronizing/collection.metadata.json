@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "FortiManager(FMG)-Synchronizing",
+    "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-Synchronizing",
     "description": "Playbooks that are responsible for synchronizing data between FortiSOAR and FortiManager.",
     "visible": true,
     "image": null,

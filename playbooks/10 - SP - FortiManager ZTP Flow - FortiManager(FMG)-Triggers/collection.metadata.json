@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "FortiManager(FMG)-Triggers",
+    "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-Triggers",
     "description": null,
     "visible": true,
     "image": null,

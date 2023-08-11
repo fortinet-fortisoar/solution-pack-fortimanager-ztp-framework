@@ -5,12 +5,12 @@
     "type": "devices",
     "parentType": null,
     "tableName": "device",
-    "ownable": false,
+    "ownable": true,
     "userOwnable": false,
     "queueable": false,
-    "trackable": false,
+    "trackable": true,
     "taggable": true,
-    "peerReplicable": false,
+    "peerReplicable": true,
     "defaultSort": [],
     "uniqueConstraint": [
         {

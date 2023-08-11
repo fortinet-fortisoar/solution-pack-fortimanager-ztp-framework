@@ -5,12 +5,12 @@
     "type": "z_t_p_profiles",
     "parentType": null,
     "tableName": "z_t_p_profile",
-    "ownable": false,
+    "ownable": true,
     "userOwnable": false,
     "queueable": false,
-    "trackable": false,
+    "trackable": true,
     "taggable": true,
-    "peerReplicable": false,
+    "peerReplicable": true,
     "defaultSort": [
         {
             "direction": "ASC",
