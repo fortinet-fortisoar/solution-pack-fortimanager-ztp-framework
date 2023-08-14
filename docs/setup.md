@@ -15,14 +15,14 @@ Install the Solution Pack. This is an example screenshot and what you see in the
 
 ## Setup FortiManager ZTP Flow (ZTPF) Frameworkres/setup/setup
 
-Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot how you want to use the solution pack. The general order of setup consists of the following tasks and will vary based on what objectives you are trying to accomplish:
+Setting up the FortiSOAR/FortiManager ZTP Flow (ZTPF) integration depends a lot on how you want to use the solution pack. The general order of setup consists of the following tasks and will vary based on what objectives you are trying to accomplish:
   - Create an [API User](#fortimanager-api-user) on your FortiManager. 
   - [Add a Manager Record](#add-manager-to-fortisoar) for your FortiManager.
   - Synchronize your FortiManager Device Database in FortiSOAR.
   - Create Metafield Templates in FortiSOAR.
   - Create Scripts in FortiSOAR. 
-  - Create a ZTP Profile and link required Metafield Templates and Scripts.
-  - Assign a ZTP Profile to a ForiManager Device using a manual assignment or an auto assignment.
+  - Create a ZTP Profile and link the required Metafield Templates and Scripts.
+  - Assign a ZTP Profile to a ForiManager Device using a manual assignment or an auto-assignment.
 
 ## FortiManager API User
 
@@ -51,7 +51,7 @@ Navigate to the Manager Module under the **FortiManager** solution records.
 
 ![](res/setup/setup-008.png) ![](res/setup/setup-010.png)
 
-If your Manager record worked you should see the FortiManager details auto-populate fields, such as `Platform`, `SN`, `Firmware`, `Time Zone`, and etc. The `Source Data` tab shows you all the avaialble data from the System Info API call to FortiManager. 
+If your Manager record worked you should see the FortiManager details auto-populate fields, such as `Platform`, `SN`, `Firmware`, `Time `Zone`, etc. The `Source Data` tab shows you all the available data from the System Info API call to FortiManager. 
 
 ![](res/setup/setup-011.png)
 

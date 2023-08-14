@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "FortiManager(FMG)-RecordHandlers",
+    "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-RecordHandlers",
     "description": "Playbooks designed to handle records related to the FortiManager Integration",
     "visible": true,
     "image": null,

@@ -5,12 +5,12 @@
     "type": "scripts",
     "parentType": null,
     "tableName": "script",
-    "ownable": false,
+    "ownable": true,
     "userOwnable": false,
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": false,
+    "peerReplicable": true,
     "defaultSort": [
         {
             "direction": "ASC",

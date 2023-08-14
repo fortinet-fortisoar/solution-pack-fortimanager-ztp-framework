@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "FortiManager(FMG)-Buttons",
+    "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-Buttons",
     "description": "Buttons for FortiManager Routines.",
     "visible": true,
     "image": null,

@@ -5,7 +5,6 @@
         "category": "Centralized Security Management",
         "description": "The Fortinet FortiManager JSON RPC Connector is a more advanced connector which provides freeform actions to use the json rpc api directly",
         "publisher": null,
-        "version": "1.0.0",
         "operation_roles": [],
         "configurations": [],
         "dataImports": []

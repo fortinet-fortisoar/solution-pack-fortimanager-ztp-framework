@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "FortiManager(FMG)-Microservices",
+    "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-Microservices",
     "description": "Microservices are designed to perform small actions to manage your FortiManager(FMG) with FortiSOAR using the json_rpc Actions",
     "visible": true,
     "image": null,

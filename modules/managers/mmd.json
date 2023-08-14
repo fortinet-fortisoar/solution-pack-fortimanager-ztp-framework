@@ -5,12 +5,12 @@
     "type": "managers",
     "parentType": null,
     "tableName": "manager",
-    "ownable": false,
+    "ownable": true,
     "userOwnable": false,
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": false,
+    "peerReplicable": true,
     "defaultSort": [],
     "uniqueConstraint": [
         {
