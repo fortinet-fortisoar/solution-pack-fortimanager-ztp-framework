@@ -162,14 +162,6 @@
                 "name": "10 - SP - FortiManager ZTP Flow - FortiManager(FMG)-Triggers"
             }
         ],
-        "globalVariables": [
-            {
-                "id": 7,
-                "name": "Server_fqhn",
-                "value": "FSR1",
-                "default_value": "master.fortisoar.in"
-            }
-        ],
         "playbookBlocks": [
             {
                 "name": "Dynamic Manager and Device List"
@@ -216,7 +208,7 @@
         "connectors": [
             {
                 "name": "Fortinet FortiManager JSON RPC",
-                "apiName": "fortinet_fortimanager_json_rpc"
+                "apiName": "fortinet-fortimanager-json-rpc"
             }
         ],
         "recordSets": [
