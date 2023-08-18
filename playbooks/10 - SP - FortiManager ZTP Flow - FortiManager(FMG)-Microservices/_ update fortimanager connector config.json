@@ -111,7 +111,7 @@
             "description": null,
             "arguments": {
                 "params": {
-                    "iri": "\/api\/integration\/connectors\/fortinet_fortimanager_json_rpc\/1.0.0\/?format=json",
+                    "iri": "\/api\/integration\/connectors\/fortinet-fortimanager-json-rpc\/1.0.0\/?format=json",
                     "body": "{}",
                     "method": "POST"
                 },
