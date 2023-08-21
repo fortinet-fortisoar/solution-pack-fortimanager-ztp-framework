@@ -1,0 +1,134 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Create FortiManager Connector Configuration from Manager Record",
+    "aliasName": null,
+    "tag": null,
+    "description": "Manager records create connector configs if ready with enough fields.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/471dbb4c-2adf-4c66-af86-b5fd05011ee9",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/920a2057-e5b5-4ab8-92a5-47acf7d491c8",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "create_fortimanager_config",
+            "description": null,
+            "arguments": {
+                "for_each": {
+                    "item": "{{vars.input.records}}",
+                    "parallel": false,
+                    "condition": ""
+                },
+                "arguments": {
+                    "fmg_ip": "{{vars.item.managerIP}}",
+                    "fmg_pass": "{{vars.item.adminRpcPassword}}",
+                    "fmg_user": "{{vars.item.adminRpcUser}}",
+                    "manager_name": "{{vars.item.managerName}}"
+                },
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/a9794bd8-b1a7-4ee8-b79a-b8b93af5a44c"
+            },
+            "status": null,
+            "top": "40",
+            "left": "340",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "147a8802-e6cf-4d4b-bc07-8234f84878da"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "a74a94d0-6980-488d-98ba-9d908c3053ac",
+                "title": "Create Connector Configuration",
+                "resources": [
+                    "managers"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                    "input": {
+                        "params": [],
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "displayConditions": {
+                    "managers": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": [
+                            {
+                                "type": "primitive",
+                                "field": "managerName",
+                                "value": "false",
+                                "operator": "isnull",
+                                "_operator": "isnull"
+                            },
+                            {
+                                "type": "primitive",
+                                "field": "managerIP",
+                                "value": "false",
+                                "operator": "isnull",
+                                "_operator": "isnull"
+                            },
+                            {
+                                "type": "primitive",
+                                "field": "adminRpcUser",
+                                "value": "false",
+                                "operator": "isnull",
+                                "_operator": "isnull"
+                            },
+                            {
+                                "type": "primitive",
+                                "field": "adminRpcPassword",
+                                "value": "false",
+                                "operator": "isnull",
+                                "_operator": "isnull"
+                            }
+                        ]
+                    }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": false,
+                "singleRecordExecution": true
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "group": null,
+            "uuid": "920a2057-e5b5-4ab8-92a5-47acf7d491c8"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> create_fortimanager_config",
+            "targetStep": "\/api\/3\/workflow_steps\/147a8802-e6cf-4d4b-bc07-8234f84878da",
+            "sourceStep": "\/api\/3\/workflow_steps\/920a2057-e5b5-4ab8-92a5-47acf7d491c8",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "109123c9-0adb-4038-9c95-fdd76a21631d"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "4c62d13a-8222-4fcf-9d7d-55f17ed3ec10",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "Button"
+    ]
+}

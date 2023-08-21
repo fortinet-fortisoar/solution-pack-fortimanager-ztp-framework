@@ -1,0 +1,2271 @@
+{
+    "@context": "\/api\/3\/contexts\/StagingModelMetadata",
+    "@id": "\/api\/3\/staging_model_metadatas\/6b855b7f-cc3a-4989-a581-61d1547dbe16",
+    "@type": "StagingModelMetadata",
+    "type": "devices",
+    "parentType": null,
+    "tableName": "device",
+    "ownable": true,
+    "userOwnable": false,
+    "queueable": false,
+    "trackable": true,
+    "taggable": true,
+    "peerReplicable": true,
+    "defaultSort": [],
+    "uniqueConstraint": [
+        {
+            "devices_unique": {
+                "columns": [
+                    "connectorConfig",
+                    "deviceName"
+                ]
+            }
+        }
+    ],
+    "indexable": true,
+    "writable": true,
+    "attributes": [
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "connectorConfig",
+            "length": null,
+            "orderIndex": 3,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": "The Connector Config for FortiSOAR to FortiManager Integration",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": false,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ connectorConfig }}",
+            "descriptions": {
+                "singular": "Connector Config"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "managers",
+            "name": "managers",
+            "length": null,
+            "orderIndex": 4,
+            "formType": "lookup",
+            "dataSource": {
+                "model": "managers"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ managers }}",
+            "descriptions": {
+                "singular": "Manager"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "deviceName",
+            "length": null,
+            "orderIndex": 5,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": false,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceName }}",
+            "descriptions": {
+                "singular": "Device Name"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "hostName",
+            "length": null,
+            "orderIndex": 6,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ hostName }}",
+            "descriptions": {
+                "singular": "Host Name"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "aDOM",
+            "length": null,
+            "orderIndex": 7,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ aDOM }}",
+            "descriptions": {
+                "singular": "ADOM"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "vDOM",
+            "length": null,
+            "orderIndex": 8,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": false,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ vDOM }}",
+            "descriptions": {
+                "singular": "VDOM"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sn",
+            "length": null,
+            "orderIndex": 9,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ sn }}",
+            "descriptions": {
+                "singular": "SN"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "platform",
+            "length": null,
+            "orderIndex": 10,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ platform }}",
+            "descriptions": {
+                "singular": "Platform"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "firmware",
+            "length": null,
+            "orderIndex": 11,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ firmware }}",
+            "descriptions": {
+                "singular": "Firmware"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "connectionStatus",
+            "length": null,
+            "orderIndex": 12,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ connectionStatus }}",
+            "descriptions": {
+                "singular": "Connection Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "connectionStatusHTML",
+            "length": null,
+            "orderIndex": 13,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ connectionStatusHTML }}",
+            "descriptions": {
+                "singular": "Connection Status HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "managementMode",
+            "length": null,
+            "orderIndex": 14,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ managementMode }}",
+            "descriptions": {
+                "singular": "Management Mode"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "managementModeHTML",
+            "length": null,
+            "orderIndex": 15,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ managementModeHTML }}",
+            "descriptions": {
+                "singular": "Management Mode HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "configStatus",
+            "length": null,
+            "orderIndex": 16,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ configStatus }}",
+            "descriptions": {
+                "singular": "Config Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "configStatusHTML",
+            "length": null,
+            "orderIndex": 17,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ configStatusHTML }}",
+            "descriptions": {
+                "singular": "Config Status HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "configDBStatus",
+            "length": null,
+            "orderIndex": 18,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ configDBStatus }}",
+            "descriptions": {
+                "singular": "ConfigDB Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "configDBStatusHTML",
+            "length": null,
+            "orderIndex": 19,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ configDBStatusHTML }}",
+            "descriptions": {
+                "singular": "ConfigDB Status HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "comments",
+            "name": "comments",
+            "length": null,
+            "orderIndex": 20,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "comments"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "devices",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ comments }}",
+            "descriptions": {
+                "singular": "Comments"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sourceData",
+            "length": null,
+            "orderIndex": 21,
+            "formType": "textarea",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ sourceData }}",
+            "descriptions": {
+                "singular": "Source Data"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "deviceIP",
+            "length": null,
+            "orderIndex": 22,
+            "formType": "ipv4",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": "Device IP that FortiSOAR can reach directly.",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceIP }}",
+            "descriptions": {
+                "singular": "Device IP"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "provisioningTemplates",
+            "length": null,
+            "orderIndex": 23,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ provisioningTemplates }}",
+            "descriptions": {
+                "singular": "Provisioning Templates"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "provisioningTemplatesHTML",
+            "length": null,
+            "orderIndex": 24,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ provisioningTemplatesHTML }}",
+            "descriptions": {
+                "singular": "Provisioning Templates HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "policyPackage",
+            "length": null,
+            "orderIndex": 25,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ policyPackage }}",
+            "descriptions": {
+                "singular": "Policy Package"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "policyPackageStatus",
+            "length": null,
+            "orderIndex": 26,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ policyPackageStatus }}",
+            "descriptions": {
+                "singular": "Policy Package Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "policyPackageHTML",
+            "length": null,
+            "orderIndex": 27,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ policyPackageHTML }}",
+            "descriptions": {
+                "singular": "Policy Package HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "deviceMetadata",
+            "length": null,
+            "orderIndex": 28,
+            "formType": "textarea",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": "{\n  \"var1\":\"val1\",\n  \"var2\":\"val2\"\n}",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceMetadata }}",
+            "descriptions": {
+                "singular": "Device Metadata"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "deviceMetadataHTML",
+            "length": null,
+            "orderIndex": 29,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceMetadataHTML }}",
+            "descriptions": {
+                "singular": "Device Metadata HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "integer",
+            "name": "deviceMetafieldCompleted",
+            "length": null,
+            "orderIndex": 30,
+            "formType": "integer",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": -2147483648,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceMetafieldCompleted }}",
+            "descriptions": {
+                "singular": "Device Metafield Completed"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "integer",
+            "name": "deviceMetafieldTotal",
+            "length": null,
+            "orderIndex": 31,
+            "formType": "integer",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": -2147483648,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceMetafieldTotal }}",
+            "descriptions": {
+                "singular": "Device Metafield Total"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "description",
+            "length": null,
+            "orderIndex": 32,
+            "formType": "richtext",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ description }}",
+            "descriptions": {
+                "singular": "Description"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "metafield_templates",
+            "name": "metafieldTemplates",
+            "length": null,
+            "orderIndex": 33,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "metafield_templates"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "devices",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ metafieldTemplates }}",
+            "descriptions": {
+                "singular": "Metafield Templates"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "scripts",
+            "name": "scripts",
+            "length": null,
+            "orderIndex": 34,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "scripts"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "devices",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ scripts }}",
+            "descriptions": {
+                "singular": "Scripts"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "provisioningTemplatesStatus",
+            "length": null,
+            "orderIndex": 35,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ provisioningTemplatesStatus }}",
+            "descriptions": {
+                "singular": "Provisioning Templates Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "z_t_p_profiles",
+            "name": "zTPProfiles",
+            "length": null,
+            "orderIndex": 36,
+            "formType": "lookup",
+            "dataSource": {
+                "model": "z_t_p_profiles"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": true,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPProfiles }}",
+            "descriptions": {
+                "singular": "ZTP Profile"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "zTPPhase",
+            "length": null,
+            "orderIndex": 37,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "ZTP Phase"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "4c2a1f21-06f0-41b8-829b-5bf26b6f41a5": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/4c2a1f21-06f0-41b8-829b-5bf26b6f41a5",
+                                    "_value": {
+                                        "itemValue": "Run Linked Scripts",
+                                        "@id": "\/api\/3\/picklists\/4c2a1f21-06f0-41b8-829b-5bf26b6f41a5"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "801d7b02-ec19-4eb9-8775-abeb90f7af06": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/801d7b02-ec19-4eb9-8775-abeb90f7af06",
+                                    "_value": {
+                                        "itemValue": "Provisioning Templates",
+                                        "@id": "\/api\/3\/picklists\/801d7b02-ec19-4eb9-8775-abeb90f7af06"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "1d8b9c23-9bbb-4fbb-8bc0-4eb0f41547e5": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/1d8b9c23-9bbb-4fbb-8bc0-4eb0f41547e5",
+                                    "_value": {
+                                        "itemValue": "Install Device Config",
+                                        "@id": "\/api\/3\/picklists\/1d8b9c23-9bbb-4fbb-8bc0-4eb0f41547e5"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "2c58d669-3dfa-452f-b0f1-2adc302f3630": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/2c58d669-3dfa-452f-b0f1-2adc302f3630",
+                                    "_value": {
+                                        "itemValue": "Install Policy Package",
+                                        "@id": "\/api\/3\/picklists\/2c58d669-3dfa-452f-b0f1-2adc302f3630"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "e5b72509-059f-4101-8576-4ae63a25d2d9": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "AND",
+                            "filters": [
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/e5b72509-059f-4101-8576-4ae63a25d2d9",
+                                    "_value": {
+                                        "itemValue": "Monitoring",
+                                        "@id": "\/api\/3\/picklists\/e5b72509-059f-4101-8576-4ae63a25d2d9"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "32d675a0-1c16-476c-b249-8da4a05c3a84": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "AND",
+                            "filters": [
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/32d675a0-1c16-476c-b249-8da4a05c3a84",
+                                    "_value": {
+                                        "itemValue": "Complete",
+                                        "@id": "\/api\/3\/picklists\/32d675a0-1c16-476c-b249-8da4a05c3a84"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "2992855d-1a23-4c4d-9263-d1c75a76b4c9": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "AND",
+                            "filters": [
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/2992855d-1a23-4c4d-9263-d1c75a76b4c9",
+                                    "_value": {
+                                        "itemValue": "Fail",
+                                        "@id": "\/api\/3\/picklists\/2992855d-1a23-4c4d-9263-d1c75a76b4c9"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "8facfd8e-4927-4a88-9019-a7bbcf8f8ef6": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/8facfd8e-4927-4a88-9019-a7bbcf8f8ef6",
+                                    "_value": {
+                                        "itemValue": "Authorize",
+                                        "@id": "\/api\/3\/picklists\/8facfd8e-4927-4a88-9019-a7bbcf8f8ef6"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "97f72cac-62ef-4942-8d7e-45351a5e89fa": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/97f72cac-62ef-4942-8d7e-45351a5e89fa",
+                                    "_value": {
+                                        "itemValue": "Device Metadata",
+                                        "@id": "\/api\/3\/picklists\/97f72cac-62ef-4942-8d7e-45351a5e89fa"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "49ac6717-17c9-42dd-ac92-4d2ddff4399e": {
+                        "visibility": "visible_condition",
+                        "conditions": {
+                            "sort": [],
+                            "limit": 30,
+                            "logic": "OR",
+                            "filters": [
+                                {
+                                    "field": "zTPProfiles",
+                                    "operator": "isnull",
+                                    "value": "true",
+                                    "_value": {
+                                        "display": "",
+                                        "itemValue": "",
+                                        "@id": "true"
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "field": "zTPPhase",
+                                    "operator": "eq",
+                                    "value": "\/api\/3\/picklists\/49ac6717-17c9-42dd-ac92-4d2ddff4399e",
+                                    "_value": {
+                                        "itemValue": "Device Groups",
+                                        "@id": "\/api\/3\/picklists\/49ac6717-17c9-42dd-ac92-4d2ddff4399e"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "4fbb435e-5bee-45ea-bfd2-5a80cca69636": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                },
+                "useDisplayConditions": true
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": "The Phase Triggers the Associated Automation",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPPhase }}",
+            "descriptions": {
+                "singular": "ZTP Phase"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "integer",
+            "name": "zTPPhaseStarted",
+            "length": null,
+            "orderIndex": 38,
+            "formType": "datetime",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPPhaseStarted }}",
+            "descriptions": {
+                "singular": "ZTP Phase Started"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "integer",
+            "name": "zTPPhaseCompleted",
+            "length": null,
+            "orderIndex": 39,
+            "formType": "datetime",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": "Last Phase Completed",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPPhaseCompleted }}",
+            "descriptions": {
+                "singular": "ZTP Phase Completed"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "zTPPhaseLast",
+            "length": null,
+            "orderIndex": 40,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "ZTP Phase"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "4c2a1f21-06f0-41b8-829b-5bf26b6f41a5": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "1d8b9c23-9bbb-4fbb-8bc0-4eb0f41547e5": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "2c58d669-3dfa-452f-b0f1-2adc302f3630": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "e5b72509-059f-4101-8576-4ae63a25d2d9": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "32d675a0-1c16-476c-b249-8da4a05c3a84": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "2992855d-1a23-4c4d-9263-d1c75a76b4c9": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "8facfd8e-4927-4a88-9019-a7bbcf8f8ef6": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "97f72cac-62ef-4942-8d7e-45351a5e89fa": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "49ac6717-17c9-42dd-ac92-4d2ddff4399e": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "4fbb435e-5bee-45ea-bfd2-5a80cca69636": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "zTPPhaseCompleted",
+                            "value": "false",
+                            "operator": "isnull",
+                            "type": "datetime"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPPhaseLast }}",
+            "descriptions": {
+                "singular": "ZTP Phase Last"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "zTPStatus",
+            "length": null,
+            "orderIndex": 41,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPStatus }}",
+            "descriptions": {
+                "singular": "ZTP Status"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "zTPStatusHTML",
+            "length": null,
+            "orderIndex": 42,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ zTPStatusHTML }}",
+            "descriptions": {
+                "singular": "ZTP Status HTML"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "deviceGroups",
+            "length": null,
+            "orderIndex": 43,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ deviceGroups }}",
+            "descriptions": {
+                "singular": "Device Groups"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "reportMarkdown",
+            "length": null,
+            "orderIndex": 44,
+            "formType": "richtext",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": "Device Report Fields are Updated from Script Templates",
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ reportMarkdown }}",
+            "descriptions": {
+                "singular": "Report Markdown"
+            }
+        }
+    ],
+    "system": false,
+    "module": "devices",
+    "softDeleteable": false,
+    "archivable": false,
+    "paused": false,
+    "partitionBy": "modifyDate",
+    "archivalCriteria": {
+        "keep_primary_data_for": 24,
+        "delete_primary_data_after": 60
+    },
+    "archivalFilters": [],
+    "uuid": "6b855b7f-cc3a-4989-a581-61d1547dbe16",
+    "displayName": "{{ connectorConfig }} {{ deviceName }}",
+    "descriptions": {
+        "singular": "Device",
+        "plural": "Devices"
+    }
+}

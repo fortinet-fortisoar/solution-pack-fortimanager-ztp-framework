@@ -1,0 +1,207 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "8ae76974-861f-4396-93e3-b0da60affd8f",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "scriptType",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "scriptName",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "orderPriority",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "description",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "recordTags",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "createUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "createDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyUser",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "modifyDate",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-6"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "4ad385cd-239b-4b61-8815-90316067d55f",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "tabs",
+                                "config": {
+                                    "wid": "aeb52f91-8db9-44d5-a718-b6fd07835f64",
+                                    "tabs": [
+                                        {
+                                            "title": "Script",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "32f18ec2-9ee9-440b-9d35-4ca2a1b08588",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "script",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "fa fa-none",
+                                            "show": true,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Metadata Sources",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "ec318841-8264-4e9f-a45c-b16971d1b10c",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "scriptMetadataSources",
+                                                                            "highlightMode": true,
+                                                                            "readOnly": false,
+                                                                            "renderWidget": "json",
+                                                                            "renderWidgetHeight": 250
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "icon icon-json",
+                                            "show": false,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Relationships",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "relationship.subtab",
+                                                "config": {
+                                                    "wid": "b27c6cb1-84b0-4600-a847-21f39e0faaae"
+                                                }
+                                            },
+                                            "icon": "icon icon-relationships",
+                                            "show": false,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "Audit Log",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "timeline",
+                                                "config": {
+                                                    "wid": "76c4b699-0376-45e5-b820-b90eae351022"
+                                                }
+                                            },
+                                            "icon": "icon icon-audit-log",
+                                            "show": false,
+                                            "visible": true
+                                        },
+                                        {
+                                            "title": "All Fields",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableForm",
+                                                "config": {
+                                                    "wid": "4b4eca25-217f-42d6-87c1-13d6b757f290"
+                                                }
+                                            },
+                                            "icon": "icon icon-expand",
+                                            "show": false,
+                                            "visible": true
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "1e470c5e-018e-43b9-99fe-704dd45d0dd8",
+                "_collapsed": false
+            }
+        ],
+        "actionButtons": [],
+        "wid": "da023ba8-d92c-41ba-94fc-f31f56118abb",
+        "metadata": []
+    },
+    "uuid": "modules-scripts-detail"
+}

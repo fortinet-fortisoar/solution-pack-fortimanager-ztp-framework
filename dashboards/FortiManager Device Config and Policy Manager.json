@@ -1,0 +1,150 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "7abf801b-aeb7-4048-9bf1-2ced15212f5c",
+    "displayName": "FortiManager Device Config and Policy Manager",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [
+        "\/api\/3\/roles\/c57340f1-c387-474b-9c24-effc9e3c41aa"
+    ],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "f8ba8937-b395-434a-a731-19968c68b895",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<p><span class=\"cs-richtext-field\" title=\"Announcements ID 1 - Description\">{{description}}<\/span><\/p>",
+                                    "fieldType": "record fields",
+                                    "resource": "announcements",
+                                    "resourceId": 1
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "8b6203f5-fea3-4592-a7f7-8f663e7fd2d0",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "grid",
+                                "config": {
+                                    "wid": "4bf4cbda-d768-4ccc-a44d-10ec9917f211",
+                                    "module": "devices",
+                                    "columns": [
+                                        "managers",
+                                        "deviceName",
+                                        "aDOM",
+                                        "zTPProfiles",
+                                        "deviceGroups",
+                                        "vDOM",
+                                        "connectionStatusHTML",
+                                        "managementModeHTML",
+                                        "configStatusHTML",
+                                        "configDBStatusHTML",
+                                        "provisioningTemplatesHTML",
+                                        "policyPackageHTML"
+                                    ],
+                                    "expandableCol": [],
+                                    "relationshipField": [],
+                                    "checkboxStatus": false,
+                                    "editableFields": false,
+                                    "actionButtons": [
+                                        {
+                                            "id": "\/api\/3\/workflows\/a9be0325-b407-4fd3-81b2-a3e5f1e2dc3e",
+                                            "name": "Synchronize FMG DeviceDBs",
+                                            "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "id": "\/api\/3\/workflows\/1a9ff29f-cfcb-412a-a6be-0419cae241f8",
+                                            "name": "Device Config - Install",
+                                            "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "id": "\/api\/3\/workflows\/46f80ed8-0d58-4d19-9008-0e6728b57346",
+                                            "name": "Policy Package - Install",
+                                            "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "id": "\/api\/3\/workflows\/d20412ec-3887-41f4-9f15-4ab147cf95d4",
+                                            "name": "Policy Package - Reinstall",
+                                            "icon": "fa fa-none"
+                                        }
+                                    ],
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "direction": "ASC",
+                                                "field": "connectorConfig",
+                                                "_fieldTitle": "Connector Config",
+                                                "_fieldName": "connectorConfig"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "aDOM",
+                                                "_fieldTitle": "ADOM",
+                                                "_fieldName": "aDOM"
+                                            },
+                                            {
+                                                "direction": "ASC",
+                                                "field": "deviceName",
+                                                "_fieldTitle": "Device Name",
+                                                "_fieldName": "deviceName"
+                                            }
+                                        ],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "managementMode",
+                                                "operator": "neq",
+                                                "_operator": "neq",
+                                                "value": "Deleted",
+                                                "type": "primitive"
+                                            }
+                                        ]
+                                    },
+                                    "title": "Devices and Configuration Status",
+                                    "enableHorizontalScroll": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "ee6302d7-8d07-4e1f-8669-fd50b2edf4e8",
+                "_collapsed": false
+            }
+        ],
+        "wid": "7c2df80f-9fa5-4e57-92fd-d3209a34ed3a",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        },
+        "readOnlyFlag": false,
+        "refreshInterval": 10
+    },
+    "filterArray": [],
+    "updateDate": null
+}
