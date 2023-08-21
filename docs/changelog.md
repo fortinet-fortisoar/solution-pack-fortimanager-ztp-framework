@@ -2,6 +2,8 @@
 |--------------------------------------------|
 
 # Change Log
+- 20230818
+  - Changed `fortinet_fortimanager_json_rpc` to `fortinet-fortimanager-json-rpc` in all playbook references.
 
 - 20230724
   - Migrate FortiManager microservices playbooks connector usage from the custom 3.0.0 version to the json_rpc 1.0.0 version. 
