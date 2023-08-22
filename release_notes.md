@@ -1,5 +1,5 @@
 # What's New
-This is the initial release of the `FortiManager ZTP Flow` (ZTPF) Solution Pack. 
+This 1.0.1 release fixes the playbooks that references the connector fortinet-fortimanager-json-rpc. It was incorrectly referencing fortinet_fortimanager_json_rpc.
 
 # Known Bugs
 

@@ -2,6 +2,8 @@
 |--------------------------------------------|
 
 # Change Log
+- 20230822
+  - Fixed playbooks that reference the connector fortinet-fortimanager-json-rpc. It was incorrectly referencing fortinet_fortimanager_json_rpc.
 
 - 20230724
   - Migrate FortiManager microservices playbooks connector usage from the custom 3.0.0 version to the json_rpc 1.0.0 version. 
