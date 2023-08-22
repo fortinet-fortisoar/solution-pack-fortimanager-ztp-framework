@@ -1,5 +1,5 @@
 # What's New
-This is the initial release of the `FortiManager ZTP Flow` (ZTPF) Solution Pack. 
+Patched an issue where the connector api name the playbooks were referencing for "FortiManager JSON RPC" was outdated and caused dependent playbooks to fail. 
 
 # Known Bugs
 

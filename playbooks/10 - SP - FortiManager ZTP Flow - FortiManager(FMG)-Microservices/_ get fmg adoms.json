@@ -43,7 +43,7 @@
                     "data": "{\n  \"filter\": [\n    [\n      [\n        \"restricted_prds\",\n        \"==\",\n        \"fos\"\n      ],\n      \"||\",\n      [\n        \"restricted_prds\",\n        \"==\",\n        \"fabric\"\n      ]\n    ],\n    \"&&\",\n    [\n      \"name\",\n      \"!=\",\n      \"rootp\"\n    ],\n    \"&&\",\n    [\n      \"name\",\n      \"!=\",\n      \"Unmanaged_Devices\"\n    ]\n  ]\n}"
                 },
                 "version": "1.0.0",
-                "connector": "fortinet_fortimanager_json_rpc",
+                "connector": "fortinet-fortimanager-json-rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,

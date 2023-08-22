@@ -43,7 +43,7 @@
                     "data": "{\n  \"filter\": [\n    [\n      \"mgmt_mode\",\n      \"==\",\n      0\n    ],\n    \"&&\",\n    [\n      \"os_type\",\n      \"==\",\n      \"fos\"\n    ]\n  ]\n}"
                 },
                 "version": "1.0.0",
-                "connector": "fortinet_fortimanager_json_rpc",
+                "connector": "fortinet-fortimanager-json-rpc",
                 "operation": "json_rpc_get",
                 "operationTitle": "JSON RPC Get",
                 "pickFromTenant": false,
