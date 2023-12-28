@@ -17,4 +17,4 @@ Devices have a lot of actions that are available that can modify the Device reco
 
 Actions are also exposed differently per other Device focused Dashboards such as the `Device Metadata Manager`. 
 
-![](../res/modules/devices-metadata-manager.png =250x250)
+![](../res/modules/devices-metadata-manager.png)
