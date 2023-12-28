@@ -5,7 +5,7 @@
 
 Metafield sources are used to create dynamic Jinja variable input for Jinja templates. These can be leveraged in the following record types:
  - ZTP Profile Assignment Search Type = Jinja
- - Metfield Templates
+ - Metafield Templates
  - Script Templates
 
 When leveraging Jinja Templates from this framework you have Jinja Variables at your disposal and by default the attributes `record` and `devmeta`. You can see this info when rendering script templates or metafield templates by looking for the `get_jinja_variables` step or `jinja_vars` variable within the `Render Jinja` playbook execution logs. Once you have sample data you can open the `Tools > Jinja Editor` by editing any playbook and manually paste your Jinja Variables into the `JSON` section and then your `Jinja Template` to test the results of your script. 
