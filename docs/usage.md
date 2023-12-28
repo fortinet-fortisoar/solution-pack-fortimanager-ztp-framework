@@ -19,7 +19,7 @@ Managing metafields is crucial to the success of any network deployment and prov
 ## Script Templates
 Scripts in FortiSOAR for this Solution Pack can be used for creating customized FortiManager CLI, Device DB, Policy DB, and/or TCL Scripts per device. Scripts in FortiSOAR can also maintain and create Provisioning CLI Templates in FortiManager such as when new ADOMs are created and need to be setup with Templates. Device reporting script can also be used to create a custom dashboard with user defined content.  
 
-## ZTP Profiles
+## [ZTP Profiles](usage/ztp_profile.md)
 The ZTP Profiles module describes how to handle the provisioning of each device maintained by the respective FortiManager. As a device shows up in the FortiManager Device DB, unauthorized or modeled, when ZTP Profiles are assigned to those devices the defined device templates and provisioning steps are applied and reported per device. ZTP Profiles can be assigned on demand or automatically assigned when devices are created in FortiManger regardless of how the devices were created.
 
 # Examples
