@@ -8,7 +8,7 @@ The `FortiManager ZTP Flow` Solution Pack has a variety of uses. First, refer to
 # Module Summary
 
 ## Managers
-Manager records define the Fortimanagers, and the current firmware and status, used in your solution. Use this module to start the integration and/or simply report on the current status of your FortiMangers.
+Manager records define the FortiManagers, and the current firmware and status, used in your solution. Creating a Manager record will automatically create the FortiManager JSON-RPC connector configuration for API access. 
 
 ## Devices
 Devices are synchronized from the FortiManager and stored in FortiSOAR. Then automation can occur on one or more devices based on operations and workflow needs. Once created in FortiSOAR they are not removed to preserve the last known status of the Device record even if the device has been removed, or moved, from your FortiManager. 
