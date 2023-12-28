@@ -5,10 +5,12 @@
     "config": {
         "navigation": [
             {
+                "editMode": false,
                 "icon": "icon icon-manual-task",
                 "items": [
                     {
-                        "title": "Managers",
+                        "editMode": false,
+                        "icon": "fa fa-server",
                         "require": {
                             "module": "managers",
                             "action": "read"
@@ -19,26 +21,26 @@
                                 "module": "managers"
                             }
                         },
-                        "icon": "fa fa-server",
-                        "editMode": false
+                        "title": "Managers"
                     },
                     {
+                        "editMode": false,
                         "icon": "fa fa-fire",
+                        "require": {
+                            "action": "read",
+                            "module": "devices"
+                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "devices"
                             }
                         },
-                        "title": "Devices",
-                        "require": {
-                            "action": "read",
-                            "module": "devices"
-                        },
-                        "editMode": false
+                        "title": "Devices"
                     },
                     {
-                        "title": "Metafield Templates",
+                        "editMode": false,
+                        "icon": "icon icon-source-code",
                         "require": {
                             "module": "metafield_templates",
                             "action": "read"
@@ -49,11 +51,11 @@
                                 "module": "metafield_templates"
                             }
                         },
-                        "icon": "icon icon-source-code",
-                        "editMode": false
+                        "title": "Metafield Templates"
                     },
                     {
-                        "title": "Scripts",
+                        "editMode": false,
+                        "icon": "icon icon-description",
                         "require": {
                             "module": "scripts",
                             "action": "read"
@@ -64,11 +66,11 @@
                                 "module": "scripts"
                             }
                         },
-                        "icon": "icon icon-description",
-                        "editMode": false
+                        "title": "Scripts"
                     },
                     {
-                        "title": "ZTP Profiles",
+                        "editMode": false,
+                        "icon": "fa fa-fighter-jet",
                         "require": {
                             "module": "z_t_p_profiles",
                             "action": "read"
@@ -79,12 +81,10 @@
                                 "module": "z_t_p_profiles"
                             }
                         },
-                        "icon": "fa fa-fighter-jet",
-                        "editMode": false
+                        "title": "ZTP Profiles"
                     }
                 ],
-                "title": "FortiManager",
-                "editMode": false
+                "title": "FortiManager"
             }
         ]
     },

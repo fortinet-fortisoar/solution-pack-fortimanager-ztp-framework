@@ -168,9 +168,9 @@
     ],
     "schedules": [
         {
-            "id": "gAAAAABkw8dAf72bpAZSEC3CrCUccGByLqR9W7XO05I1VPjUGYnbSxItT0YayWStyMevC2_ASPTQA7NZvss7_7_T6DdWD9-EnQ==",
+            "id": "gAAAAABljJzs26m2CJTVdMUiqe7KDwFPvxUGfdl0w_VOpWbrGjdMd34_fy9VNptcCJPR7opD4XhUKk2vRiv04Y6DVOnReh79vQ==",
             "crontab": {
-                "id": 10,
+                "id": 12,
                 "minute": "*\/2",
                 "hour": "*",
                 "day_of_week": "*",
@@ -198,14 +198,14 @@
                     "importedBy": []
                 },
                 "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-                "name": "Synch FMG1",
+                "name": "Synch FMG DBs",
                 "description": "Synch FMG1",
                 "auth": {
                     "auth_method": "CS HMAC"
                 },
                 "referenceid": null,
                 "schedule_entry_name": "Synch FMG DBs",
-                "schedule_id": "c709340a-a602-4257-b398-07554ec7f7b7",
+                "schedule_id": "c452327a-322b-40b0-8003-ac27931f50a4",
                 "start_time": null,
                 "expires": null,
                 "timezone": "UTC",
@@ -223,7 +223,7 @@
             "enabled": false,
             "last_run_at": null,
             "total_run_count": 0,
-            "date_changed": "2023-07-24T15:53:53.673992Z",
+            "date_changed": "2023-12-27T16:48:32.555060Z",
             "description": "Synch FMG1",
             "solar": null,
             "clocked": null
