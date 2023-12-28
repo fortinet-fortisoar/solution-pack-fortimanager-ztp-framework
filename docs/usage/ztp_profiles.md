@@ -29,10 +29,10 @@ The profile settings generally focus on how the ZTP Profile will operate when as
 | Clear Linked Scripts | Checkbox to enable/disable the unlinking of any Script Templates related to the device this profile is assigned. This is useful for cases where a device has already run through a profile and you do not want to re-run the same templates. |
 | Clear Linked Metafield Templates  | Checkbox to enable/disable the unlinking of any Metafield Templates related to the device this profile is assigned. This is useful for cases where a device has already run through a profile and you do not want to re-run the same templates.  |
 | Clear Device Metadata | Checkbox to enable/disable to clear any previously created metadata from the metafield templates. This can be useful in cases where the metadata was already used and no longer needed.  |
-| Clear Device Reports | Checkbox to enable/disable to clear the `Report Markdown` field of the device in the case where you want to re-run Script Templates of type `Mardown Report` which will append that field on the device for reporting. |
+| Clear Device Reports | Checkbox to enable/disable to clear the `Report Markdown` field of the device in the case where you want to re-run Script Templates of type `Markdown Report` which will append that field on the device for reporting. |
 | Export Metadata to FortiManager  | Checkbox to enable/disable the API call to update the FortiManager Variables per Device mapping.  |
 | Retain Profile Assignment | Checkbox to enable/disable toggles if we should remove a ZTP Profile from a device when the ZTP Phases are complete. This is useful for cases where you might want to re-run a profile on a device or where you want to filter completed device based on the assigned profile regardless of the phase state. This is only available when `ZTP Profile Next` is empty.   |
-| Skip Delete Device | Checkbox to enable/disable is only avaialble when running the `Profile Mode` as `Decommission` which by default will remove the device from FortiManager but retain the device record in FortiSOAR. |
+| Skip Delete Device | Checkbox to enable/disable is only available when running the `Profile Mode` as `Decommission` which by default will remove the device from FortiManager but retain the device record in FortiSOAR. |
 
 # ZTP Phases
 
