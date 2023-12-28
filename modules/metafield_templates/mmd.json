@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/d721ea0b-59db-4a90-9637-feb459499a15",
+    "@id": "\/api\/3\/staging_model_metadatas\/2030cf36-c5e6-4402-af6c-4f489580d028",
     "@type": "StagingModelMetadata",
     "type": "metafield_templates",
     "parentType": null,
@@ -10,7 +10,7 @@
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": true,
+    "peerReplicable": false,
     "defaultSort": [
         {
             "direction": "ASC",
@@ -380,7 +380,9 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "d721ea0b-59db-4a90-9637-feb459499a15",
+    "replicationFilters": [],
+    "enableReplication": true,
+    "uuid": "2030cf36-c5e6-4402-af6c-4f489580d028",
     "displayName": "{{ name }}",
     "descriptions": {
         "singular": "Metafield Template",

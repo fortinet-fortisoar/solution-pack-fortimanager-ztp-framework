@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/04cd5780-2f00-4131-9b3e-47e48501675b",
+    "@id": "\/api\/3\/staging_model_metadatas\/b762f436-2230-4a9b-b274-42085235af5e",
     "@type": "StagingModelMetadata",
     "type": "z_t_p_profiles",
     "parentType": null,
@@ -10,7 +10,7 @@
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": true,
+    "peerReplicable": false,
     "defaultSort": [
         {
             "direction": "ASC",
@@ -576,6 +576,18 @@
                     "8293a6f8-86f3-4c91-bbca-b74fd7c57794": {
                         "visibility": "visible",
                         "conditions": null
+                    },
+                    "7e0e6fea-6f31-4310-a417-76bf2dfabda7": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "91122515-3619-4dd6-b6a8-36cd63199b85": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "263e5e58-080c-4e0e-974b-6950e91f60b4": {
+                        "visibility": "visible",
+                        "conditions": null
                     }
                 }
             },
@@ -596,8 +608,32 @@
             "bulkAction": [],
             "dataSourceFilters": null,
             "defaultValue": null,
-            "tooltip": "The Field(s) we want to search to assign devices to this profile. By Default we will choose all fields.",
-            "visibility": true,
+            "tooltip": "The Field(s) we want to search to assign devices to this profile in Simple and Advanced mode.",
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "assignmentSearchType",
+                            "value": [
+                                "4e8f738b-b4fe-45e7-bf22-333e89354b95",
+                                "a0611652-03ae-4e5f-929a-3cc83a6df1ee"
+                            ],
+                            "display": "",
+                            "operator": "in",
+                            "type": "array",
+                            "OPERATOR_KEY": "$",
+                            "module": "assignmentSearchType",
+                            "template": "multiselectpicklist",
+                            "previousOperator": "in",
+                            "previousTemplate": "multiselectpicklist",
+                            "useInOperator": true
+                        }
+                    ]
+                }
+            ],
             "htmlEscape": false,
             "orphanRemoval": null,
             "readable": true,
@@ -614,7 +650,7 @@
         {
             "@type": "AttributeMetadata",
             "type": "string",
-            "name": "assignmentSearch",
+            "name": "assignmentSearchMetadataSources",
             "length": null,
             "orderIndex": 11,
             "formType": "textarea",
@@ -641,7 +677,71 @@
             },
             "dataSourceFilters": null,
             "defaultValue": null,
-            "tooltip": "Search for Device Records on create using a regex.",
+            "tooltip": "Create custom Jinja vars using external sources.",
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "assignmentSearchType",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/1a2dbeff-3942-4284-97a7-01948ab6e6ed",
+                            "_value": {
+                                "display": "Jinja",
+                                "itemValue": "Jinja",
+                                "@id": "\/api\/3\/picklists\/1a2dbeff-3942-4284-97a7-01948ab6e6ed"
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "skipSerialization": false,
+            "displayName": "{{ assignmentSearchMetadataSources }}",
+            "descriptions": {
+                "singular": "Assignment Search Metadata Sources"
+            }
+        },
+        {
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "assignmentSearch",
+            "length": null,
+            "orderIndex": 12,
+            "formType": "textarea",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": "Search for Devices on create using a regex for Simple and Advanced or Jinja.",
             "visibility": true,
             "htmlEscape": false,
             "orphanRemoval": null,
@@ -661,7 +761,7 @@
             "type": "string",
             "name": "aDOM",
             "length": null,
-            "orderIndex": 12,
+            "orderIndex": 13,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -706,7 +806,7 @@
             "type": "string",
             "name": "deviceGroups",
             "length": null,
-            "orderIndex": 13,
+            "orderIndex": 14,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -751,7 +851,7 @@
             "type": "string",
             "name": "provisioningTemplateGroup",
             "length": null,
-            "orderIndex": 14,
+            "orderIndex": 15,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -796,7 +896,7 @@
             "type": "string",
             "name": "policyPackage",
             "length": null,
-            "orderIndex": 15,
+            "orderIndex": 16,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -841,7 +941,7 @@
             "type": "picklists",
             "name": "zTPPhaseStart",
             "length": null,
-            "orderIndex": 16,
+            "orderIndex": 17,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -951,7 +1051,7 @@
             "type": "string",
             "name": "zTPStepMap",
             "length": null,
-            "orderIndex": 17,
+            "orderIndex": 18,
             "formType": "textarea",
             "dataSource": null,
             "searchable": true,
@@ -1015,7 +1115,7 @@
             "type": "z_t_p_profiles",
             "name": "zTPProfileNext",
             "length": null,
-            "orderIndex": 18,
+            "orderIndex": 19,
             "formType": "lookup",
             "dataSource": {
                 "model": "z_t_p_profiles"
@@ -1080,7 +1180,7 @@
             "type": "boolean",
             "name": "clearLinkedMetafieldTemplates",
             "length": null,
-            "orderIndex": 19,
+            "orderIndex": 20,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1125,7 +1225,7 @@
             "type": "boolean",
             "name": "clearLinkedScripts",
             "length": null,
-            "orderIndex": 20,
+            "orderIndex": 21,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1170,7 +1270,7 @@
             "type": "boolean",
             "name": "clearDeviceMetadata",
             "length": null,
-            "orderIndex": 21,
+            "orderIndex": 22,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1215,7 +1315,7 @@
             "type": "boolean",
             "name": "retainProfileAssignment",
             "length": null,
-            "orderIndex": 22,
+            "orderIndex": 23,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1279,7 +1379,7 @@
             "type": "boolean",
             "name": "exportMetadataToFortiManager",
             "length": null,
-            "orderIndex": 23,
+            "orderIndex": 24,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1323,7 +1423,7 @@
             "type": "string",
             "name": "incompleteMetafieldEmail",
             "length": null,
-            "orderIndex": 24,
+            "orderIndex": 25,
             "formType": "text",
             "dataSource": null,
             "searchable": true,
@@ -1368,7 +1468,7 @@
             "type": "boolean",
             "name": "clearDeviceReports",
             "length": null,
-            "orderIndex": 25,
+            "orderIndex": 26,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1413,7 +1513,7 @@
             "type": "string",
             "name": "incompleteMetafieldDeviceMetadataField",
             "length": null,
-            "orderIndex": 26,
+            "orderIndex": 27,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -1458,7 +1558,7 @@
             "type": "boolean",
             "name": "incompleteMetafieldEmailEnable",
             "length": null,
-            "orderIndex": 27,
+            "orderIndex": 28,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1503,7 +1603,7 @@
             "type": "boolean",
             "name": "skipDeleteDevice",
             "length": null,
-            "orderIndex": 28,
+            "orderIndex": 29,
             "formType": "checkbox",
             "dataSource": null,
             "searchable": true,
@@ -1567,7 +1667,7 @@
             "type": "string",
             "name": "deviceMetadataMonitorRegex",
             "length": null,
-            "orderIndex": 29,
+            "orderIndex": 30,
             "formType": "textarea",
             "dataSource": null,
             "searchable": true,
@@ -1612,7 +1712,7 @@
             "type": "integer",
             "name": "deviceMetadataMonitorInterval",
             "length": null,
-            "orderIndex": 30,
+            "orderIndex": 31,
             "formType": "integer",
             "dataSource": null,
             "searchable": true,
@@ -1663,7 +1763,9 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "04cd5780-2f00-4131-9b3e-47e48501675b",
+    "replicationFilters": [],
+    "enableReplication": true,
+    "uuid": "b762f436-2230-4a9b-b274-42085235af5e",
     "displayName": "{{ name }}",
     "descriptions": {
         "singular": "ZTP Profile",
