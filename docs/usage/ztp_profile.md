@@ -1,4 +1,4 @@
-| [Home](../../README.md) | --> [Usage](../usage.md) |
+| [Home](../../README.md) | / [Usage](../usage.md) |
 |-------------------------|--------------------------|
 
 # ZTP Profiles
