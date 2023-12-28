@@ -4,8 +4,8 @@
     "@type": "Role",
     "description": "The playbook appliance needs to be able to edit records and fields that users should not touch directly.",
     "name": "FortiManager-Playbook-Appliance",
-    "modulePermissions": {
-        "16": {
+    "modulePermissions": [
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -76,7 +76,7 @@
             ],
             "module": "devices"
         },
-        "39": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -86,7 +86,7 @@
             "fieldPermissions": [],
             "module": "scripts"
         },
-        "40": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -96,7 +96,7 @@
             "fieldPermissions": [],
             "module": "managers"
         },
-        "41": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -106,7 +106,7 @@
             "fieldPermissions": [],
             "module": "metafield_templates"
         },
-        "42": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -116,6 +116,6 @@
             "fieldPermissions": [],
             "module": "z_t_p_profiles"
         }
-    },
+    ],
     "uuid": "c064238d-8049-4c5b-b3e8-e3a1c41178fe"
 }
