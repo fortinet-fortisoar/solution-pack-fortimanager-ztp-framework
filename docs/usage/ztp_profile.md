@@ -24,7 +24,7 @@ The profile settings generally focus on how the ZTP Profile will operate when as
 | Assignment Mode | Can be set to `Manual` where you need to select devices to get this profile or `Automatic` which will run as a new device record is created.  |
 | Assignment Search Type | In automatic mode you can search for devices using `simple` and `advanced` with regex, or `jinja` to build logical responses of `true`. |
 | Assignment Search Fields | Only available for regex searches with `Simple` or `Advanced` and concatenates selected fields into a string.  |
-| Assignment Search Metadata Sources | Only available for `Jinja` searches and can retrieve Jinja variables from FMG API calls or custom playbooks. See the [Jinja Rendering with Metadata Sources](?qid=9545ae4e-0552-43e4-a399-1082dabe8a98) page for details. |
+| Assignment Search Metadata Sources | Only available for `Jinja` searches and can retrieve Jinja variables from FMG API calls or custom playbooks. See the [Jinja Rendering with Metadata Sources](./jinja_rendering_with_metafield_sources.md) page for details. |
 | Assignment Search | Available for `Simple` or `Advanced` to store the regex or when `Jinja` is the `Search Type` will store Jinja Template language. |
 | Clear Linked Scripts | Checkbox to enable/disable the unlinking of any Script Templates related to the device this profile is assigned. This is useful for cases where a device has already run through a profile and you do not want to re-run the same templates. |
 | Clear Linked Metafield Templates  | Checkbox to enable/disable the unlinking of any Metafield Templates related to the device this profile is assigned. This is useful for cases where a device has already run through a profile and you do not want to re-run the same templates.  |
