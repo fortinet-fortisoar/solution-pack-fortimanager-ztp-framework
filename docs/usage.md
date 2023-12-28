@@ -3,7 +3,10 @@
 
 # Usage
 
-The `FortiManager ZTP Flow` Solution Pack has a variety of uses. First, refer to the [installation and setup guide](setup.md) guide to get started. Use the example(s) found [below](#examples) to decide what provisioning options are available out of the box.
+The `FortiManager ZTP Flow` Solution Pack has a variety of uses. First, refer to the [installation and setup guide](setup.md) guide to get started. Read the content below to help guide you through some solutions. 
+
+You may also want to install the 
+
 
 # Module Summary
 
