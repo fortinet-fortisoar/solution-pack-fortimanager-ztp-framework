@@ -5,7 +5,7 @@
 
 The `FortiManager ZTP Flow` Solution Pack has a variety of uses. First, refer to the [installation and setup guide](setup.md) guide to get started. Read the content below to help guide you through some solutions. 
 
-You may also want to install the 
+You may also want to install the [FortiManager ZTP Flow - Feature Examples](https://fortisoar.contenthub.fortinet.com//list.html?contentType=all&searchContent=FortiManager%20ZTP%20Flow%20-%20Feature%20Examples) to get functional profiles and templates for various objectives. 
 
 
 # Module Summary
