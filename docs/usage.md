@@ -22,9 +22,10 @@ Scripts in FortiSOAR for this Solution Pack can be used for creating customized 
 ## [ZTP Profiles](./usage/ztp_profiles.md)>
 The ZTP Profiles module describes how to handle the provisioning of each device maintained by the respective FortiManager. As a device shows up in the FortiManager Device DB, unauthorized or modeled, when ZTP Profiles are assigned to those devices the defined device templates and provisioning steps are applied and reported per device. ZTP Profiles can be assigned on demand or automatically assigned when devices are created in FortiManger regardless of how the devices were created. Automatic assignment of ZTP Profiles can leverage [Metafield Sources](./usage/jinja_rendering_with_metafield_sources.md) to create complex auto assignment rules.
 
-# Examples
+# Examples and Detailed Topics
 
- * [Example1](./usage/example1.md): Provision of 4x Unauthorized FortiGates VMs in FortiManager starting by simply assigning a ZTP Profile.
+ * [Multiple ZTP Profile Example](./usage/example1.md): Provision of 4x Unauthorized FortiGates VMs in FortiManager starting by simply assigning a ZTP Profile.
+ * [Jinja Rendering with Metafield Sources](./usage/jinja_rendering_with_metafield_sources.md): Dynamic Metafield Source options for enhancing the provisioning experience. 
 
 | [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Contents](./contents.md) |
 |-----------------------------------------|-------------------------------------------|---------------------------|
