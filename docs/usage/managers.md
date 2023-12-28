@@ -6,6 +6,7 @@
 ## Summary
 
 Creating Manger records only needs the `FortiManager Host`, `RPC User` and `RPC Password` and the rest of the information is gathered via the FMG API and stored in FortiSOAR. 
+
 ![](../res/modules/managers-summary.png)
 
 ## Actions
