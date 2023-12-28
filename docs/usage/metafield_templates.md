@@ -5,10 +5,12 @@
 
 ## Example Template
 
-Create Global Variables
+Create Global Variables using Jinja and static values:
+
 ![](../res/modules/metafield-template-example1.png)
 
-Create Site Specific Variables. The record for metadata gets data using the following Jinja
+Create Site Specific Variables. The record for metadata gets data using the following Jinja:
+
 ```
 {
   "site_subnet": "{{'10.48.0.0/12' | ipaddr('subnet') | ipsubnet(24,devmeta.site_id|int-1)}}",
@@ -17,7 +19,7 @@ Create Site Specific Variables. The record for metadata gets data using the foll
 }
 ```
 
-When running the automation `Render Metafield Template with a Device`. 
+When running the automation `Render Metafield Template with a Device` we can see how the Metadata would be applied to the device if associated to this template. 
 ![](../res/modules/metafield-template-example2.png)
 
 
