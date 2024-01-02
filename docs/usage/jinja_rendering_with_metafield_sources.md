@@ -81,9 +81,9 @@ In this example we are grabbing the `interface` table for the device name from t
 [
   {
     "source_type": "fmg",
-    "source": "\{\{record.connector_config\}\}",
+    "source": "{{record.connector_config}}",
     "keyname": "interfaces",
-    "location": "/pm/config/device/\{\{record.devname\}\}/global/system/interface"
+    "location": "/pm/config/device/{{record.devname}}/global/system/interface"
   }
 ]
 ```
@@ -121,7 +121,7 @@ The following example is used in the ZTP Flow Feature Examples. These playbooks 
     "source_type": "playbook",
     "keyname": "ip_table_lookup",
     "playbook_id": "1c6e570a-605e-46ac-9125-32f2af1877e7",
-    "argument": "\{\{record.devname\}\}"
+    "argument": "{{record.devname}}"
   }
 ]
 ```
