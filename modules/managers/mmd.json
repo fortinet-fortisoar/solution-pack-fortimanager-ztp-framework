@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/571d0f32-3366-432a-a169-e965075d0e5a",
+    "@id": "\/api\/3\/staging_model_metadatas\/701301ea-1fdb-42a1-b0c4-688745f2fa22",
     "@type": "StagingModelMetadata",
     "type": "managers",
     "parentType": null,
@@ -10,7 +10,7 @@
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": true,
+    "peerReplicable": false,
     "defaultSort": [],
     "uniqueConstraint": [
         {
@@ -991,7 +991,9 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "571d0f32-3366-432a-a169-e965075d0e5a",
+    "replicationFilters": [],
+    "enableReplication": true,
+    "uuid": "701301ea-1fdb-42a1-b0c4-688745f2fa22",
     "displayName": "{{ managerName }}",
     "descriptions": {
         "singular": "Manager",

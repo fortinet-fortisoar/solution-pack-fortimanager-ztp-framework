@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/1b552bf7-33dd-41c2-8052-f7e89bfff1c9",
+    "@id": "\/api\/3\/staging_model_metadatas\/f19b9abd-8d54-4e2b-af19-12962cadccdc",
     "@type": "StagingModelMetadata",
     "type": "scripts",
     "parentType": null,
@@ -10,7 +10,7 @@
     "queueable": false,
     "trackable": true,
     "taggable": true,
-    "peerReplicable": true,
+    "peerReplicable": false,
     "defaultSort": [
         {
             "direction": "ASC",
@@ -502,7 +502,9 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "1b552bf7-33dd-41c2-8052-f7e89bfff1c9",
+    "replicationFilters": [],
+    "enableReplication": true,
+    "uuid": "f19b9abd-8d54-4e2b-af19-12962cadccdc",
     "displayName": "{{ scriptName }}",
     "descriptions": {
         "singular": "Script",

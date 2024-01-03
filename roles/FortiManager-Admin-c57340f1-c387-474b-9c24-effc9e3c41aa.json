@@ -4,8 +4,8 @@
     "@type": "Role",
     "description": "The FortiManager Admin should be able to edit only certain fields as the synchronization process owns many fields.",
     "name": "FortiManager-Admin",
-    "modulePermissions": {
-        "38": {
+    "modulePermissions": [
+        {
             "@type": "ModulePermission",
             "canCreate": false,
             "canExecute": true,
@@ -274,7 +274,7 @@
             ],
             "module": "devices"
         },
-        "39": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -284,7 +284,7 @@
             "fieldPermissions": [],
             "module": "scripts"
         },
-        "40": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -451,7 +451,7 @@
             ],
             "module": "managers"
         },
-        "41": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -540,7 +540,7 @@
             ],
             "module": "metafield_templates"
         },
-        "42": {
+        {
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -550,6 +550,6 @@
             "fieldPermissions": [],
             "module": "z_t_p_profiles"
         }
-    },
+    ],
     "uuid": "c57340f1-c387-474b-9c24-effc9e3c41aa"
 }

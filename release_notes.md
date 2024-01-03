@@ -1,5 +1,7 @@
 # What's New
-This 1.0.1 release fixes the playbooks that references the connector fortinet-fortimanager-json-rpc. It was incorrectly referencing fortinet_fortimanager_json_rpc.
+
+Release of 1.0.2:
+ - Add jinja vars support to ztp profile assignments and update docs to reflect this change.
 
 # Known Bugs
 
@@ -10,5 +12,4 @@ If you are updating an existing solution pack then the included Announcement mig
 ```
 sudo env PGPASSWORD=$(cat /home/csadmin/device_uuid) psql -U cyberpgsql -d venom -c "update announcements set id=1 where uuid='83ca88a8-e02f-48a1-901f-39aede335b7d';"
 ```
-
 See internal Bug ID `0932566` for the latest status of the bug. 
