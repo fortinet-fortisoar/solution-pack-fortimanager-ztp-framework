@@ -26,8 +26,8 @@
                 "deviceid2strings": "{%- set table = {} -%}\n{%- for dev in vars.device_record_data -%}\n  {%- set dev_str = [] -%}\n    {%- for dat in dev -%}\n      {%- if dat != \"id\" -%}\n        {%- if vars.zprof_search_type == \"Advanced\" -%}\n          {%- set s = dat|string + \":\" + dev[dat]|string -%}\n          {%- set _do = dev_str.append(s) %}\n        {%- else -%}\n          {%- set s = dev[dat]|string -%}\n          {%- set _do = dev_str.append(s) %}\n        {%- endif %}\n      {%- endif %}\n    {%- endfor %}\n    {%- set _do = table.update({dev.id|int:dev_str|join(\" \")}) -%}\n{%- endfor -%}\n{{table}}"
             },
             "status": null,
-            "top": "800",
-            "left": "640",
+            "top": "660",
+            "left": "1260",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
             "uuid": "189f8eeb-7903-4e1e-b236-4ba8709335cb"
@@ -37,14 +37,14 @@
             "name": "extract_jinja_results",
             "description": null,
             "arguments": {
-                "search_results": "{%- set i = namespace(x=0) -%}\n{%- set table = [] -%}\n{%- for dev in vars.device_record_data -%}\n  {%- set idx = {} -%}\n  {%- if vars.steps.render_jinja[i.x].output != \"\" -%}\n    {%- set ret = true -%}    \n  {%- endif -%}\n  {%- set _do = idx.update( {\n      \"ztp_profile_id\":vars.ztp_profile_id,\n      \"id\":dev.id,\n      \"matched\": ret|default(false),\n      \"jinja_vars\":vars.deviceid2vars[i.x],\n      \"jinja_search\":vars.zprof_search\n    } ) -%}\n  {%- set _do = table.append(idx)  -%}\n  {%- set i.x = i.x+1 -%}\n{%- endfor -%}\n{{table}}"
+                "search_results": "{%- set i = namespace(x=0) -%}\n{%- set table = [] -%}\n{%- for dev in vars.device_record_data -%}\n  {%- set idx = {} -%}\n  {%- if vars.steps.render_jinja[i.x].output != \"\" -%}\n    {%- set ret = true -%}    \n  {%- endif -%}\n  {%- set _do = idx.update( {\n      \"ztp_profile_id\":vars.ztp_profile_id,\n      \"id\":dev.id,\n      \"matched\": ret|default(false),\n      \"jinja_vars\":vars.steps.get_jinja_vars[i.x].output,\n      \"jinja_search\":vars.zprof_search\n    } ) -%}\n  {%- set _do = table.append(idx)  -%}\n  {%- set i.x = i.x+1 -%}\n{%- endfor -%}\n{{table}}"
             },
             "status": null,
-            "top": "720",
-            "left": "300",
+            "top": "680",
+            "left": "740",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
-            "uuid": "56c05601-db4e-4565-b27a-784c0335fe52"
+            "uuid": "fdcc226f-c58a-4054-98c4-b864c7a4eb74"
         },
         {
             "@type": "WorkflowStep",
@@ -106,10 +106,11 @@
                         "profileMode",
                         "orderPriority",
                         "assignmentMode",
+                        "assignmentSearchType",
+                        "assignmentSearchField",
                         "assignmentSearch",
                         "id",
-                        "assignmentSearchType",
-                        "assignmentSearchField"
+                        "assignmentSearchMetadataSources"
                     ]
                 },
                 "module": "z_t_p_profiles?$limit=1",
@@ -125,16 +126,43 @@
         },
         {
             "@type": "WorkflowStep",
-            "name": "render_jinja",
+            "name": "get_jinja_vars",
             "description": null,
             "arguments": {
                 "for_each": {
-                    "item": "{{vars.deviceid2vars}}",
+                    "item": "{{vars.device_record_data}}",
                     "parallel": false,
                     "condition": ""
                 },
                 "arguments": {
-                    "script_vars": "{{vars.item}}",
+                    "metadata_source": "{{vars.zprof_assignment_metasources}}",
+                    "device_record_id": "{{vars.item['id']}}"
+                },
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/19d48e99-e6f3-40bf-a8a6-c7b107f3fd7f"
+            },
+            "status": null,
+            "top": "480",
+            "left": "740",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "897590c3-85e6-4778-a7a4-c70117e00740"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "render_jinja",
+            "description": null,
+            "arguments": {
+                "for_each": {
+                    "item": "{{vars.steps.get_jinja_vars}}",
+                    "parallel": false,
+                    "condition": ""
+                },
+                "arguments": {
+                    "script_vars": "{{vars.item.output}}",
                     "script_template": "{{vars.zprof_search}}"
                 },
                 "apply_async": false,
@@ -144,11 +172,11 @@
                 "workflowReference": "\/api\/3\/workflows\/8aff2bb3-7d1c-45f1-aae9-ea816aea874d"
             },
             "status": null,
-            "top": "620",
-            "left": "300",
+            "top": "580",
+            "left": "740",
             "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
             "group": null,
-            "uuid": "3266eb5a-adc6-4f93-aa9d-911061b3c623"
+            "uuid": "1f9a1557-c550-46d6-b296-f16ed4843438"
         },
         {
             "@type": "WorkflowStep",
@@ -158,7 +186,7 @@
                 "output": "{{vars.search_results}}"
             },
             "status": null,
-            "top": "120",
+            "top": "220",
             "left": "40",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -173,24 +201,10 @@
             },
             "status": null,
             "top": "800",
-            "left": "300",
+            "left": "540",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
             "uuid": "626c282e-6435-498a-9856-2f282df4c52a"
-        },
-        {
-            "@type": "WorkflowStep",
-            "name": "search_jinja",
-            "description": null,
-            "arguments": {
-                "deviceid2vars": "{{vars.device_record_data}}"
-            },
-            "status": null,
-            "top": "480",
-            "left": "300",
-            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-            "group": null,
-            "uuid": "6dfecfd5-44e4-470a-b271-40fdc987c8c4"
         },
         {
             "@type": "WorkflowStep",
@@ -212,15 +226,16 @@
                     },
                     {
                         "option": "Jinja",
-                        "step_iri": "\/api\/3\/workflow_steps\/6dfecfd5-44e4-470a-b271-40fdc987c8c4",
+                        "step_iri": "\/api\/3\/workflow_steps\/897590c3-85e6-4778-a7a4-c70117e00740",
                         "condition": "{{ vars.zprof_search_type == \"Jinja\" }}",
-                        "step_name": "search_jinja"
+                        "step_name": "get_jinja_vars"
                     }
-                ]
+                ],
+                "step_variables": []
             },
             "status": null,
-            "top": "480",
-            "left": "640",
+            "top": "420",
+            "left": "1100",
             "stepType": "\/api\/3\/workflow_step_types\/12254cf5-5db7-4b1a-8cb1-3af081924b28",
             "group": null,
             "uuid": "b2990715-0719-41a7-b49d-25c89841b5a6"
@@ -249,7 +264,8 @@
                 "ztp_profile_mode": "{{vars.steps.find_ztp_profile[0].assignmentMode.itemValue}}",
                 "zprof_search_type": "{{vars.steps.find_ztp_profile[0].assignmentSearchType.itemValue}}",
                 "zprof_assignment_mode": "{{vars.steps.find_ztp_profile[0].assignmentMode.itemValue}}",
-                "zprof_assignment_fields": "{%- set fmap = vars.search_field_map -%}\n{%- set fields = [] -%}\n{%- for f in vars.steps.find_ztp_profile[0].assignmentSearchField|json_query('[].itemValue') -%}\n  {%- if f in fmap -%}\n    {%- set _do = fields.append(fmap[f]) -%}\n  {%- endif -%}\n{%- endfor -%}\n{{fields}}"
+                "zprof_assignment_fields": "{%- set fmap = vars.search_field_map -%}\n{%- set fields = [] -%}\n{%- for f in vars.steps.find_ztp_profile[0].assignmentSearchField|json_query('[].itemValue') -%}\n  {%- if f in fmap -%}\n    {%- set _do = fields.append(fmap[f]) -%}\n  {%- endif -%}\n{%- endfor -%}\n{{fields}}",
+                "zprof_assignment_metasources": "{{vars.steps.find_ztp_profile[0].assignmentSearchMetadataSources}}"
             },
             "status": null,
             "top": "240",
@@ -304,8 +320,8 @@
                 "step_variables": []
             },
             "status": null,
-            "top": "480",
-            "left": "1040",
+            "top": "420",
+            "left": "1460",
             "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
             "group": null,
             "uuid": "92dcdc90-1fc2-4146-a588-350aca214cd4"
@@ -324,13 +340,13 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "extract_jinja_results -> return_from_playbook",
+            "name": "extract_jinja_results2 -> return_from_playbook",
             "targetStep": "\/api\/3\/workflow_steps\/91912812-6b21-4a33-bea7-e0ea7dda24fb",
-            "sourceStep": "\/api\/3\/workflow_steps\/56c05601-db4e-4565-b27a-784c0335fe52",
+            "sourceStep": "\/api\/3\/workflow_steps\/fdcc226f-c58a-4054-98c4-b864c7a4eb74",
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "7127b555-2659-44b4-ac2d-b714c0f0c788"
+            "uuid": "96cd4af2-c78a-430c-ae73-026a428d8aca"
         },
         {
             "@type": "WorkflowRoute",
@@ -354,13 +370,23 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "render_jinja -> extract_jinja_results",
-            "targetStep": "\/api\/3\/workflow_steps\/56c05601-db4e-4565-b27a-784c0335fe52",
-            "sourceStep": "\/api\/3\/workflow_steps\/3266eb5a-adc6-4f93-aa9d-911061b3c623",
+            "name": "get_jinja_vars -> Copy of render_jinja",
+            "targetStep": "\/api\/3\/workflow_steps\/1f9a1557-c550-46d6-b296-f16ed4843438",
+            "sourceStep": "\/api\/3\/workflow_steps\/897590c3-85e6-4778-a7a4-c70117e00740",
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "c94ac91f-5a75-46a2-b1ac-0ed885139288"
+            "uuid": "1d748ee4-e15f-412c-9ac4-a959a2c5c37b"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "render_jinja2 -> extract_jinja_results2",
+            "targetStep": "\/api\/3\/workflow_steps\/fdcc226f-c58a-4054-98c4-b864c7a4eb74",
+            "sourceStep": "\/api\/3\/workflow_steps\/1f9a1557-c550-46d6-b296-f16ed4843438",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "20b51b17-fece-4667-9e7d-6fbea18ba6d7"
         },
         {
             "@type": "WorkflowRoute",
@@ -374,16 +400,6 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "search_jinja -> render_jinja",
-            "targetStep": "\/api\/3\/workflow_steps\/3266eb5a-adc6-4f93-aa9d-911061b3c623",
-            "sourceStep": "\/api\/3\/workflow_steps\/6dfecfd5-44e4-470a-b271-40fdc987c8c4",
-            "label": null,
-            "isExecuted": false,
-            "group": null,
-            "uuid": "3d19382c-92f3-4fd3-b602-ab43d23fae36"
-        },
-        {
-            "@type": "WorkflowRoute",
             "name": "search_type -> device_string_data",
             "targetStep": "\/api\/3\/workflow_steps\/189f8eeb-7903-4e1e-b236-4ba8709335cb",
             "sourceStep": "\/api\/3\/workflow_steps\/b2990715-0719-41a7-b49d-25c89841b5a6",
@@ -394,13 +410,13 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "search_type -> search_jinja",
-            "targetStep": "\/api\/3\/workflow_steps\/6dfecfd5-44e4-470a-b271-40fdc987c8c4",
+            "name": "search_type -> get_jinja_vars",
+            "targetStep": "\/api\/3\/workflow_steps\/897590c3-85e6-4778-a7a4-c70117e00740",
             "sourceStep": "\/api\/3\/workflow_steps\/b2990715-0719-41a7-b49d-25c89841b5a6",
             "label": "Jinja",
             "isExecuted": false,
             "group": null,
-            "uuid": "4352885d-f037-44f3-b42e-fb784991477b"
+            "uuid": "ffad702c-0714-48d7-b4d3-65aa8d1e63de"
         },
         {
             "@type": "WorkflowRoute",
@@ -454,6 +470,23 @@
         }
     ],
     "groups": [
+        {
+            "@type": "WorkflowGroup",
+            "name": "Jinja",
+            "description": "This area leverages the same logic as scripts and metadata templates",
+            "type": "note",
+            "isCollapsed": false,
+            "hasTriggerStep": false,
+            "hideInLogs": true,
+            "metadata": [],
+            "reusable": false,
+            "top": "480",
+            "left": "520",
+            "height": "160",
+            "width": "198",
+            "uuid": "d99a04fe-5e18-4542-916a-93507d5e1542",
+            "recordTags": []
+        },
         {
             "@type": "WorkflowGroup",
             "name": "Notes",

@@ -2,6 +2,9 @@
 |--------------------------------------------|
 
 # Change Log
+- 20231228
+ - Add jinja vars support to ztp profile assignments and update docs to reflect this change.
+
 - 20230822
   - Fixed playbooks that reference the connector fortinet-fortimanager-json-rpc. It was incorrectly referencing fortinet_fortimanager_json_rpc.
 
