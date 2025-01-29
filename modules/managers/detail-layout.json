@@ -73,12 +73,6 @@
                                                             "highlightMode": true,
                                                             "readOnly": false,
                                                             "linky": true
-                                                        },
-                                                        {
-                                                            "name": "recordTags",
-                                                            "highlightMode": true,
-                                                            "readOnly": false,
-                                                            "linky": true
                                                         }
                                                     ],
                                                     "style": "col-lg-4"
