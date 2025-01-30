@@ -212,28 +212,6 @@
             "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
             "group": null,
             "uuid": "1e09ed56-e253-44ce-ae3d-74e6bbdace69"
-        },
-        {
-            "@type": "WorkflowStep",
-            "name": "wait_for_task",
-            "description": null,
-            "arguments": {
-                "arguments": {
-                    "task_id": "{{vars.steps.install_pkg.data['execute_response'].task}}",
-                    "connector_config": "{{vars.input.params['connector_config']}}"
-                },
-                "apply_async": false,
-                "step_variables": [],
-                "pass_parent_env": false,
-                "pass_input_record": false,
-                "workflowReference": "\/api\/3\/workflows\/70892d77-03fe-4353-81da-c2225be54dd3"
-            },
-            "status": null,
-            "top": "540",
-            "left": "80",
-            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
-            "group": null,
-            "uuid": "b1009630-57de-4b0c-ab00-5241b3ba5b84"
         }
     ],
     "routes": [
@@ -336,16 +314,6 @@
             "isExecuted": false,
             "group": null,
             "uuid": "9010bd87-2276-4eca-a814-9278d629ce9e"
-        },
-        {
-            "@type": "WorkflowRoute",
-            "name": "wait_for_task -> extract fmg device data",
-            "targetStep": "\/api\/3\/workflow_steps\/2913ae72-dbcf-49ed-98df-08086bb2ff26",
-            "sourceStep": "\/api\/3\/workflow_steps\/b1009630-57de-4b0c-ab00-5241b3ba5b84",
-            "label": null,
-            "isExecuted": false,
-            "group": null,
-            "uuid": "cdafdad5-14e5-4f9e-a5a8-2323912120f9"
         }
     ],
     "groups": [],
