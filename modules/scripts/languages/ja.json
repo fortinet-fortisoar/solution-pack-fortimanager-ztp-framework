@@ -1,16 +1,20 @@
 {
-    "ANNOUNCEMENTS": {
-        "MODULE_DETAILS": {
-            "SINGULAR_NAME": "発表",
-            "PLURAL_NAME": "発表"
-        },
-        "FIELDS": {
-            "NOTIFYONEMAIL": "電子メールで応答者に通知",
-            "WARROOMS": "戦闘室",
-            "ANNOUNCEMENTCRITICALITY": "重要度",
-            "TITLE": "タイトル",
-            "DESCRIPTION": "説明",
-            "ANNOUNCEMENTTYPE": "発表タイプ"
-        }
+    "SCRIPTS": {
+      "MODULE_DETAILS": {
+        "SINGULAR_NAME": "スクリプト",
+        "PLURAL_NAME": "スクリプト"
+      },
+      "FIELDS": {
+        "ORDERPRIORITY": "優先順位を注文します",
+        "SCRIPTNAME": "名前",
+        "DESCRIPTION": "説明",
+        "SCRIPTTYPE": "タイプ",
+        "SCRIPT": "スクリプト",
+        "SCRIPTMETADATASOURCES": "メタデータソース",
+        "METAFIELDTEMPLATES": "メタフィールドテンプレート",
+        "DEVICES": "デバイス",
+        "MANAGERS": "マネージャー",
+        "ZTPPROFILES": "ZTPプロファイル"
+      }
     }
-}
+  }

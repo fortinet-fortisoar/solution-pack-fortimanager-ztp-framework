@@ -1,16 +1,18 @@
 {
-    "ANNOUNCEMENTS": {
+    "METAFIELD_TEMPLATES": {
         "MODULE_DETAILS": {
-            "SINGULAR_NAME": "発表",
-            "PLURAL_NAME": "発表"
+            "SINGULAR_NAME": "メタフィールドテンプレート",
+            "PLURAL_NAME": "メタフィールドテンプレート"
         },
         "FIELDS": {
-            "NOTIFYONEMAIL": "電子メールで応答者に通知",
-            "WARROOMS": "戦闘室",
-            "ANNOUNCEMENTCRITICALITY": "重要度",
-            "TITLE": "タイトル",
+            "ORDERPRIORITY": "注文の優先度",
+            "NAME": "名前",
             "DESCRIPTION": "説明",
-            "ANNOUNCEMENTTYPE": "発表タイプ"
+            "METAFIELDTEMPLATE": "メタフィールドテンプレート",
+            "METADATASOURCES": "メタデータソース",
+            "ZTPPROFILES": "ZTPプロファイル",
+            "DEVICES": "デバイス",
+            "SCRIPTS": "スクリプト"
         }
     }
 }

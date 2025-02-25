@@ -1,16 +1,20 @@
 {
-    "ANNOUNCEMENTS": {
-        "MODULE_DETAILS": {
-            "SINGULAR_NAME": "Annonce",
-            "PLURAL_NAME": "Annonces"
-        },
-        "FIELDS": {
-            "NOTIFYONEMAIL": "Notifier les intervenants par email",
-            "WARROOMS": "Salles de guerre",
-            "ANNOUNCEMENTCRITICALITY": "CRITICITÉ DE L'ANNONCE",
-            "TITLE": "Titre",
-            "DESCRIPTION": "Description",
-            "ANNOUNCEMENTTYPE": "Type d'annonce"
-        }
+    "SCRIPTS": {
+      "MODULE_DETAILS": {
+        "SINGULAR_NAME": "Scénario",
+        "PLURAL_NAME": "Scripts"
+      },
+      "FIELDS": {
+        "ORDERPRIORITY": "Priorité de commande",
+        "SCRIPTNAME": "Nom",
+        "DESCRIPTION": "Description",
+        "SCRIPTTYPE": "Taper",
+        "SCRIPT": "Scénario",
+        "SCRIPTMETADATASOURCES": "Sources de métadonnées",
+        "METAFIELDTEMPLATES": "Modèles MetaField",
+        "DEVICES": "Dispositifs",
+        "MANAGERS": "Managers",
+        "ZTPPROFILES": "Profils ZTP"
+      }
     }
-}
+  }

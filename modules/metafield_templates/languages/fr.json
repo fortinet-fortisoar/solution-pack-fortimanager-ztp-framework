@@ -1,16 +1,18 @@
 {
-    "ANNOUNCEMENTS": {
+    "METAFIELD_TEMPLATES": {
         "MODULE_DETAILS": {
-            "SINGULAR_NAME": "Annonce",
-            "PLURAL_NAME": "Annonces"
+            "SINGULAR_NAME": "Modèle de Métachamp",
+            "PLURAL_NAME": "Modèles de Métachamp"
         },
         "FIELDS": {
-            "NOTIFYONEMAIL": "Notifier les intervenants par email",
-            "WARROOMS": "Salles de guerre",
-            "ANNOUNCEMENTCRITICALITY": "CRITICITÉ DE L'ANNONCE",
-            "TITLE": "Titre",
+            "ORDERPRIORITY": "Priorité de Commande",
+            "NAME": "Nom",
             "DESCRIPTION": "Description",
-            "ANNOUNCEMENTTYPE": "Type d'annonce"
+            "METAFIELDTEMPLATE": "Modèle de Métachamp",
+            "METADATASOURCES": "Sources de Métadonnées",
+            "ZTPPROFILES": "Profils ZTP",
+            "DEVICES": "Appareils",
+            "SCRIPTS": "Scripts"
         }
     }
 }

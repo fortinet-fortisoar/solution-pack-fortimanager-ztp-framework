@@ -1,16 +1,18 @@
 {
-    "ANNOUNCEMENTS": {
-        "MODULE_DETAILS": {
-            "SINGULAR_NAME": "公告",
-            "PLURAL_NAME": "公告"
-        },
-        "FIELDS": {
-            "NOTIFYONEMAIL": "通过电子邮件通知响应者",
-            "WARROOMS": "作战室",
-            "ANNOUNCEMENTCRITICALITY": "重要性",
-            "TITLE": "标题",
-            "DESCRIPTION": "描述",
-            "ANNOUNCEMENTTYPE": "公告类型"
-        }
+    "METAFIELD_TEMPLATES": {
+      "MODULE_DETAILS": {
+        "SINGULAR_NAME": "元场模板",
+        "PLURAL_NAME": "元场模板"
+      },
+      "FIELDS": {
+        "ORDERPRIORITY": "订单优先级",
+        "NAME": "姓名",
+        "DESCRIPTION": "描述",
+        "METAFIELDTEMPLATE": "元场模板",
+        "METADATASOURCES": "元数据",
+        "ZTPPROFILES": "ZTP配置文件",
+        "DEVICES": "设备",
+        "SCRIPTS": "脚本"
+      }
     }
-}
+  }
