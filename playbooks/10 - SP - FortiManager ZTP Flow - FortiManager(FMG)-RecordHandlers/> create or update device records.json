@@ -35,6 +35,7 @@
                     "aDOM": "{{vars.item['extra info'].adom}}",
                     "vDOM": "{{vars.vdom_idx[vars.item.name].mgt_vdom}}",
                     "firmware": "{{vars.item.os_ver|int}}.{{vars.item.mr}}.{{vars.item.patch}}-build{{vars.item.build}}",
+                    "hostName": "{{vars.item.hostname}}",
                     "managers": "{{vars.manager_record_id}}",
                     "platform": "{{vars.item.platform_str}}",
                     "__replace": "true",
@@ -135,7 +136,7 @@
             "name": "mgtvdom_assignments",
             "description": null,
             "arguments": {
-                "assignment_info": "{%- set idx = dict() -%}\n{%- for item in vars.input.params['device_data'] %}\n  {%- set device = item.name -%}\n  {%- set vname = item.mgt_vdom|default('root') -%}\n  {%- set vdom = \n         item.vdom\n         |json_query('[?name == `{}`]'.format(vname))\n  -%}\n  {%- set ppkg = \n         vdom[0]['assignment info']\n         |json_query('[?type == `policy`]')\n  -%}\n  {%- set prov = \n         vdom[0]['assignment info']\n         |json_query('[?type != `policy` && type != `fext` && type != `wtp`]')\n  -%}\n  {%- for a in item['assignment info'] -%}\n    {%- do prov.append(a) -%}\n  {%- endfor -%}\n  {%- do idx.update( \n    { \n      device: { \n        \"ppkg\":ppkg,\n        \"prov\":prov\n      } \n    } \n  ) -%}\n{%- endfor -%}\n{{idx}}"
+                "assignment_info": "{%- set idx = dict() -%}\n{%- for item in vars.input.params['device_data'] %}\n  {%- set device = item.name -%}\n  {%- set vname = \"root\" -%}\n  {%- if item.mgt_vdom not in ['',None] -%}\n    {%- set vname = item.mgt_vdom -%}\n  {%- endif -%}\n  {%- set vdom = \n         item.vdom\n         |json_query('[?name == `{}`]'.format(vname))\n  -%}\n  {%- set ppkg = \n         vdom[0]['assignment info']\n         |json_query('[?type == `policy`]')\n  -%}\n  {%- set prov = \n         vdom[0]['assignment info']\n         |json_query('[?type != `policy` && type != `fext` && type != `wtp`]')\n  -%}\n  {%- for a in item['assignment info'] -%}\n    {%- do prov.append(a) -%}\n  {%- endfor -%}\n  {%- do idx.update( \n    { \n      device: { \n        \"ppkg\":ppkg,\n        \"prov\":prov\n      } \n    } \n  ) -%}\n{%- endfor -%}\n{{idx}}"
             },
             "status": null,
             "top": "180",

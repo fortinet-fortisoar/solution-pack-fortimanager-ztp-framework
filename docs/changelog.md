@@ -2,10 +2,36 @@
 |--------------------------------------------|
 
 # Change Log
+ - 20240913-20250129 (1.0.5)
+   - Update device synch to include hostname. 
+   - Update special fields in the ZTP steps for authorization to include ADOM. 
+   - Update `> monitor task complete` to continue if it errors out but return an `error:True` so that a stuck task can show `Failed`. 
+   - Modify `> synch record metadata to fmg adom variables - by device` to default to the Global context if not running in vdom mode. 
+   - Modify `> fmg install config - on devices` to use `> monitor task complete`. 
+   - Modify `> change ztp phase on device records` to transition actions to toggle to the phase pending and then set to properly re-trigger records. 
+   - Modify all buttons that deal with transitions to use the subroutine. 
+   - Create `> fmg exec task - return standard output of results.json` to consolidate exec handling. 
+   - Modify `> fmg install config - on devices.json` and `> fmg install policy package - on devices.json` playbooks to leverage the new playbook. Remove use of task monitor as the enhanced track_task functions are being added to pyFMG. 
+   - Modify Dashboards to collapse Quick Links and show pie charts where useful. 
+   - Modify playbook `On ZTP Profile Assignment in Device Record` to clear all ZTP fields when a new profile is assigned.
+   - Modify playbook `> fmg exec task - return standard output of results` to handle latest `task_track()` return from `pyfmg`. 
+   - Create playbook button `ZTP Phase Retry Failed on Device from Device Record` for devices that have failed a phase. 
+   - Add new fields for storing ZTP Start/Stop times per device and update playbooks to update these in the ZTP Flow. 
+   - Enhance ZTP Phase comments on a device. 
+   - Modify `On ZTP Phase (Action Step) in Device Record` to better handle error conditions and set the device to fail instead of failing the playbook on problems.
+   - Modify `Randomly Create Model Devices - by Manager Record` to have a better list of supported products by FMG firmware (7.2 - 7.6) to prevent errors during testing. 
+   - Add new playbook `> get fmg supported platforms` to get supported platforms from FMG and update `Randomly Create Model Devices - by Manager Record` to use it. 
+   - Add new custom playbooks `> sys proxy json - per device record` and `Get Device Routing Table.json` for common report info. 
+   - Update dashboards where fields that are not needed take up space. 
+   - Correct device synch to assume "root" is the management vdom if the device does not have a `mgt_vdom` set from FMG. Often seen with model method processes. 
+   - Update record views for devices, metafield templates, and script templates. 
+   - Update `> fmg script - exec on devices` to support adom in the URL to fix workspace mode problems. 
+   - Remove the `Tags` field from record views as FortiSOAR includes this as a default header of the record. 
+
 - 20240701 (1.0.4)
-  - Update json-rpc onnector to 1.0.4. 
+  - Update json-rpc Connector to 1.0.4. 
   - Modify ZTP Profile Views. 
-  - Modify URLs to use ADOM on API calls to beter support locking ADOMs. 
+  - Modify URLs to use ADOM on API calls to better support locking ADOMs. 
   - Add support for installing Policy Packages to a group within the playbook. 
   - Add get task and wait for task playbooks. 
 
@@ -46,13 +72,13 @@
   - Updated the auto assign profile. 
   - Add toggle for profile removals.
   - Add new playbooks for metafield handling and for auto assign options.
-  - Add logic to allow for chainint ZTP Profiles together. 
+  - Add logic to allow for chaining ZTP Profiles together. 
   - Tweak ZTP Auto Assignment and add Step Configuration. 
   - Added ZTP Trigger master playbook and implemented first assumed update path. 
   - Add new ZTP Phases and begin the ZTP Phase trigger system. 
 
 - 20230428
-  - Add ZTP Assignment and Mode picklists.
+  - Add ZTP Assignment and Mode pick lists.
   - Rename lots of buttons.
   - Added ZTP Phase data fields. 
   - Running Provisioning Templates now assigns devices to groups and uses the ZTP Profile Template Group Name if set...otherwise use the devname. 
@@ -98,4 +124,4 @@
   - Add synch with status in the playbook.
   - Multitenant support. 
   - Device Records with comments.
-  - Playbooks inclue synch, auth, and delete.
+  - Playbooks include synch, auth, and delete.
