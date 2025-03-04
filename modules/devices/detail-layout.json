@@ -20,12 +20,14 @@
                                                         {
                                                             "name": "managers",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         },
                                                         {
-                                                            "name": "deviceIP",
+                                                            "name": "deviceName",
                                                             "highlightMode": true,
-                                                            "readOnly": false
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         }
                                                     ],
                                                     "style": "col-lg-4"
@@ -33,19 +35,22 @@
                                                 {
                                                     "fields": [
                                                         {
-                                                            "name": "deviceName",
+                                                            "name": "deviceIP",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": false,
+                                                            "linky": true
                                                         },
                                                         {
                                                             "name": "platform",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         },
                                                         {
                                                             "name": "sn",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         }
                                                     ],
                                                     "style": "col-lg-4"
@@ -55,12 +60,14 @@
                                                         {
                                                             "name": "aDOM",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         },
                                                         {
                                                             "name": "deviceGroups",
                                                             "highlightMode": true,
-                                                            "readOnly": true
+                                                            "readOnly": true,
+                                                            "linky": true
                                                         }
                                                     ],
                                                     "style": "col-lg-4"
@@ -289,7 +296,8 @@
                                                             ]
                                                         }
                                                     ]
-                                                }
+                                                },
+                                                "visible": true
                                             }
                                         },
                                         {
@@ -339,7 +347,8 @@
                                                     "module": "metafield_templates",
                                                     "fieldName": "metafieldTemplates",
                                                     "title": "Metafield Templates"
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "icon": "icon icon-edit-template",
                                             "show": false,
@@ -396,7 +405,8 @@
                                                     "module": "scripts",
                                                     "fieldName": "scripts",
                                                     "title": "Script Templates"
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "icon": "icon icon-edit-template",
                                             "show": false,
@@ -415,7 +425,8 @@
                                                         "userOwners",
                                                         "attachments"
                                                     ]
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "icon": "icon icon-relationships",
                                             "show": false,
@@ -447,7 +458,8 @@
                                                             ]
                                                         }
                                                     ]
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "show": false,
                                             "visible": true
@@ -480,7 +492,8 @@
                                                             "_collapsed": false
                                                         }
                                                     ]
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "icon": "fa fa-eye",
                                             "show": false,
@@ -493,7 +506,8 @@
                                                 "type": "editableForm",
                                                 "config": {
                                                     "wid": "4f18bf01-b018-4da6-972e-e86b07a23a2e"
-                                                }
+                                                },
+                                                "visible": true
                                             },
                                             "icon": "icon icon-expand",
                                             "show": false,
@@ -516,6 +530,16 @@
                 "id": "\/api\/3\/workflows\/42e6e0f7-2ff2-4fc3-b2b1-c7aa6cf8c7ef",
                 "name": "ZTP Phase Transition on Device from Device Record",
                 "icon": "icon icon-running-playbooks"
+            },
+            {
+                "id": "\/api\/3\/workflows\/461a8fea-c0b7-45b7-86f2-623a4d3abbad",
+                "name": "ZTP Phase Retry Failed on Device from Device Record",
+                "icon": "fa fa-caret-square-o-left"
+            },
+            {
+                "id": "\/api\/3\/workflows\/ea11bed6-9d8d-4178-986f-f16eff75db5d",
+                "name": "Synch FMG Manager DeviceDB Button - by device record",
+                "icon": "icon icon-refresh"
             }
         ],
         "wid": "ec6f7515-4fa4-42df-ba94-45d2d4ec6525",

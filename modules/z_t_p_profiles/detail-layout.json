@@ -28,12 +28,6 @@
                                                             "highlightMode": false,
                                                             "readOnly": false,
                                                             "linky": true
-                                                        },
-                                                        {
-                                                            "name": "recordTags",
-                                                            "highlightMode": true,
-                                                            "readOnly": false,
-                                                            "linky": true
                                                         }
                                                     ],
                                                     "style": "col-lg-6"
@@ -603,7 +597,7 @@
                                                 "visible": true
                                             },
                                             "icon": "icon icon-settings-01",
-                                            "show": true,
+                                            "show": false,
                                             "visible": true
                                         }
                                     ],
@@ -820,7 +814,7 @@
                                                 "visible": true
                                             },
                                             "icon": "fa fa-external-link",
-                                            "show": true,
+                                            "show": false,
                                             "visible": true
                                         }
                                     ]
