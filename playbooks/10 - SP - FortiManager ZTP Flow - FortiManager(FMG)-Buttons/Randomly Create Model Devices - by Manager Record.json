@@ -739,6 +739,26 @@
         },
         {
             "@type": "WorkflowRoute",
+            "name": "Query for Patforms -> create fmg platforms",
+            "targetStep": "\/api\/3\/workflow_steps\/959dd5fd-9850-4e2f-beb8-e5e3d8c1ed80",
+            "sourceStep": "\/api\/3\/workflow_steps\/b9aa7e80-3724-4dc8-acec-7add75e76e42",
+            "label": "Create Platform List",
+            "isExecuted": false,
+            "group": null,
+            "uuid": "cf21325a-474d-40fa-b7ee-4eba9336f19a"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Query for Patforms -> get fmg platforms",
+            "targetStep": "\/api\/3\/workflow_steps\/5bc962e0-481d-4717-ba36-42de5803c5e8",
+            "sourceStep": "\/api\/3\/workflow_steps\/b9aa7e80-3724-4dc8-acec-7add75e76e42",
+            "label": "Query",
+            "isExecuted": false,
+            "group": null,
+            "uuid": "43467611-70a8-4562-80f9-346e6d8c90d0"
+        },
+        {
+            "@type": "WorkflowRoute",
             "name": "Set fortimanager adoms vars -> Create device Dictionary",
             "targetStep": "\/api\/3\/workflow_steps\/4ce9ea62-13a7-4636-848d-2e3a2b47ac8b",
             "sourceStep": "\/api\/3\/workflow_steps\/9fc724e1-b46e-4ea6-882e-e292787dac46",
