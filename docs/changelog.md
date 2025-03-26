@@ -2,6 +2,11 @@
 |--------------------------------------------|
 
 # Change Log
+ - 20250326 (1.0.7)
+   - Correct error: 409 conflict from Playbook Collections(s) on install of 1.0.6. 
+   - Cleanup `Randomly Create Model Devices` playbook to leverage `> get fmg supported firmware.json` removing old steps not in use.  
+   - Fix language file syntax. 
+
  - 20250219-20250310 (1.0.6)
    - Update `Randomly Create Model Devices` playbook to leverage `> get fmg supported firmware.json` and only create models that should be supported by adom. 
    - Fix language file syntax. 
