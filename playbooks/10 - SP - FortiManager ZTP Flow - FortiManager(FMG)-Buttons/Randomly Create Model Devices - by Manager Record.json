@@ -105,28 +105,6 @@
         },
         {
             "@type": "WorkflowStep",
-            "name": "Calculate version options",
-            "description": null,
-            "arguments": {
-                "config": "6452db36-dc11-44a1-9a7f-231a9b569ef5",
-                "params": {
-                    "python_function": "adom_ver = {{vars.adom_version}}\n\nprint([\"{0:.1f}\".format(adom_ver), \"{0:.1f}\".format(adom_ver + .2) ])"
-                },
-                "version": "2.0.3",
-                "connector": "code-snippet",
-                "operation": "python_inline_code_editor",
-                "operationTitle": "Execute Python Code",
-                "step_variables": []
-            },
-            "status": null,
-            "top": "1260",
-            "left": "640",
-            "stepType": "\/api\/3\/workflow_step_types\/1fdd14cc-d6b4-4335-a3af-ab49c8ed2fd8",
-            "group": null,
-            "uuid": "34551ce3-d7bd-497e-a1b9-3504a7ca2292"
-        },
-        {
-            "@type": "WorkflowStep",
             "name": "Cancel or Timeout",
             "description": null,
             "arguments": {
@@ -143,38 +121,6 @@
             "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
             "group": null,
             "uuid": "de467f4a-a9d1-4602-a472-a1484a2d94fb"
-        },
-        {
-            "@type": "WorkflowStep",
-            "name": "Copy of Create model device",
-            "description": null,
-            "arguments": {
-                "for_each": {
-                    "item": "{{vars.input.records}}",
-                    "parallel": false,
-                    "condition": ""
-                },
-                "arguments": {
-                    "fgt_mr": "{{vars.adom_version.split('.')[1] if '.' in vars.adom_version else 0 }}",
-                    "fgt_sn": "{{vars.item.serialNumber}}",
-                    "fgt_name": "{{vars.item.serialNumber}}",
-                    "fmg_adom": "{{vars.steps.Ask_for_adom_and_other_details.input.fortiManagerADOM.split(\" \")[0]}}",
-                    "fgt_patch": "0",
-                    "fgt_os_version": "{{vars.adom_version.split('.')[0] if '.' in vars.adom_version else vars.adom_version  }}",
-                    "connector_config": "{{vars.steps.Ask_for_user_input.input.fortiManager}}"
-                },
-                "apply_async": false,
-                "step_variables": [],
-                "pass_parent_env": false,
-                "pass_input_record": false,
-                "workflowReference": "\/api\/3\/workflows\/c2d6a006-6f14-4c1d-85b3-3f516646ff86"
-            },
-            "status": null,
-            "top": "1260",
-            "left": "340",
-            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
-            "group": null,
-            "uuid": "65b1249a-11bb-4d77-8aea-0d2efd594932"
         },
         {
             "@type": "WorkflowStep",
@@ -739,26 +685,6 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "Query for Patforms -> create fmg platforms",
-            "targetStep": "\/api\/3\/workflow_steps\/959dd5fd-9850-4e2f-beb8-e5e3d8c1ed80",
-            "sourceStep": "\/api\/3\/workflow_steps\/b9aa7e80-3724-4dc8-acec-7add75e76e42",
-            "label": "Create Platform List",
-            "isExecuted": false,
-            "group": null,
-            "uuid": "cf21325a-474d-40fa-b7ee-4eba9336f19a"
-        },
-        {
-            "@type": "WorkflowRoute",
-            "name": "Query for Patforms -> get fmg platforms",
-            "targetStep": "\/api\/3\/workflow_steps\/5bc962e0-481d-4717-ba36-42de5803c5e8",
-            "sourceStep": "\/api\/3\/workflow_steps\/b9aa7e80-3724-4dc8-acec-7add75e76e42",
-            "label": "Query",
-            "isExecuted": false,
-            "group": null,
-            "uuid": "43467611-70a8-4562-80f9-346e6d8c90d0"
-        },
-        {
-            "@type": "WorkflowRoute",
             "name": "Set fortimanager adoms vars -> Create device Dictionary",
             "targetStep": "\/api\/3\/workflow_steps\/4ce9ea62-13a7-4636-848d-2e3a2b47ac8b",
             "sourceStep": "\/api\/3\/workflow_steps\/9fc724e1-b46e-4ea6-882e-e292787dac46",
@@ -855,6 +781,7 @@
         }
     ],
     "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "playbookOrigin": "\/api\/3\/picklists\/b6d710a9-a8ec-41ec-8817-fe9fa062fcdd",
     "uuid": "14c3e417-9eb7-47f8-bd7f-0f45b56e495b",
     "owners": [],
     "isPrivate": false,
