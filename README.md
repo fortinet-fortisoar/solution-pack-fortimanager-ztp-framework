@@ -1,14 +1,14 @@
 # Release Information
 
- * **Version**: 1.0.7
- * **Certified**: No
- * **Publisher**: Fortinet CSE
- * **Contributor**: James Hilving
- * **Compatible Version**: 
-   * FortiSOAR v7.4.0 and later
-   * FortiManager v7.2.0 and later for full features. Limited features for earlier FortiManager versions. 
- * [Release Notes](./release_notes.md) 
- * [Changelog](./docs/changelog.md)
+- **Version**: 1.0.7
+- **Certified**: No
+- **Publisher**: Fortinet CSE
+- **Contributor**: James Hilving
+- **Compatible Version**: 
+  * FortiSOAR v7.4.0 and later
+  * FortiManager v7.2.0 and later for full features. Limited features for earlier FortiManager versions. 
+- [Release Notes](./release_notes.md) 
+- [Changelog](./docs/changelog.md)
 
 # Overview
 
@@ -18,7 +18,7 @@ Playbook automation focused on FortiManager functions can streamline common task
 
 ![](./docs/res/fortisoar-fortimanager-summary-visual.png)
 
- # Next Steps
+# Next Steps
 
 | [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) | [Contents](./docs/contents.md) |
 |----------------------------------------------|------------------------------------------------|--------------------------|--------------------------------|
