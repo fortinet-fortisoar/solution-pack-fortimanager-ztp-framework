@@ -9,9 +9,12 @@ Install the Solution Pack. This is an example screenshot and what you see in the
 
 # Configuration
  
- * Modify the System `Settings > Appliances > Playbook` user to have the `FortiManager-Playbook-Appliance` Role.
- * Modify the System `Settings > Users`, that will be using this solution, to have the `FortiManager-Admin` Role.
- * Navigate to `Automation > Connectors` and look for `Code Snippet`. Make sure this is installed and has a configuration marked as `Mark as default configuration`.
+- Modify the System `Settings > Appliances > Playbook` user to have the `FortiManager-Playbook-Appliance` Role.
+- Modify the System `Settings > Users`, that will be using this solution, to have the `FortiManager-Admin` Role.
+- Navigate to `Automation > Connectors` and look for `Code Snippet`. Make sure this is installed and has a configuration marked as `Mark as default configuration`.
+- Enable **Verbose JSON** under *Fortinet FortiManager JSON RPC* connector's configuration.
+
+![Verbose JSON setting enabled](./res/verbose-json-enabled.png)
 
 ## Setup FortiManager ZTP Flow (ZTPF) Frameworkres/setup/setup
 
