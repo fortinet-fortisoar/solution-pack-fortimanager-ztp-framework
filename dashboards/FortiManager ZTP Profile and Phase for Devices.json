@@ -489,7 +489,7 @@
             "customTemplateTitle": "Dashboard"
         },
         "readOnlyFlag": true,
-        "refreshInterval": 1
+        "refreshInterval": 10
     },
     "filterArray": [],
     "updateDate": null
