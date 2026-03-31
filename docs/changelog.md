@@ -3,6 +3,9 @@
 
 # Change Log
  - 20260311-20260319 (1.2.0)
+   - Update script target when creating PolicyDB scripts found in FMG 7.6.5+.
+   - Decrease default ZTPF Dashboard refresh. 
+   - Add custom playbooks for proxy API examples. 
    - Update `> synch fmg adom variables to device records - by adom` to ignore metadata assigned to groups. 
    - Update manager record priority fields. Add playbook buttons. Remove unused tabs.
    - Change random create playbook to prompt for ADOM. 
@@ -10,7 +13,7 @@
    - Tweak manager connector playbook to delete/add configurations if changed. 
    - Add support for storing/changing the FMG TCP Port. 
    - Merge changes form 1.0.8 and 1.1.0. 
-   - Migrate playbooks using `/dvmdb/script` to `/pm/config/adom/root/obj/fmg/script` for FMG 7.6.5+ versions. 
+   - Migrate playbooks using `/dvmdb/script` to `/pm/config/adom/<adom>/obj/fmg/script` for FMG 7.6.5+ versions. 
    - Add 7.6.2 compatibility with playbook origin and editable flag support
    - Add new playbook to unlock all playbooks in the ZTP solution pack
    - Enhance Jinja templates for monitoring task execution time and policy script execution
