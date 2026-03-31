@@ -1,0 +1,136 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Get Device API via Proxy",
+    "aliasName": null,
+    "tag": null,
+    "description": "Using sys\/proxy\/json get the device data.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [
+        "payload"
+    ],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/256151d7-abbd-444a-b28f-774e9f5582de",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/a39e12cd-3fdd-4451-9371-b3d2464e7cdf",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "get fos data",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "payload": "",
+                    "device_id": "{{vars.device_id}}",
+                    "fos_action": "get",
+                    "fos_resource": "{{vars.api_url}}"
+                },
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/f0a3e147-44ef-4502-acb2-0f530fdf3ad9"
+            },
+            "status": null,
+            "top": "180",
+            "left": "420",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "29c49630-de9d-4d76-94f1-b013234c7b8b"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "return",
+            "description": null,
+            "arguments": {
+                "output": "{{vars.steps.get_fos_data.output.data['execute_response'][0].response.results}}"
+            },
+            "status": null,
+            "top": "120",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "8309e921-d134-4669-9ce8-4b7aec1f90a6"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "seup vars",
+            "description": null,
+            "arguments": {
+                "api_url": "{{vars.input.params.payload.api_url}}",
+                "device_id": "{{vars.input.params.payload.device_id}}"
+            },
+            "status": null,
+            "top": "40",
+            "left": "340",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "c1504de0-d0dd-41b1-bf18-93ad3f936e54"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "a39e12cd-3fdd-4451-9371-b3d2464e7cdf"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "get routing table -> return",
+            "targetStep": "\/api\/3\/workflow_steps\/8309e921-d134-4669-9ce8-4b7aec1f90a6",
+            "sourceStep": "\/api\/3\/workflow_steps\/29c49630-de9d-4d76-94f1-b013234c7b8b",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "80d8817e-71de-4778-8441-cfbb7728e188"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "seup vars -> get fos data",
+            "targetStep": "\/api\/3\/workflow_steps\/29c49630-de9d-4d76-94f1-b013234c7b8b",
+            "sourceStep": "\/api\/3\/workflow_steps\/c1504de0-d0dd-41b1-bf18-93ad3f936e54",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "e27599f9-8842-4156-959f-1859b40d83cc"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> seup vars",
+            "targetStep": "\/api\/3\/workflow_steps\/c1504de0-d0dd-41b1-bf18-93ad3f936e54",
+            "sourceStep": "\/api\/3\/workflow_steps\/a39e12cd-3fdd-4451-9371-b3d2464e7cdf",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "06e2244c-2f7c-4c4a-87a3-ecf8dc874489"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "playbookOrigin": "\/api\/3\/picklists\/b6d710a9-a8ec-41ec-8817-fe9fa062fcdd",
+    "isEditable": true,
+    "uuid": "79f33093-1804-4d03-8916-fdaa0455d533",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": []
+}

@@ -387,12 +387,6 @@
                                                 "field": "orderPriority",
                                                 "_fieldTitle": "Order Priority",
                                                 "_fieldName": "orderPriority"
-                                            },
-                                            {
-                                                "direction": "ASC",
-                                                "field": "name",
-                                                "_fieldTitle": "Name",
-                                                "_fieldName": "name"
                                             }
                                         ],
                                         "limit": 30,

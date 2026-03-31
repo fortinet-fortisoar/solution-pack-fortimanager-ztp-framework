@@ -6,9 +6,7 @@
         "navigation": [
             {
                 "editMode": false,
-                "exists": false,
                 "icon": "icon icon-manual-task",
-                "include": true,
                 "items": [
                     {
                         "editMode": false,

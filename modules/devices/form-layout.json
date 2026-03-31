@@ -3,7 +3,49 @@
     "@type": "SystemViewTemplate",
     "type": "form",
     "config": {
-        "rows": []
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "ea8c8f7c-8de4-46a0-bdd8-746fd1098288",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "deviceName",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "reportMarkdown",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "wid": "a7c21087-ba2d-436b-9d23-3bb7ca233ffe"
+            }
+        ],
+        "actionButtons": [],
+        "wid": "f9b21cdf-b762-4452-9fc6-def26bb8c8e3",
+        "metadata": [],
+        "style": "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"
     },
     "module": "devices",
     "filters": [],
