@@ -94,7 +94,7 @@
             "canUpdate": true,
             "canDelete": true,
             "fieldPermissions": [],
-            "module": "managers"
+            "module": "metafield_templates"
         },
         {
             "@type": "ModulePermission",
@@ -104,7 +104,7 @@
             "canUpdate": true,
             "canDelete": true,
             "fieldPermissions": [],
-            "module": "metafield_templates"
+            "module": "managers"
         },
         {
             "@type": "ModulePermission",

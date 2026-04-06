@@ -3,7 +3,53 @@
     "@type": "SystemViewTemplate",
     "type": "form",
     "config": {
-        "rows": []
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "96fb79bd-9d07-4324-b957-d452374a0e3e",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "scriptName",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "wid": "8c849709-c279-48fc-8c80-c6bb732d9462"
+            }
+        ],
+        "wid": "04531fdc-db46-4841-a5b2-73eac6bd6b38",
+        "metadata": {
+            "customTemplateTitle": "Scripts",
+            "originalTemplateTitle": "Scripts"
+        },
+        "style": "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"
     },
-    "uuid": "modules-scripts-form"
+    "module": "scripts",
+    "filters": [],
+    "isDefault": true,
+    "visible": true,
+    "viewOptions": "form",
+    "name": "Base Template",
+    "system": true,
+    "uuid": "modules-scripts-form",
+    "newUuid": "3fc54522-54c0-4097-9169-7ccfcc7b2bef"
 }

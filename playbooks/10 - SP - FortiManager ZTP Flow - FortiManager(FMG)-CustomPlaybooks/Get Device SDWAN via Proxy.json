@@ -1,0 +1,175 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Get Device SDWAN via Proxy",
+    "aliasName": null,
+    "tag": null,
+    "description": "Using sys\/proxy\/json get the device data.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [
+        "payload"
+    ],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/256151d7-abbd-444a-b28f-774e9f5582de",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/967554e9-cd69-4d57-8bc7-0131ae798fd1",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "get sdwan_health",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "payload": "",
+                    "device_id": "{{vars.device_id}}",
+                    "fos_action": "get",
+                    "fos_resource": "{{vars.api_sdwan_health}}"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "sdwan_health": "{{vars.steps.get_sdwan_health.output.data['execute_response'][0].response.results}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/f0a3e147-44ef-4502-acb2-0f530fdf3ad9"
+            },
+            "status": null,
+            "top": "220",
+            "left": "420",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "4f978cc1-d855-4a31-a20f-57952ac32787"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "get sdwan_members",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "payload": "",
+                    "device_id": "{{vars.device_id}}",
+                    "fos_action": "get",
+                    "fos_resource": "{{vars.api_sdwan_members}}"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "sdwan_members": "{{vars.steps.get_sdwan_members.output.data['execute_response'][0].response.results}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/f0a3e147-44ef-4502-acb2-0f530fdf3ad9"
+            },
+            "status": null,
+            "top": "120",
+            "left": "420",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "bb1e281f-3c01-42e8-866d-266fed4f69e9"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "return",
+            "description": null,
+            "arguments": {
+                "output": "{%- set sdwan_members = vars.sdwan_members -%}\n{%- set sdwan_health = vars.sdwan_health -%}\n{%- set health_checks = sdwan_health.keys()|list -%}\n\n{%- set table = [] -%}\n{%- for m in sdwan_members -%}\n  {%- set name = m.interface -%}\n  {%- set d = {} -%}\n  {%- set h = {} -%}\n\n  {%- for hc in health_checks -%}\n    {%- if name in sdwan_health[hc] -%}\n      {%- set href = sdwan_health[hc][name] -%}\n      {%- set hd = {\n        \"status\":href.status,\n        \"latency\":\"{:.2f}\".format(href.latency | float),\n        \"jitter\":\"{:.2f}\".format(href.jitter | float),\n        \"loss\":href.packet_loss,\n        \"state_changed_epoch\":href.state_changed,\n        \"state_changed\":arrow.get(href.state_changed)\n            .to(\"UTC\")\n            .format(\"YYYY-MM-DD HH:mm:ss ZZ\")\n      } -%}\n      {%- do h.update({hc:hd}) -%}\n    {%- endif -%}\n  {%- endfor -%}\n\n{%- do d.update({\n  \"name\": name,\n  \"link\": m.link,\n  \"sessions\":m.session,\n  \"state_changed_epoch\":m.state_changed,\n  \"state_changed\":arrow.get(m.state_changed)\n     .to(\"UTC\")\n     .format(\"YYYY-MM-DD HH:mm:ss ZZ\"),\n  \"health_checks\":h\n}) -%}\n  {%- do table.append(d) -%}\n{%- endfor -%}\n\n{{table}}"
+            },
+            "status": null,
+            "top": "120",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "314953b5-249e-47c2-8bac-f06999a8688a"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "seup vars",
+            "description": null,
+            "arguments": {
+                "device_id": "{{vars.input.params.payload}}",
+                "api_sdwan_health": "\/api\/v2\/monitor\/virtual-wan\/health-check",
+                "api_sdwan_members": "\/api\/v2\/monitor\/virtual-wan\/members"
+            },
+            "status": null,
+            "top": "40",
+            "left": "420",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "8e6d2297-e377-425c-90c0-860cb6e135be"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "967554e9-cd69-4d57-8bc7-0131ae798fd1"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Copy of get sdwan_members -> return",
+            "targetStep": "\/api\/3\/workflow_steps\/314953b5-249e-47c2-8bac-f06999a8688a",
+            "sourceStep": "\/api\/3\/workflow_steps\/4f978cc1-d855-4a31-a20f-57952ac32787",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "c6c551f1-e93c-4fc9-ba59-b2aac1a72c44"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "get sdwan_members -> Copy of get sdwan_members",
+            "targetStep": "\/api\/3\/workflow_steps\/4f978cc1-d855-4a31-a20f-57952ac32787",
+            "sourceStep": "\/api\/3\/workflow_steps\/bb1e281f-3c01-42e8-866d-266fed4f69e9",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "9fcb1529-f1e4-44a6-9075-cc4fa61e30d1"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "seup vars -> get fos data",
+            "targetStep": "\/api\/3\/workflow_steps\/bb1e281f-3c01-42e8-866d-266fed4f69e9",
+            "sourceStep": "\/api\/3\/workflow_steps\/8e6d2297-e377-425c-90c0-860cb6e135be",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "e805ef16-9a45-40b8-a7bf-d7952e88da2b"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> seup vars",
+            "targetStep": "\/api\/3\/workflow_steps\/8e6d2297-e377-425c-90c0-860cb6e135be",
+            "sourceStep": "\/api\/3\/workflow_steps\/967554e9-cd69-4d57-8bc7-0131ae798fd1",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "c0ab2069-7322-4f49-9047-ab7f3a5452f9"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "playbookOrigin": "\/api\/3\/picklists\/b6d710a9-a8ec-41ec-8817-fe9fa062fcdd",
+    "isEditable": true,
+    "uuid": "fa035c11-2a5d-4027-a1b2-f70bc9260379",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": []
+}

@@ -2,6 +2,31 @@
 |--------------------------------------------|
 
 # Change Log
+ - 20260311-20260319 (1.2.0)
+   - Update script target when creating PolicyDB scripts found in FMG 7.6.5+.
+   - Decrease default ZTPF Dashboard refresh. 
+   - Add custom playbooks for proxy API examples. 
+   - Update `> synch fmg adom variables to device records - by adom` to ignore metadata assigned to groups. 
+   - Update manager record priority fields. Add playbook buttons. Remove unused tabs.
+   - Change random create playbook to prompt for ADOM. 
+   - Remove Playground collection. 
+   - Tweak manager connector playbook to delete/add configurations if changed. 
+   - Add support for storing/changing the FMG TCP Port. 
+   - Merge changes form 1.0.8 and 1.1.0. 
+   - Migrate playbooks using `/dvmdb/script` to `/pm/config/adom/<adom>/obj/fmg/script` for FMG 7.6.5+ versions. 
+   - Add 7.6.2 compatibility with playbook origin and editable flag support
+   - Add new playbook to unlock all playbooks in the ZTP solution pack
+   - Enhance Jinja templates for monitoring task execution time and policy script execution
+   - Add logic to handle Jinja template rendering errors with device comments
+   - Improve ZTP profile lookup performance using 7.6.2 loop breaking feature
+   - Enhance missing metadata prompts with direct device record linking
+   - Fix processing issue with running linked scripts on devices
+   - Add task parameters for device authorization
+   - Improve device name changing to use global device level
+   - Add 7.6.2 dashboard defaults and MMD changes
+   - Enhance format return for easier device IRI linking in dialogs
+   - Enhance comment creation for script results
+
  - 20250326 (1.0.7)
    - Correct error: 409 conflict from Playbook Collections(s) on install of 1.0.6. 
    - Cleanup `Randomly Create Model Devices` playbook to leverage `> get fmg supported firmware.json` removing old steps not in use.  

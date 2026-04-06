@@ -1,0 +1,164 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "> clear manager synch data",
+    "aliasName": null,
+    "tag": null,
+    "description": null,
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [
+        "manager_name"
+    ],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/256151d7-abbd-444a-b28f-774e9f5582de",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/2fbde2f9-c64f-4d08-a556-d42333cdc93e",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "clear record",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "sN": "{{vars.empty}}",
+                    "aDOMMode": "{{vars.empty}}",
+                    "firmware": "{{vars.empty}}",
+                    "maxADOMS": 0,
+                    "platform": "{{vars.empty}}",
+                    "timeZone": "{{vars.empty}}",
+                    "maxDevices": 0,
+                    "licenseStatus": "{{vars.empty}}"
+                },
+                "operation": "Append",
+                "collection": "{{vars.steps.get_manager_by_name[0]['@id']}}",
+                "__recommend": [],
+                "collectionType": "\/api\/3\/managers",
+                "fieldOperation": {
+                    "recordTags": "Append"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "240",
+            "left": "340",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928722",
+            "group": null,
+            "uuid": "605a006a-b53d-4e79-a40d-2bdf5154d289"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "get manager by name",
+            "description": null,
+            "arguments": {
+                "when": "{{vars.manager_name}}",
+                "query": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "type": "primitive",
+                            "field": "managerName",
+                            "value": "{{vars.manager_name}}",
+                            "operator": "eq",
+                            "_operator": "eq"
+                        }
+                    ],
+                    "__selectFields": [
+                        "id",
+                        "managerName"
+                    ]
+                },
+                "module": "managers?$limit=1",
+                "checkboxFields": true,
+                "step_variables": []
+            },
+            "status": null,
+            "top": "140",
+            "left": "340",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
+            "group": null,
+            "uuid": "a2e95267-ab32-45c2-ae5b-fe8c2c682161"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "setup vars",
+            "description": null,
+            "arguments": {
+                "empty": "''",
+                "manager_name": "{{vars.input.params['manager_name']}}"
+            },
+            "status": null,
+            "top": "40",
+            "left": "340",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "1a53eee6-62f3-4191-8b74-5235717afc53"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+            },
+            "status": null,
+            "top": "40",
+            "left": "40",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "2fbde2f9-c64f-4d08-a556-d42333cdc93e"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "get manager by name -> clear record",
+            "targetStep": "\/api\/3\/workflow_steps\/605a006a-b53d-4e79-a40d-2bdf5154d289",
+            "sourceStep": "\/api\/3\/workflow_steps\/a2e95267-ab32-45c2-ae5b-fe8c2c682161",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "8450fc95-f549-4b37-844c-2aee4036a9bc"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "setup vars -> get manager by name",
+            "targetStep": "\/api\/3\/workflow_steps\/a2e95267-ab32-45c2-ae5b-fe8c2c682161",
+            "sourceStep": "\/api\/3\/workflow_steps\/1a53eee6-62f3-4191-8b74-5235717afc53",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "a6626440-5fb7-4191-87ba-87e246981120"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> setup vars",
+            "targetStep": "\/api\/3\/workflow_steps\/1a53eee6-62f3-4191-8b74-5235717afc53",
+            "sourceStep": "\/api\/3\/workflow_steps\/2fbde2f9-c64f-4d08-a556-d42333cdc93e",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "6238ada5-bb22-4bcd-b095-98fc4d5900d0"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "playbookOrigin": "\/api\/3\/picklists\/b6d710a9-a8ec-41ec-8817-fe9fa062fcdd",
+    "isEditable": false,
+    "uuid": "18562134-e860-43dc-a751-f6e6bfd601d1",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": []
+}
