@@ -1,6 +1,6 @@
 # Release Information
 
-- **Version**: 1.0.7
+- **Version**: 1.2.0
 - **Certified**: No
 - **Publisher**: Fortinet CSE
 - **Contributor**: James Hilving
